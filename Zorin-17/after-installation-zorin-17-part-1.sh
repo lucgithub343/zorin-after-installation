@@ -125,15 +125,6 @@ echo "**************************************************************************
 
 
 
-echo -e "\n\n\n********************************************** INSTALANDO  COMANDO  CURL *************************************************************"
-
-sudo apt install curl -y
-
-echo "***********************************************************************************************************************************************"
-
-
-
-
 echo -e "\n\n\n************************************************** INSTALANDO  GIT *******************************************************************"
 
 ## Instalando o Git
@@ -214,14 +205,14 @@ fi
 
 
 
-## Download dos scripts de instalacao do Ubuntu
-if [ -d /home/$USER/Installation/Script/ubuntu-after-installation-22-04/ ];
+## Download dos scripts de instalacao do Zorin
+if [ -d /home/$USER/Installation/Script/zorin-after-installation/ ];
 then
-    echo "O diretorio  /home/$USER/Installation/Script/ubuntu-after-installation-22-04/  ja existe"
+    echo "O diretorio  /home/$USER/Installation/Script/zorin-after-installation/  ja existe"
 else
-    echo -e "\n\n\n\n Scripts de instalacao do Ubuntu 22.04"
-    git clone https://github.com/lucgithub343/ubuntu-after-installation.git
-    cp -r /home/$USER/Downloads/Softwares/ubuntu-after-installation/  /home/$USER/Installation/Script/
+    echo -e "\n\n\n\n Scripts de instalacao do Zorin 17"
+    git clone https://github.com/lucgithub343/zorin-after-installation.git
+    cp -r /home/$USER/Installation/Script/zorin-after-installation/  /home/$USER/Installation/Script/
 fi
 
 
