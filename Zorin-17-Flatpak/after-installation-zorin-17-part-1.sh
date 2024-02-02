@@ -194,13 +194,14 @@ fi
 
 
 ## Download Wallpapers
-if [ -d /home/$USER/Pictures/wallpaper/ ];
+if [ -d /home/$USER/Wallpaper/ ];
 then
-    echo "O diretorio  /home/$USER/Pictures/wallpaper  ja existe"
+    echo "O diretorio  /home/$USER/Wallpaper/  ja existe"
 else
     echo -e "\n\n\n\n Wallpapers"
     git clone https://github.com/lucotavio/wallpapers.git
-    cp -r wallpapers/ /home/$USER/Pictures/
+    cp -r wallpapers/ /home/$USER/
+    mv /home/$USER/wallpapers/ /home/$USER/Wallpapers/
 fi
 
 
@@ -304,17 +305,6 @@ fi
 
 
 
-## Download Android Studio
-if [ -e android-studio-2023.1.1.deb ];
-then
-    echo "O arquivo  android-studio-2023.1.1.deb  ja existe"
-else
-    echo -e "\n\n\n\n Android Studio"
-    wget https://github.com/lucgithub343/android-studio/releases/download/android-studio/android-studio-2023.1.1.deb
-fi
-
-
-
 ## Download Apache Netbeans
 if [ -e aapache-netbeans_20-1_all.deb ];
 then
@@ -338,23 +328,23 @@ fi
 
 
 ## Download Balena Etcher
-if [ -e balena-etcher_1.18.11_amd64.deb ];
+if [ -e balena-etcher_1.19.4_amd64.deb ];
 then
-    echo "O arquivo  balena-etcher_1.18.11_amd64.deb  ja existe"
+    echo "O arquivo  balena-etcher_1.19.4_amd64.deb  ja existe"
 else
     echo -e "\n\n\n\n Balena Etcher"
-    wget https://github.com/lucgithub343/balena-etcher/releases/download/balena-etcher/balena-etcher_1.18.11_amd64.deb
+    wget https://github.com/lucgithub343/balena-etcher/releases/download/balena-etcher/balena-etcher_1.19.4_amd64.deb
 fi
 
 
 
 ## Download Chrome
-if [ -e chrome-stable_current_amd64.deb ];
+if [ -e google-chrome-stable_current_amd64.deb ];
 then
-    echo "O arquivo  chrome-stable_current_amd64.deb  ja existe"
+    echo "O arquivo  google-chrome-stable_current_amd64.deb  ja existe"
 else
     echo -e "\n\n\n\n Chrome"
-    wget https://github.com/lucgithub343/chrome/releases/download/chrome/chrome-stable_current_amd64.deb
+    wget https://github.com/lucgithub343/chrome/releases/download/chrome/google-chrome-stable_current_amd64.deb
 fi
 
 
@@ -382,12 +372,12 @@ fi
 
 
 ## Download Insomnia
-if [ -e Insomnia.Core-2023.5.8.deb ];
+if [ -e Insomnia.Core-8.6.0.deb ];
 then
-    echo "O arquivo  Insomnia.Core-2023.5.8.deb  ja existe"
+    echo "O arquivo  Insomnia.Core-8.6.0.deb  ja existe"
 else
     echo -e "\n\n\n\n Insomnia"
-    wget https://github.com/lucgithub343/insomnia/releases/download/insomnia/Insomnia.Core-2023.5.8.deb
+    wget https://github.com/lucgithub343/insomnia/releases/download/insomnia/Insomnia.Core-8.6.0.deb
 fi
 
 
@@ -399,17 +389,6 @@ then
 else
     echo -e "\n\n\n\n Insync"
     wget https://github.com/lucgithub343/insync/releases/download/insync/insync_3.8.6.50504-jammy_amd64.deb
-fi
-
-
-
-## Download Intellij Community
-if [ -e intellij-Community-2023.3.2.deb ];
-then
-    echo "O arquivo  intellij-Community-2023.3.2.deb ja existe"
-else
-    echo -e "\n\n\n\n Intellij Community"
-    wget https://github.com/lucgithub343/intellij/releases/download/intellij/intellij-Community-2023.3.2.deb
 fi
 
 
@@ -458,12 +437,12 @@ fi
 
 
 ## Download Microsoft Edge
-if [ -e microsoft-edge-stable_120.0.2210.133-1_amd64.deb ];
+if [ -e microsoft-edge-stable_121.0.2277.98-1_amd64.deb ];
 then
-    echo "O arquivo  microsoft-edge-stable_120.0.2210.133-1_amd64.deb ja  existe"
+    echo "O arquivo  microsoft-edge-stable_121.0.2277.98-1_amd64.deb ja  existe"
 else
     echo -e "\n\n\n\n Microsoft Edge"
-    wget https://github.com/lucgithub343/microsoft-edge/releases/download/microsoft-edge/microsoft-edge-stable_120.0.2210.133-1_amd64.deb
+    wget https://github.com/lucgithub343/microsoft-edge/releases/download/microsoft-edge/microsoft-edge-stable_121.0.2277.98-1_amd64.deb
 fi
 
 
@@ -488,16 +467,6 @@ else
     wget https://github.com/lucgithub343/onlyoffice/releases/download/onlyoffice/onlyoffice-desktopeditors_amd64.deb
 fi
 
-
-
-## Download Postman
-if [ -e postman-10.18.5.deb ];
-then
-    echo "O arquivo  postman-10.18.5.deb  ja existe"
-else
-    echo -e "\n\n\n\n Postman"
-    wget https://github.com/lucgithub343/postman/releases/download/postman/postman-10.18.5.deb
-fi
 
 
 
@@ -525,12 +494,12 @@ fi
 
 
 ## Download Visual Studio Code
-if [ -e visual_studio_code_1.82.2-1694671812_amd64.deb ];
+if [ -e code_1.86.0-1706698139_amd64.deb ];
 then
-    echo "O arquivo  visual_studio_code_1.82.2-1694671812_amd64.deb   ja existe"
+    echo "O arquivo  code_1.86.0-1706698139_amd64.deb   ja existe"
 else
     echo -e "\n\n\n\n Visual Studio Code"
-    wget https://github.com/lucgithub343/visual-studio-code/releases/download/visual-studio-code/visual_studio_code_1.82.2-1694671812_amd64.deb
+    wget https://github.com/lucgithub343/visual-studio-code/releases/download/visual-studio-code/code_1.86.0-1706698139_amd64.deb
 fi
 
 
@@ -562,43 +531,34 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALACAO DO JDK-21 **************************************************************"
 
-## Testando para ver se o diretorio /usr/lib/jvm/ ja existe
-if [ -d /usr/lib/jvm/ ];
+## Download JDK
+if [ -e jdk-21_linux-x64_bin.deb ];
 then
-    echo "O  DIRETORIO  /usr/lib/jvm/  JA  EXISTE"
+    echo "O arquivo  jdk-21_linux-x64_bin.deb  ja existe"
 else
-    echo "CRIANDO  O  DIRETORIO  /usr/lib/jvm/"
-    sudo mkdir -p /usr/lib/jvm/
+    wget https://github.com/lucgithub343/jdk/releases/download/jdk/jdk-21_linux-x64_bin.deb
 fi
 
 
-## Instalando o JDK-21
-if [ -d jdk-21 ];
-then
-    echo "O diretorio  /jdk-21/  ja existe e esta sendo copiado para pasta /usr/lib/jvm/"
-    sudo cp -r jdk-21/ /usr/lib/jvm/
-else
-    echo -e "\n\n\n\n Download JDK-21"
-    wget https://github.com/lucgithub343/jdk/releases/download/jdk/openjdk-21_linux-x64_bin.tar.gz
+sudo dpkg -i jdk-21_linux-x64_bin.deb
+sudo apt --fix-broken install -y
 
-    tar -xvzf openjdk-21_linux-x64_bin.tar.gz
-    sudo cp -r jdk-21/ /usr/lib/jvm/
-    rm openjdk-21_linux-x64_bin.tar.gz
-fi
+## Alterando o nome do jdk
+sudo mv /usr/lib/jvm/jdk-21-oracle-x64/ /usr/lib/jvm/jdk-21-oracle/
 
 
 ## Selecionando qual versão do java vai ser a padrao
-sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-21/bin/java 4
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-21-oracle/bin/java 4
 sudo update-alternatives --config java
 
 
 ## Configurando variaveis de ambiente do Java
-if grep -qi "export JAVA_HOME=/usr/lib/jvm/jdk-21" /home/$USER/.bashrc;
+if grep -qi "export JAVA_HOME=/usr/lib/jvm/jdk-21-oracle" /home/$USER/.bashrc;
 then
     echo "Variaveis de ambiente Java ja configurados"
 else
     echo "" >> /home/$USER/.bashrc
-    echo "export JAVA_HOME=/usr/lib/jvm/jdk-21" >> /home/$USER/.bashrc
+    echo "export JAVA_HOME=/usr/lib/jvm/jdk-21-oracle" >> /home/$USER/.bashrc
     echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> /home/$USER/.bashrc
 fi
 
@@ -609,6 +569,35 @@ echo "**************************************************************************
 
 
 
+
+echo -e "\n\n\n************************************************** INSTALACAO DO  KOTLIN *************************************************************"
+
+## Entrando na para pasta de programas
+cd /home/$USER/Downloads/Softwares/
+
+## Download Kotlin
+if [ -e kotlin-1.9.22.deb ];
+then
+    echo "O arquivo  kotlin-1.9.22.deb  ja existe"
+else
+    wget https://github.com/lucgithub343/kotlin/releases/download/kotlin/kotlin-1.9.22.deb
+fi
+
+sudo dpkg -i kotlin-1.9.22.deb
+
+
+## Configurando variaveis de ambiente do Java
+if grep -qi "export KOTLIN_HOME=/usr/local/bin/kotlin" /home/$USER/.bashrc;
+then
+    echo "Variaveis de ambiente Java ja configurados"
+else
+    echo "" >> /home/$USER/.bashrc
+    echo "export KOTLIN_HOME=/usr/local/bin/kotlin" >> /home/$USER/.bashrc
+    echo "export PATH=\$PATH:\$KOTLIN_HOME/bin" >> /home/$USER/.bashrc
+fi
+
+## Usando o comando source para executar o arquivo .bashrc
+## source /home/$USER/.bashrc
 
 echo -e "\n\n\n********************************************** INSTALANDO  O  MAVEN ******************************************************************"
 
@@ -818,9 +807,6 @@ sudo apt install umbrello -y
 
 ## instalando o Gnome Pomodoro
 sudo apt install gnome-shell-pomodoro -y
-
-## Instalando Kotlin
-sudo apt-get install kotlin -y
 
 ## Instalando o modulo "libcanberra-gtk-module" para que nao ocorra o erro: “failed to load module canberra-gtk-module”
 sudo apt install libcanberra-gtk-module libcanberra-gtk3-module -y

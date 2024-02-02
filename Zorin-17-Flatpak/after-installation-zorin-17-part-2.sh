@@ -129,6 +129,9 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALANDO  PACOTES  FLATPACK *****************************************************"
 
+flatpak install flathub com.google.AndroidStudio -y
+flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
+flatpak install flathub com.getpostman.Postman -y
 flatpak install flathub org.gnome.Solanum -y
 
 echo "***********************************************************************************************************************************************"
@@ -148,11 +151,6 @@ sudo dpkg -i 4kvideodownloader_4.21.7-1_amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Android Studio
-sudo dpkg -i android-studio-2023.1.1.deb
-sudo apt --fix-broken install -y
-
-
 ## Atom
 sudo dpkg -i atom-amd64.deb
 sudo apt --fix-broken install -y
@@ -160,12 +158,12 @@ sudo sed -i 's\env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false /usr/bin/atom
 
 
 ## Balena Etcher
-sudo dpkg -i balena-etcher_1.18.11_amd64.deb
+sudo dpkg -i balena-etcher_1.19.4_amd64.deb
 sudo apt --fix-broken install -y
 
 
 ## Chrome
-sudo dpkg -i chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt --fix-broken install -y
 
 
@@ -180,17 +178,12 @@ sudo apt --fix-broken install -y
 
 
 ## Insomnia
-sudo dpkg -i Insomnia.Core-2023.5.8.deb
+sudo dpkg -i Insomnia.Core-8.6.0.deb
 sudo apt --fix-broken install -y
 
 
 ## Insync
 sudo dpkg -i insync_3.8.6.50504-jammy_amd64.deb
-sudo apt --fix-broken install -y
-
-
-## Intellij Community
-sudo dpkg -i intellij-Community-2023.3.2.deb
 sudo apt --fix-broken install -y
 
 
@@ -210,7 +203,7 @@ sudo apt --fix-broken install -y
 
 
 ## Microsoft Edge
-sudo dpkg -i microsoft-edge-stable_120.0.2210.133-1_amd64.deb
+sudo dpkg -i microsoft-edge-stable_121.0.2277.98-1_amd64.deb
 sudo apt --fix-broken install -y
 
 
@@ -225,18 +218,13 @@ sudo apt --fix-broken install -y
 sudo sed -i '/Terminal=false/a StartupWMClass=DesktopEditors' /usr/share/applications/onlyoffice-desktopeditors.desktop
 
 
-## Postman
-sudo dpkg -i postman-10.18.5.deb
-sudo apt --fix-broken install -y
-
-
 ## Star UML
 sudo dpkg -i StarUML_5.1.0_amd64.deb
 sudo apt --fix-broken install -y
 
 
 ## Visual Studio Code
-sudo dpkg -i visual_studio_code_1.82.2-1694671812_amd64.deb
+sudo dpkg -i code_1.86.0-1706698139_amd64.deb
 sudo apt --fix-broken install -y
 
 
