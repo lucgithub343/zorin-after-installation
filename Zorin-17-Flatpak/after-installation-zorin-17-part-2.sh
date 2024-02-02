@@ -228,6 +228,11 @@ sudo dpkg -i code_1.86.0-1706698139_amd64.deb
 sudo apt --fix-broken install -y
 
 
+## Waterfox
+sudo dpkg -i waterfox-G6.0.8.deb
+sudo apt --fix-broken install -y
+
+
 ############################################################## INSTALANDO  APACHE  NETBEANS #########################################################
 
 ## Apache Netbeans

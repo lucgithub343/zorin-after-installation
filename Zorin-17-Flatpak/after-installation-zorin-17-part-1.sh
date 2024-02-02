@@ -524,6 +524,17 @@ else
     wget https://github.com/lucgithub343/vmware-workstation/releases/download/vmware-workstation/serial-vmware-workstation.txt
 fi
 
+
+
+## Download Waterfox
+if [ -e waterfox-G6.0.8.deb ];
+then
+    echo "O arquivo  waterfox-G6.0.8.deb   ja existe"
+else
+    echo -e "\n\n\n\n Waterfox"
+    wget https://github.com/lucgithub343/waterfox/releases/download/waterfox/waterfox-G6.0.8.deb
+fi
+
 echo "***********************************************************************************************************************************************"
 
 
@@ -540,7 +551,7 @@ else
 fi
 
 
-sudo dpkg -i jdk-21_linux-x64_bin.deb
+sudo dpkg -i jdk-21_linux-x64_bin.deb-*+
 sudo apt --fix-broken install -y
 
 ## Alterando o nome do jdk
@@ -902,5 +913,16 @@ echo -e "\n\n\n***************************************************** INSTALANDO 
 
 cd /home/$USER/Installation/database-docker-compose/Mongo
 sudo docker-compose up -d
+
+echo "***********************************************************************************************************************************************"
+
+
+
+echo -e "\n\n\n*************************************** REMOVENDO ARQUIVOS DA PASTA TEMPLATES  *******************************************************"
+
+rm ~/Templates/LibreOffice\ Calc.ods
+rm ~/Templates/LibreOffice\ Draw.odg
+rm ~/Templates/LibreOffice\ Impress.odp
+rm ~/Templates/LibreOffice\ Writer.odt
 
 echo -e "\n\n\n******************************************REINICIAR  O  COMPUTADOR********************************************************************"
