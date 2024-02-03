@@ -273,7 +273,7 @@ then
     echo "O diretorio  database-docker-compose  ja existe"
 else
     echo -e "\n\n\n\n Docker Compose dos bancos de dados"
-    git clone https://github.com/lucotavio/database-docker-compose.git
+    git clone https://github.com/lucgithub343/database-docker-compose.git
 
     cp -r ~/Downloads/Softwares/database-docker-compose/ ~/Installation/
 fi
