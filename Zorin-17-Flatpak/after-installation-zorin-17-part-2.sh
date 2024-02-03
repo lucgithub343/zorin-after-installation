@@ -110,7 +110,6 @@ echo "**************************************************************************
 echo -e "\n\n\n************************************************** INSTALANDO  PACOTES  FLATPACK *****************************************************"
 
 flatpak install flathub dev.aunetx.deezer -y
-flatpak install flathub com.spotify.Client -y
 flatpak install flathub org.gnome.Solanum -y
 
 echo "***********************************************************************************************************************************************"
