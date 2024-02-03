@@ -785,12 +785,6 @@ sudo apt install gnome-shell-extension-manager -y
 ## Instalando Kolourpaint
 sudo apt install kolourpaint -y
 
-## Instalando Spotify
-curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt update -y
-sudo apt install spotify-client -y
-
 ## Instalando Gparted
 sudo apt install gparted -y
 
@@ -802,9 +796,6 @@ sudo apt install synaptic -y
 
 ## Instalando Umbrelo
 sudo apt install umbrello -y
-
-## instalando o Gnome Pomodoro
-sudo apt install gnome-shell-pomodoro -y
 
 ## Instalando o modulo "libcanberra-gtk-module" para que nao ocorra o erro: “failed to load module canberra-gtk-module”
 sudo apt install libcanberra-gtk-module libcanberra-gtk3-module -y

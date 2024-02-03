@@ -109,11 +109,12 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALANDO  PACOTES  FLATPACK *****************************************************"
 
+flatpak install flathub com.spotify.Client -y
 flatpak install flathub com.google.AndroidStudio -y
 flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
 flatpak install flathub com.getpostman.Postman -y
 flatpak install flathub org.gnome.Solanum -y
-flatpak install flathub com.spotify.Client -y
+
 
 echo "***********************************************************************************************************************************************"
 
