@@ -424,36 +424,17 @@ else
 fi
 
 
-## Download Kdenlive
-if [ -e kdenlive-22.12.1.deb ];
-then
-    echo "O arquivo  kdenlive-22.12.1.deb ja existe"
-else
-    echo -e "\n\n\n\n Kdenlive"
-    wget https://github.com/lucgithub343/kdenlive/releases/download/kdenlive/kdenlive-22.12.1.deb
-fi
-
 
 
 ## Download Lombok
-if [ -e lombok.jar ];
+if [ -e lombok-1-18-30.jar ];
 then
-    echo "O arquivo lombok.jar ja existe"
+    echo "O arquivo lombok-1-18-30.jar ja existe"
 else
     echo -e "\n\n\n\n Lombok"
-    wget https://github.com/lucgithub343/lombok/releases/download/lombok/lombok.jar
+    wget https://github.com/lucgithub343/lombok/releases/download/lombok/lombok-1-18-30.jar
 fi
 
-
-
-## Download Mega
-if [ -e megasync-xUbuntu_22.04_amd64.deb ];
-then
-    echo "O arquivo  megasync-xUbuntu_22.04_amd64.deb ja  existe"
-else
-    echo -e "\n\n\n\n Mega"
-    wget https://github.com/lucgithub343/mega/releases/download/mega/megasync-xUbuntu_22.04_amd64.deb
-fi
 
 
 
@@ -469,12 +450,12 @@ fi
 
 
 ## Download MySql Workbench
-if [ -e mysql-workbench-community_8.0.34-1ubuntu22.04_amd64.deb ];
+if [ -e mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb ];
 then
-    echo "O arquivo   mysql-workbench-community_8.0.34-1ubuntu22.04_amd64.deb  ja existe"
+    echo "O arquivo   mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb  ja existe"
 else
     echo -e "\n\n\n\n MySql Workbench"
-    wget https://github.com/lucgithub343/mysql-workbench/releases/download/mysql-workbench/mysql-workbench-community_8.0.34-1ubuntu22.04_amd64.deb
+    wget https://github.com/lucgithub343/mysql-workbench/releases/download/mysql-workbench/mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb
 fi
 
 
