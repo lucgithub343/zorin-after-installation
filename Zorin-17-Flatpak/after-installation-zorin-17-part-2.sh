@@ -16,8 +16,8 @@ sudo dpkg -i spring-tool-suite-4.21.0.deb
 sudo apt --fix-broken install -y
 
 ## Instalando Lombok no Spring Tools Suite
-chmod +x lombok.jar
-sudo java -jar lombok.jar
+chmod +x lombok-1-18-30.jar
+sudo java -jar lombok-1-18-30.jar
 
 ## Removendo o arquivo .eclipseproduct
 ## sudo rm /.eclipseproduct
@@ -180,23 +180,13 @@ sudo dpkg -i jaspersoft-sudio-6.20.0_linux_amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Kdenlive
-sudo dpkg -i kdenlive-22.12.1.deb
-sudo apt --fix-broken install -y
-
-
-## Mega
-sudo dpkg -i megasync-xUbuntu_22.04_amd64.deb
-sudo apt --fix-broken install -y
-
-
 ## Microsoft Edge
 sudo dpkg -i microsoft-edge-stable_121.0.2277.98-1_amd64.deb
 sudo apt --fix-broken install -y
 
 
 ## MySql Workbench
-sudo dpkg -i mysql-workbench-community_8.0.34-1ubuntu22.04_amd64.deb
+sudo dpkg -i mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb
 sudo apt --fix-broken install -y
 
 
