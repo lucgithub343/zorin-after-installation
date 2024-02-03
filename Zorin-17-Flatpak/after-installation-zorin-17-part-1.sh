@@ -296,6 +296,17 @@ fi
 
 
 
+## Download Android Studio
+if [ -e android-studio-2022.3.1.deb ];
+then
+    echo "O arquivo  android-studio-2022.3.1.deb  ja existe"
+else
+    echo -e "\n\n\n\n Android Studio"
+    wget https://github.com/lucgithub343/android-studio/releases/download/android-studio/android-studio-2022.3.1.deb
+fi
+
+
+
 ## Download Apache Netbeans
 if [ -e apache-netbeans_20-1_all.deb ];
 then
@@ -384,6 +395,17 @@ fi
 
 
 
+## Download Intellij Community
+if [ -e intellij-Community-2023.3.2.deb ];
+then
+    echo "O arquivo  intellij-Community-2023.3.2.deb ja existe"
+else
+    echo -e "\n\n\n\n Intellij Community"
+    wget https://github.com/lucgithub343/intellij/releases/download/intellij/intellij-Community-2023.3.2.deb
+fi
+
+
+
 ## Download Jasper Studio
 if [ -e jaspersoft-sudio-6.20.0_linux_amd64.deb ];
 then
@@ -412,17 +434,6 @@ then
 else
     echo -e "\n\n\n\n Lombok"
     wget https://github.com/lucgithub343/lombok/releases/download/lombok/lombok.jar
-fi
-
-
-
-## Download Mega
-if [ -e megasync-xUbuntu_22.04_amd64.deb ];
-then
-    echo "O arquivo  megasync-xUbuntu_22.04_amd64.deb ja  existe"
-else
-    echo -e "\n\n\n\n Mega"
-    wget https://github.com/lucgithub343/mega/releases/download/mega/megasync-xUbuntu_22.04_amd64.deb
 fi
 
 
@@ -458,6 +469,16 @@ else
     wget https://github.com/lucgithub343/onlyoffice/releases/download/onlyoffice/onlyoffice-desktopeditors_amd64.deb
 fi
 
+
+
+## Download Postman
+if [ -e postman-10.18.5.deb ];
+then
+    echo "O arquivo  postman-10.18.5.deb  ja existe"
+else
+    echo -e "\n\n\n\n Postman"
+    wget https://github.com/lucgithub343/postman/releases/download/postman/postman-10.18.5.deb
+fi
 
 
 

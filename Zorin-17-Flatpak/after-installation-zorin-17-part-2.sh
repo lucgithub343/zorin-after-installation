@@ -109,13 +109,9 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALANDO  PACOTES  FLATPACK *****************************************************"
 
-flatpak install flathub com.spotify.Client -y
-flatpak install flathub com.google.AndroidStudio -y
-flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
-flatpak install flathub com.getpostman.Postman -y
-flatpak install flathub org.gnome.Solanum -y
 flatpak install flathub dev.aunetx.deezer -y
-
+flatpak install flathub com.spotify.Client -y
+flatpak install flathub org.gnome.Solanum -y
 
 echo "***********************************************************************************************************************************************"
 
@@ -131,6 +127,11 @@ chmod +x *.deb
 
 ## 4K Video Downloader
 sudo dpkg -i 4kvideodownloader_4.21.7-1_amd64.deb
+sudo apt --fix-broken install -y
+
+
+## Android Studio
+sudo dpkg -i android-studio-2022.3.1.deb
 sudo apt --fix-broken install -y
 
 
@@ -170,6 +171,11 @@ sudo dpkg -i insync_3.8.6.50504-jammy_amd64.deb
 sudo apt --fix-broken install -y
 
 
+## Intellij Community
+sudo dpkg -i intellij-Community-2023.3.2.deb
+sudo apt --fix-broken install -y
+
+
 ## Japersoft studio
 sudo dpkg -i jaspersoft-sudio-6.20.0_linux_amd64.deb
 sudo apt --fix-broken install -y
@@ -199,6 +205,11 @@ sudo apt --fix-broken install -y
 sudo dpkg -i onlyoffice-desktopeditors_amd64.deb
 sudo apt --fix-broken install -y
 sudo sed -i '/Terminal=false/a StartupWMClass=DesktopEditors' /usr/share/applications/onlyoffice-desktopeditors.desktop
+
+
+## Postman
+sudo dpkg -i postman-10.18.5.deb
+sudo apt --fix-broken install -y
 
 
 ## Star UML
