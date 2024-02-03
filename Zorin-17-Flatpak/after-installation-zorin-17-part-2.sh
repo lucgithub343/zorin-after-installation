@@ -2,32 +2,7 @@
 
 
 ## Entrando na para pasta de programas
-cd /home/$USER/Downloads/Softwares/
-
-
-echo -e "\n\n******************************************** INSTALANDO  IMPRESSORA  CANON *************************************************************"
-
-## https://th.canon/en/support/PIXMA%20G3010/model
-## Download Driver Impressora
-echo -e "\n\n\n Driver Impressora"
-if [ -d /impressora-Canon-G-3110-deb ];
-then
-  cd impressora-Canon-G-3110-deb/
-  chmod +x install.sh
-  sudo ./install.sh
-else
-    wget https://github.com/lucotavio/impressora-canon/releases/download/impressora-canon/impressora-Canon-G-3110-deb.tar.gz
-    descompactar-tar-gz impressora-Canon-G-3110-deb.tar.gz
-    cd impressora-Canon-G-3110-deb/
-    chmod +x install.sh
-    sudo ./install.sh
-fi
-
-## Entrando na para pasta de Software
-cd /home/$USER/Downloads/Softwares/
-
-echo -e "\n\n****************************************************************************************************************************************"
-
+cd ~/Downloads/Softwares/
 
 
 
@@ -73,11 +48,11 @@ sudo ./VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle
 vmware
 
 ## Consertando o problema de 3d não suportado
-if grep -qi 'mks.gl.allowBlacklistedDrivers = "TRUE"' /home/$USER/.vmware/preferences;
+if grep -qi 'mks.gl.allowBlacklistedDrivers = "TRUE"' ~/.vmware/preferences;
 then
     echo "VMWare ja configurado"
 else
-    echo 'mks.gl.allowBlacklistedDrivers = "TRUE"' >> /home/$USER/.vmware/preferences
+    echo 'mks.gl.allowBlacklistedDrivers = "TRUE"' >> ~/.vmware/preferences
 fi
 
 echo -e "\n\n\n**************************************************************************************************************************************"
@@ -92,7 +67,8 @@ while true
 do
     echo -e "\n\nDigite opção 1 ou 2"
     echo "1 - DESKTOP"
-    echo "2 - NOTEBOOK PESSOAL"
+    echo "2 - NOTEBOOK  PESSOAL"
+    echo "3 - OUTRA OPCAO"
 
     echo "Digite a opção: "
     read opcao
@@ -117,6 +93,10 @@ do
 
         echo -e "\n\n**************************************************************************************************"
         break
+    elif [ $opcao -eq 3 ];
+    then
+        echo -e "\n\n***************************************** OUTRA OPCAO *********************************************"
+        break
     else
         echo -e "\n\nOpcao invalida"
     fi
@@ -133,6 +113,7 @@ flatpak install flathub com.google.AndroidStudio -y
 flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
 flatpak install flathub com.getpostman.Postman -y
 flatpak install flathub org.gnome.Solanum -y
+flatpak install flathub com.spotify.Client -y
 
 echo "***********************************************************************************************************************************************"
 
@@ -241,17 +222,17 @@ sudo apt --fix-broken install -y
 
 
 ## Baixando repositorio Classes do Git Hub
-if [ -d /home/$USER/.netbeans/20/config/Templates/Classes/ ];
+if [ -d ~/.netbeans/20/config/Templates/Classes/ ];
 then
-    echo "O diretorio  /home/$USER/.netbeans/20/config/Templates/Classes/  ja existe"
+    echo "O diretorio  ~/.netbeans/20/config/Templates/Classes/  ja existe"
 else
 
   ## Criando a pasta onde vao ficar os templates modificados
-  mkdir -p /home/$USER/.netbeans/20/config/Templates/
+  mkdir -p ~/.netbeans/20/config/Templates/
 
   echo -e "\n\n\n\n Clonando repositorio Classes do Git Hub"
   git clone https://github.com/lucotavio/Classes.git
-  cp -r Classes/ /home/$USER/.netbeans/20/config/Templates/
+  cp -r Classes/ ~/.netbeans/20/config/Templates/
 fi
 
 ########################################################## FIM DA  INSTALACAO  DO  APACHE  NETBEANS##################################################

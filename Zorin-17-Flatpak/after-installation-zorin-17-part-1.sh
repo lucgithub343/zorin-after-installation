@@ -5,97 +5,88 @@
 ## Criando diretorio Programas onde vao
 ## ficar os programaas que precisao de
 ## dwonloads para serem istalados
-mkdir -p /home/$USER/Downloads/Softwares/
+mkdir -p ~/Downloads/Softwares/
 
 ## Criando diretorio .icons
-mkdir -p /home/$USER/.icons/
+mkdir -p ~/.icons/
 
 ## Criando diretorio .themes
-mkdir -p /home/$USER/.themes/
+mkdir -p ~/.themes/
 
 ## Criando diretorio Temp
-mkdir -p /home/$USER/Temp/
+mkdir -p ~/Temp/
 
 ## Criando diretorio do OBS Studio
-mkdir -p /home/$USER/Videos/OBS-Studio/
+mkdir -p ~/Videos/OBS-Studio/
 
 ## Criando diretorio ISO dentro da pasta Instalacao
-mkdir -p /home/$USER/Installation/ISO/
+mkdir -p ~/Installation/ISO/
 
 ## Criando diretorio Script dentro da pasta Installation
-mkdir -p /home/$USER/Installation/Script/
+mkdir -p ~/Installation/Script/
 
 
 ## Criando diretorio de projetos do Java
-mkdir -p /home/$USER/Projects/Java
+mkdir -p ~/Projects/Java
 
 
 ## Criando diretorio de projetos do Angular
-mkdir -p /home/$USER/Projects/Angular
+mkdir -p ~/Projects/Angular
 
 
 ## Criando diretorio Script de Projetos do React
-mkdir -p /home/$USER/Projects/React
+mkdir -p ~/Projects/React
 
 
 
 ## Entrando na para pasta de programas
-cd /home/$USER/Downloads/Softwares/
+cd ~/Downloads/Softwares/
 
-
-
-## Criando modelo de arquivo de script de banco de dados
-if [ -e /home/$USER/Templates/TXT.txt ];
-then
-    echo "O arquivo  TXT.txt  ja existe"
-else
-    touch /home/$USER/Templates/TXT.txt
-fi
 
 
 ## Criando modelo de arquivo shell script
-if [ -e /home/$USER/Templates/shell-script.sh ];
+if [ -e ~/Templates/shell-script.sh ];
 then
     echo "O arquivo  shell-script.sh  ja existe"
 else
-    touch /home/$USER/Templates/shell-script.sh
-    echo "#!/bin/bash" > /home/$USER/Templates/shell-script.sh
+    touch ~/Templates/shell-script.sh
+    echo "#!/bin/bash" > ~/Templates/shell-script.sh
 fi
 
 
 ## Criando modelo de arquivo de script de banco de dados
-if [ -e /home/$USER/Templates/SQL.sql ];
+if [ -e ~/Templates/SQL.sql ];
 then
     echo "O arquivo  SQL.sql  ja existe"
 else
-    touch /home/$USER/Templates/SQL.sql
+    touch ~/Templates/SQL.sql
 fi
 
 
 ## Criando modelo de arquivo xml
-if [ -e /home/$USER/Templates/XML.xml ];
+if [ -e ~/Templates/XML.xml ];
 then
     echo "O arquivo  XML.xml  ja existe"
 else
-    touch /home/$USER/Templates/XML.xml
+    touch ~/Templates/XML.xml
 fi
 
 
 ## Criando modelo de arquivo java
-if [ -e /home/$USER/Templates/JAVA.java ];
+if [ -e ~/Templates/JAVA.java ];
 then
     echo "O arquivo  JAVA.java  ja existe"
 else
-    touch /home/$USER/Templates/JAVA.java
+    touch ~/Templates/JAVA.java
 fi
 
 
 ## Criando modelo de arquivo yml
-if [ -e /home/$USER/Templates/YML.yml ];
+if [ -e ~/Templates/YML.yml ];
 then
     echo "O arquivo  YML.yml  ja existe"
 else
-    touch /home/$USER/Templates/YML.yml
+    touch ~/Templates/YML.yml
 fi
 
 
@@ -170,121 +161,121 @@ fi
 
 
 ## Download Netbeans plugins
-if [ -d /home/$USER/Installation/netbeans-plugins ];
+if [ -d ~/Installation/netbeans-plugins ];
 then
-    echo "O diretorio  /home/$USER/Installation/netbeans-plugins  ja existe"
+    echo "O diretorio  ~/Installation/netbeans-plugins  ja existe"
 else
     echo -e "\n\n\n\n Netbeans Plugins"
     git clone https://github.com/lucotavio/netbeans-plugins.git
-    cp -r netbeans-plugins /home/$USER/Installation/
+    cp -r ~/Downloads/Softwares/netbeans-plugins/ ~/Installation/
 fi
 
 
 
 #Download Drivers JDBC
-if [ -d /home/$USER/Installation/drivers-JDBC ];
+if [ -d ~/Installation/drivers-JDBC ];
 then
-    echo "O diretorio  /home/$USER/Installation/drivers-JDBC  ja existe"
+    echo "O diretorio  ~/Installation/drivers-JDBC  ja existe"
 else
     echo -e "\n\n\n\n Drivers JDBC"
     git clone https://github.com/lucotavio/drivers-jdbc.git
-    cp -r drivers-JDBC /home/$USER/Installation/
+    cp -r ~/Downloads/Softwares/drivers-jdbc/ ~/Installation/
 fi
 
 
 
 ## Download Wallpapers
-if [ -d /home/$USER/Wallpaper/ ];
+if [ -d ~/Wallpaper/ ];
 then
-    echo "O diretorio  /home/$USER/Wallpaper/  ja existe"
+    echo "O diretorio  ~/Wallpaper/  ja existe"
 else
     echo -e "\n\n\n\n Wallpapers"
     git clone https://github.com/lucotavio/wallpapers.git
-    cp -r wallpapers/ /home/$USER/
-    mv /home/$USER/wallpapers/ /home/$USER/Wallpapers/
+    cp -r wallpapers/ ~/
+    mv ~/wallpapers/ ~/Wallpapers/
 fi
 
 
 
 ## Download dos scripts de instalacao do Zorin
-if [ -d /home/$USER/Installation/Script/zorin-after-installation/ ];
+if [ -d ~/Installation/Script/zorin-after-installation/ ];
 then
-    echo "O diretorio  /home/$USER/Installation/Script/zorin-after-installation/  ja existe"
+    echo "O diretorio  ~/Installation/Script/zorin-after-installation/  ja existe"
 else
     echo -e "\n\n\n\n Scripts de instalacao do Zorin 17"
     git clone https://github.com/lucgithub343/zorin-after-installation.git
-    cp -r /home/$USER/Installation/Script/zorin-after-installation/  /home/$USER/Installation/Script/
+    cp -r ~/Downloads/Softwares/zorin-after-installation/ ~/Installation/Script/
 fi
 
 
 
 ## Download tema WhiteSur Dark solid
-if [ -d /home/$USER/.themes/WhiteSur-dark-solid ];
+if [ -d ~/.themes/WhiteSur-dark-solid ];
 then
-    echo "O diretorio  /home/$USER/.themes/WhiteSur-dark-solid  ja existe"
+    echo "O diretorio  ~/.themes/WhiteSur-dark-solid  ja existe"
 else
     echo -e "\n\n\n\n WhiteSur Dark solid"
     git clone https://github.com/lucotavio/gnome-themes.git
-    cp -r /home/$USER/Downloads/Softwares/gnome-themes/WhiteSur-dark-solid/ /home/$USER/.themes/
+    cp -r ~/Downloads/Softwares/gnome-themes/WhiteSur-dark-solid/ ~/.themes/
 fi
 
 
 
 ## Download Deepin Icon
-if [ -d /home/$USER/.icons/Deepin ];
+if [ -d ~/.icons/Deepin ];
 then
-    echo "O diretorio  /home/$USER/.icons/Deepin  ja existe"
+    echo "O diretorio  ~/.icons/Deepin  ja existe"
 else
     wget https://github.com/lucotavio/gnome-icons/releases/download/gnome-icons/Uos-fulldistro-icons.tar.xz
-    cp Uos-fulldistro-icons.tar.xz /home/$USER/.icons/
-    cd /home/$USER/.icons/
+    cp Uos-fulldistro-icons.tar.xz ~/.icons/
+    cd ~/.icons/
     tar -xvf Uos-fulldistro-icons.tar.xz
     mv Uos-fulldistro-icons/ Deepin/
     rm Uos-fulldistro-icons.tar.xz
 
     ## Entrando na para pasta de programas
-    cd /home/$USER/Downloads/Softwares/
+    cd ~/Downloads/Softwares/
 fi
 
 
 ## Download BigSur Icon
-if [ -d /home/$USER/.icons/BigSur ];
+if [ -d ~/.icons/BigSur ];
 then
-    echo "O diretorio  /home/$USER/.icons/BigSur ja existe"
+    echo "O diretorio  ~/.icons/BigSur ja existe"
 else
     wget https://github.com/lucotavio/gnome-icons/releases/download/gnome-icons/BigSur.tar.gz
-    cp BigSur.tar.gz /home/$USER/.icons/
-    cd /home/$USER/.icons/
+    cp BigSur.tar.gz ~/.icons/
+    cd ~/.icons/
     tar -xvzf BigSur.tar.gz
     rm BigSur.tar.gz
 
     ## Entrando na para pasta de programas
-    cd /home/$USER/Downloads/Softwares/
+    cd ~/Downloads/Softwares/
 fi
 
 
 
 ## Download MacMojave cursores
-if [ -d /home/$USER/.icons/McMojave-cursors ];
+if [ -d ~/.icons/McMojave-cursors ];
 then
-    echo "O diretorio  /home/$USER/.icons/McMojave-cursors  ja existe"
+    echo "O diretorio  ~/.icons/McMojave-cursors  ja existe"
 else
     echo -e "\n\n\n\n MacMojave cursores"
     git clone https://github.com/lucotavio/gnome-cursors.git
-    cp -r /home/$USER/Downloads/Softwares/gnome-cursors/McMojave-cursors/ /home/$USER/.icons/
+    cp -r ~/Downloads/Softwares/gnome-cursors/McMojave-cursors/ ~/.icons/
 fi
 
 
 
 ## Download Docker Compose dos bancos de dados
-if [ -d /home/$USER/Installation/database-docker-compose/ ];
+if [ -d ~/Installation/database-docker-compose/ ];
 then
     echo "O diretorio  database-docker-compose  ja existe"
 else
     echo -e "\n\n\n\n Docker Compose dos bancos de dados"
     git clone https://github.com/lucotavio/database-docker-compose.git
 
-    cp -r /home/$USER/Downloads/Softwares/database-docker-compose/ /home/$USER/Installation/
+    cp -r ~/Downloads/Softwares/database-docker-compose/ ~/Installation/
 fi
 
 echo "***********************************************************************************************************************************************"
@@ -306,7 +297,7 @@ fi
 
 
 ## Download Apache Netbeans
-if [ -e aapache-netbeans_20-1_all.deb ];
+if [ -e apache-netbeans_20-1_all.deb ];
 then
     echo "O arquivo  apapache-netbeans_20-1_all.deb  ja existe"
 else
@@ -550,31 +541,27 @@ else
     wget https://github.com/lucgithub343/jdk/releases/download/jdk/jdk-21_linux-x64_bin.deb
 fi
 
-
-sudo dpkg -i jdk-21_linux-x64_bin.deb-*+
-sudo apt --fix-broken install -y
-
-## Alterando o nome do jdk
-sudo mv /usr/lib/jvm/jdk-21-oracle-x64/ /usr/lib/jvm/jdk-21-oracle/
+chmod +x jdk-21_linux-x64_bin.deb
+sudo dpkg -i jdk-21_linux-x64_bin.deb
 
 
 ## Selecionando qual versão do java vai ser a padrao
-sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-21-oracle/bin/java 4
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-21-oracle-x64/bin/java 4
 sudo update-alternatives --config java
 
 
 ## Configurando variaveis de ambiente do Java
-if grep -qi "export JAVA_HOME=/usr/lib/jvm/jdk-21-oracle" /home/$USER/.bashrc;
+if grep -qi "export JAVA_HOME=/usr/lib/jvm/jdk-21-oracle-x64" ~/.bashrc;
 then
     echo "Variaveis de ambiente Java ja configurados"
 else
-    echo "" >> /home/$USER/.bashrc
-    echo "export JAVA_HOME=/usr/lib/jvm/jdk-21-oracle" >> /home/$USER/.bashrc
-    echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> /home/$USER/.bashrc
+    echo "" >> ~/.bashrc
+    echo "export JAVA_HOME=/usr/lib/jvm/jdk-21-oracle-x64" >> ~/.bashrc
+    echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> ~/.bashrc
 fi
 
 ## Usando o comando source para executar o arquivo .bashrc
-## source /home/$USER/.bashrc
+## source ~/.bashrc
 
 echo "***********************************************************************************************************************************************"
 
@@ -584,7 +571,7 @@ echo "**************************************************************************
 echo -e "\n\n\n************************************************** INSTALACAO DO  KOTLIN *************************************************************"
 
 ## Entrando na para pasta de programas
-cd /home/$USER/Downloads/Softwares/
+cd ~/Downloads/Softwares/
 
 ## Download Kotlin
 if [ -e kotlin-1.9.22.deb ];
@@ -598,17 +585,17 @@ sudo dpkg -i kotlin-1.9.22.deb
 
 
 ## Configurando variaveis de ambiente do Java
-if grep -qi "export KOTLIN_HOME=/usr/local/bin/kotlin" /home/$USER/.bashrc;
+if grep -qi "export KOTLIN_HOME=/usr/local/bin/kotlin" ~/.bashrc;
 then
     echo "Variaveis de ambiente Java ja configurados"
 else
-    echo "" >> /home/$USER/.bashrc
-    echo "export KOTLIN_HOME=/usr/local/bin/kotlin" >> /home/$USER/.bashrc
-    echo "export PATH=\$PATH:\$KOTLIN_HOME/bin" >> /home/$USER/.bashrc
+    echo "" >> ~/.bashrc
+    echo "export KOTLIN_HOME=/usr/local/bin/kotlin" >> ~/.bashrc
+    echo "export PATH=\$PATH:\$KOTLIN_HOME/bin" >> ~/.bashrc
 fi
 
 ## Usando o comando source para executar o arquivo .bashrc
-## source /home/$USER/.bashrc
+## source ~/.bashrc
 
 echo -e "\n\n\n********************************************** INSTALANDO  O  MAVEN ******************************************************************"
 
@@ -617,19 +604,19 @@ sudo apt install maven -y
 
 
 ## Configurando variaveis de ambiente do Maven
-if grep -qi "export MAVEN_HOME=/usr/share/maven" /home/$USER/.bashrc;
+if grep -qi "export MAVEN_HOME=/usr/share/maven" ~/.bashrc;
 then
     echo "Variaveis de Ambiente do Maven configurados"
 else
     ## Espaco em branco
-    echo "" >> /home/$USER/.bashrc
-    echo "export MAVEN_HOME=/usr/share/maven" >> /home/$USER/.bashrc
-    echo "export PATH=\$PATH:\$MAVEN_HOME/bin" >> /home/$USER/.bashrc
+    echo "" >> ~/.bashrc
+    echo "export MAVEN_HOME=/usr/share/maven" >> ~/.bashrc
+    echo "export PATH=\$PATH:\$MAVEN_HOME/bin" >> ~/.bashrc
 fi
 
 
 ## Usando o comando source para executar o arquivo .bashrc
-## source /home/$USER/.bashrc
+## source ~/.bashrc
 
 echo "***********************************************************************************************************************************************"
 
@@ -881,7 +868,7 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALANDO  MYSQL  ****************************************************************"
 
-cd /home/$USER/Installation/database-docker-compose/mysql/
+cd ~/Installation/database-docker-compose/mysql/
 sudo docker-compose up -d
 
 echo "***********************************************************************************************************************************************"
@@ -891,7 +878,7 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALANDO  MARIADB  **************************************************************"
 
-cd /home/$USER/Installation/database-docker-compose/MariaDB/
+cd ~/Installation/database-docker-compose/MariaDB/
 sudo docker-compose up -d
 
 echo "***********************************************************************************************************************************************"
@@ -901,7 +888,7 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALANDO  POSTGRESQL  ***********************************************************"
 
-cd /home/$USER/Installation/database-docker-compose/postgres/
+cd ~/Installation/database-docker-compose/postgres/
 sudo docker-compose up -d
 
 echo "***********************************************************************************************************************************************"
@@ -911,7 +898,7 @@ echo "**************************************************************************
 
 echo -e "\n\n\n***************************************************** INSTALANDO  MONGO  *************************************************************"
 
-cd /home/$USER/Installation/database-docker-compose/Mongo
+cd ~/Installation/database-docker-compose/Mongo
 sudo docker-compose up -d
 
 echo "***********************************************************************************************************************************************"
