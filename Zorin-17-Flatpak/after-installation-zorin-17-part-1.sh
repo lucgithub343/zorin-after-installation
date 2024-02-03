@@ -914,4 +914,8 @@ rm ~/Templates/LibreOffice\ Draw.odg
 rm ~/Templates/LibreOffice\ Impress.odp
 rm ~/Templates/LibreOffice\ Writer.odt
 
+echo "***********************************************************************************************************************************************"
+
+sudo apt autoremove -y
+
 echo -e "\n\n\n******************************************REINICIAR  O  COMPUTADOR********************************************************************"
