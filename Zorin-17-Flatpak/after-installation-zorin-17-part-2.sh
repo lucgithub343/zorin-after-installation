@@ -197,7 +197,7 @@ sudo sed -i '/Terminal=false/a StartupWMClass=DesktopEditors' /usr/share/applica
 
 
 ## Postman
-sudo dpkg -i postman-10.18.5.deb
+sudo dpkg -i postman-10.22.10.deb
 sudo apt --fix-broken install -y
 
 

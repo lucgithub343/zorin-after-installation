@@ -462,12 +462,12 @@ fi
 
 
 ## Download Postman
-if [ -e postman-10.18.5.deb ];
+if [ -e postman-10.22.10.deb ];
 then
-    echo "O arquivo  postman-10.18.5.deb  ja existe"
+    echo "O arquivo  postman-10.22.10.deb  ja existe"
 else
     echo -e "\n\n\n\n Postman"
-    wget https://github.com/lucgithub343/postman/releases/download/postman/postman-10.18.5.deb
+    wget https://github.com/lucgithub343/postman/releases/download/postman/postman-10.22.10.deb
 fi
 
 
