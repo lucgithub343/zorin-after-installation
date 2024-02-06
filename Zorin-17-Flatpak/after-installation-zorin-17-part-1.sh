@@ -816,6 +816,14 @@ sudo add-apt-repository ppa:savoury1/chromium -y
 sudo apt update -y
 sudo apt install chromium-browser -y
 
+## Removendo o Firefox Flatpak
+flatpak uninstall org.mozilla.firefox  -y
+
+## Instalando Firefox .deb
+sudo add-apt-repository ppa:mozillateam/ppa -y
+sudo apt update -y
+sudo apt install firefox -y
+
 ## Instalando SDKMAN
 curl -s https://get.sdkman.io | bash
 
