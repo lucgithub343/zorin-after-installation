@@ -190,9 +190,8 @@ then
     echo "O diretorio  ~/Wallpaper/  ja existe"
 else
     echo -e "\n\n\n\n Wallpapers"
-    git clone https://github.com/lucotavio/wallpapers.git
-    cp -r wallpapers/ ~/
-    mv ~/wallpapers/ ~/Wallpapers/
+    git clone https://github.com/lucgithub343/Wallpapers.git
+    cp -r Wallpapers/ ~/
 fi
 
 
