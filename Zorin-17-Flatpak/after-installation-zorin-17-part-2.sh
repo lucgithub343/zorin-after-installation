@@ -111,6 +111,7 @@ echo -e "\n\n\n************************************************** INSTALANDO  PA
 
 flatpak install flathub dev.aunetx.deezer -y
 flatpak install flathub org.gnome.Solanum -y
+flatpak install flathub com.bitwarden.desktop -y
 
 echo "***********************************************************************************************************************************************"
 
@@ -198,6 +199,11 @@ sudo sed -i '/Terminal=false/a StartupWMClass=DesktopEditors' /usr/share/applica
 
 ## Postman
 sudo dpkg -i postman-10.22.10.deb
+sudo apt --fix-broken install -y
+
+
+## Scene Builder
+sudo dpkg -i SceneBuilder-21.0.0.deb
 sudo apt --fix-broken install -y
 
 

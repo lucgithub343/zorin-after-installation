@@ -471,6 +471,17 @@ fi
 
 
 
+## Download Scene Builder
+if [ -e SceneBuilder-21.0.0.deb ];
+then
+    echo "O arquivo  SceneBuilder-21.0.0.deb  ja existe"
+else
+    echo -e "\n\n\n\n Scene Builder"
+    wget https://github.com/lucgithub343/scene-builder/releases/download/Scene-Builder/SceneBuilder-21.0.0.deb
+fi
+
+
+
 ## Download Spring Tool Suite
 if [ -e spring-tool-suite-4.21.0.deb ];
 then
@@ -551,8 +562,15 @@ else
     wget https://github.com/lucgithub343/jdk/releases/download/jdk/jdk-21_linux-x64_bin.deb
 fi
 
+
+## Inalando JDK
 chmod +x jdk-21_linux-x64_bin.deb
 sudo dpkg -i jdk-21_linux-x64_bin.deb
+
+
+## Instalando JRE
+sudo apt update -y
+sudo apt-get install openjdk-21-jre -y
 
 
 ## Selecionando qual versão do java vai ser a padrao
