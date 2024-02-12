@@ -841,6 +841,9 @@ sudo add-apt-repository ppa:mozillateam/ppa -y
 sudo apt update -y
 sudo apt install firefox -y
 
+## Instalando ferramenta de Backup
+sudo apt install luckybackup-data -y
+
 ## Instalando SDKMAN
 curl -s https://get.sdkman.io | bash
 
