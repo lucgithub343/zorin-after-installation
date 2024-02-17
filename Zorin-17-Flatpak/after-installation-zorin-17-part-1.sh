@@ -64,11 +64,25 @@ fi
 
 
 ## Criando modelo de arquivo xml
-if [ -e ~/Templates/XML.xml ];
+if [ -e ~/Templates/HTML.html ];
 then
-    echo "O arquivo  XML.xml  ja existe"
+    echo "O arquivo  HTML.html  ja existe"
 else
-    touch ~/Templates/XML.xml
+    touch ~/Templates/HTML.html
+
+    echo '<!DOCTYPE html>' | tee -a ~/Templates/HTML.html
+    echo '<html lang="en">' | tee -a ~/Templates/HTML.html
+    echo '' | tee -a ~/Templates/HTML.html
+    echo '    <head>' | tee -a ~/Templates/HTML.html
+    echo '        <meta charset="UTF-8">' | tee -a ~/Templates/HTML.html
+    echo '        <meta name="viewport" content="width=device-width, initial-scale=1.0">' | tee -a ~/Templates/HTML.html
+    echo '        <title>Document</title>' | tee -a ~/Templates/HTML.html
+    echo '    </head>' | tee -a ~/Templates/HTML.html
+    echo '' | tee -a ~/Templates/HTML.html
+    echo '    <body>' | tee -a ~/Templates/HTML.html
+    echo '    </body>' | tee -a ~/Templates/HTML.html
+    echo '' | tee -a ~/Templates/HTML.html
+    echo '</html>' | tee -a ~/Templates/HTML.html
 fi
 
 
