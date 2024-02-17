@@ -73,14 +73,14 @@ else
     echo '<!DOCTYPE html>' | tee -a ~/Templates/HTML.html
     echo '<html lang="en">' | tee -a ~/Templates/HTML.html
     echo '' | tee -a ~/Templates/HTML.html
-    echo '    <head>' | tee -a ~/Templates/HTML.html
-    echo '        <meta charset="UTF-8">' | tee -a ~/Templates/HTML.html
-    echo '        <meta name="viewport" content="width=device-width, initial-scale=1.0">' | tee -a ~/Templates/HTML.html
-    echo '        <title>Document</title>' | tee -a ~/Templates/HTML.html
-    echo '    </head>' | tee -a ~/Templates/HTML.html
+    echo '<head>' | tee -a ~/Templates/HTML.html
+    echo '    <meta charset="UTF-8">' | tee -a ~/Templates/HTML.html
+    echo '    <meta name="viewport" content="width=device-width, initial-scale=1.0">' | tee -a ~/Templates/HTML.html
+    echo '    <title>Document</title>' | tee -a ~/Templates/HTML.html
+    echo '</head>' | tee -a ~/Templates/HTML.html
     echo '' | tee -a ~/Templates/HTML.html
-    echo '    <body>' | tee -a ~/Templates/HTML.html
-    echo '    </body>' | tee -a ~/Templates/HTML.html
+    echo '<body>' | tee -a ~/Templates/HTML.html
+    echo '</body>' | tee -a ~/Templates/HTML.html
     echo '' | tee -a ~/Templates/HTML.html
     echo '</html>' | tee -a ~/Templates/HTML.html
 fi
@@ -474,6 +474,17 @@ fi
 
 
 
+## Download Opera
+if [ -e opera-stable_106.0.4998.70_amd64.deb ];
+then
+    echo "O arquivo  opera-stable_106.0.4998.70_amd64.deb  ja existe"
+else
+    echo -e "\n\n\n\n Opera"
+    wget https://github.com/lucgithub343/opera/releases/download/Opera/opera-stable_106.0.4998.70_amd64.deb
+fi
+
+
+
 ## Download Postman
 if [ -e postman-10.22.10.deb ];
 then
@@ -527,6 +538,18 @@ else
     echo -e "\n\n\n\n Visual Studio Code"
     wget https://github.com/lucgithub343/visual-studio-code/releases/download/visual-studio-code/code_1.86.0-1706698139_amd64.deb
 fi
+
+
+
+## Download Vivaldi
+if [ -e vivaldi-stable_6.5.3206.63-1_amd64.deb ];
+then
+    echo "O arquivo  vivaldi-stable_6.5.3206.63-1_amd64.deb   ja existe"
+else
+    echo -e "\n\n\n\n Vivaldi"
+    wget https://github.com/lucgithub343/vivaldi/releases/download/Vivaldi/vivaldi-stable_6.5.3206.63-1_amd64.deb
+fi
+
 
 
 
@@ -854,6 +877,12 @@ flatpak uninstall org.mozilla.firefox  -y
 sudo add-apt-repository ppa:mozillateam/ppa -y
 sudo apt update -y
 sudo apt install firefox -y
+
+## Instalando Navegador Brave
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update -y
+sudo apt install brave-browser -y
 
 ## Instalando ferramenta de Backup
 sudo apt install luckybackup-data -y

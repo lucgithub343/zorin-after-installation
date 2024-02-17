@@ -197,6 +197,11 @@ sudo apt --fix-broken install -y
 sudo sed -i '/Terminal=false/a StartupWMClass=DesktopEditors' /usr/share/applications/onlyoffice-desktopeditors.desktop
 
 
+## Opera
+sudo dpkg -i opera-stable_106.0.4998.70_amd64.deb
+sudo apt --fix-broken install -y
+
+
 ## Postman
 sudo dpkg -i postman-10.22.10.deb
 sudo apt --fix-broken install -y
@@ -214,6 +219,11 @@ sudo apt --fix-broken install -y
 
 ## Visual Studio Code
 sudo dpkg -i code_1.86.0-1706698139_amd64.deb
+sudo apt --fix-broken install -y
+
+
+## Vivaldi
+sudo dpkg -i vivaldi-stable_6.5.3206.63-1_amd64.deb
 sudo apt --fix-broken install -y
 
 
