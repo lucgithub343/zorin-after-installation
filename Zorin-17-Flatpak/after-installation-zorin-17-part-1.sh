@@ -38,6 +38,13 @@ mkdir -p ~/Projects/Angular
 mkdir -p ~/Projects/React
 
 
+## Criando diretorio dos Servers
+mkdir -p ~/Servers
+
+
+## Criando diretorio Courses
+mkdir -p ~/Courses
+
 
 ## Entrando na para pasta de programas
 cd ~/Downloads/Softwares/
@@ -529,6 +536,22 @@ fi
 
 
 
+## Download Tomcat
+if [ -d ~/Servers/tomcat-10.1.18 ];
+then
+    echo "O diretorio  ~/Servers/tomcat-10.1.18 ja existe"
+else
+    wget https://github.com/lucgithub343/tomcat/releases/download/Tomcat/tomcat-10.1.18.tar.gz
+    cp tomcat-10.1.18.tar.gz ~/Servers/
+    cd ~/Servers/
+    tar -xvzf tomcat-10.1.18.tar.gz
+    rm tomcat-10.1.18.tar.gz
+
+    ## Entrando na para pasta de programas
+    cd ~/Downloads/Softwares/
+fi
+
+
 
 ## Download Visual Studio Code
 if [ -e code_1.86.0-1706698139_amd64.deb ];
@@ -583,6 +606,25 @@ else
     echo -e "\n\n\n\n Waterfox"
     wget https://github.com/lucgithub343/waterfox/releases/download/waterfox/waterfox-G6.0.8.deb
 fi
+
+
+
+## Download Wildfly
+if [ -d ~/Servers/wildfly-31.0.0.Final ];
+then
+    echo "O diretorio  ~/Servers/wildfly-31.0.0.Final ja existe"
+else
+    wget https://github.com/lucgithub343/wildfly/releases/download/Wildfly/wildfly-31.0.0.Final.tar.gz
+    cp wildfly-31.0.0.Final.tar.gz ~/Servers/
+    cd ~/Servers/
+    tar -xvzf wildfly-31.0.0.Final.tar.gz
+    rm wildfly-31.0.0.Final.tar.gz
+
+    ## Entrando na para pasta de programas
+    cd ~/Downloads/Softwares/
+fi
+
+
 
 echo "***********************************************************************************************************************************************"
 
