@@ -186,7 +186,7 @@ sudo dpkg -i microsoft-edge-stable_121.0.2277.98-1_amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Microsoft Edge
+## Microsoft Teams
 sudo dpkg -i teams-for-linux_1.4.12_amd64.deb
 sudo apt --fix-broken install -y
 
