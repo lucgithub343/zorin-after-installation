@@ -186,6 +186,11 @@ sudo dpkg -i microsoft-edge-stable_121.0.2277.98-1_amd64.deb
 sudo apt --fix-broken install -y
 
 
+## Microsoft Edge
+sudo dpkg -i teams-for-linux_1.4.12_amd64.deb
+sudo apt --fix-broken install -y
+
+
 ## MySql Workbench
 sudo dpkg -i mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb
 sudo apt --fix-broken install -y

@@ -459,6 +459,17 @@ fi
 
 
 
+## Download Microsoft Teams
+if [ -e teams-for-linux_1.4.12_amd64.deb ];
+then
+    echo "O arquivo  teams-for-linux_1.4.12_amd64.deb ja  existe"
+else
+    echo -e "\n\n\n\n Microsoft Teams"
+    wget https://github.com/lucgithub343/microsoft-teams/releases/download/Microsoft-Teams/teams-for-linux_1.4.12_amd64.deb
+fi
+
+
+
 ## Download MySql Workbench
 if [ -e mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb ];
 then
@@ -923,8 +934,17 @@ sudo apt install firefox -y
 ## Instalando Navegador Brave
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+echo 'deb http://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_22.04/ /' | sudo tee /etc/apt/sources.list.d/home:stevenpusser.list
+curl -fsSL https://download.opensuse.org/repositories/home:stevenpusser/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_stevenpusser.gpg > /dev/null
 sudo apt update -y
 sudo apt install brave-browser -y
+
+## Instalando navegador Pale Moon
+sudo apt install wget apt-transport-https gnupg2 -y
+echo 'deb http://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_22.04/ /' | sudo tee /etc/apt/sources.list.d/home:stevenpusser.list
+curl -fsSL https://download.opensuse.org/repositories/home:stevenpusser/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_stevenpusser.gpg > /dev/null
+sudo apt update -y
+sudo apt install palemoon -y
 
 ## Instalando ferramenta de Backup
 sudo apt install luckybackup-data -y
