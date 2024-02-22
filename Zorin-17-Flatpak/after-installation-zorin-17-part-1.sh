@@ -316,6 +316,17 @@ fi
 
 
 
+## Download Adventure Quest Worlds
+if [ -e adventure-quest-worlds.deb ];
+then
+    echo "O arquivo  adventure-quest-worlds.deb  ja existe"
+else
+    echo -e "\n\n\n\n Adventure Quest Worlds"
+    wget https://github.com/lucgithub343/adventure-quest-worlds/releases/download/adventure-quest-worlds/adventure-quest-worlds.deb
+fi
+
+
+
 ## Download Android Studio
 if [ -e android-studio-2022.3.1.deb ];
 then

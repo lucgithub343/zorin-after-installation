@@ -131,6 +131,11 @@ sudo apt --fix-broken install -y
 
 
 ## Android Studio
+sudo dpkg -i adventure-quest-worlds.deb
+sudo apt --fix-broken install -y
+
+
+## Android Studio
 sudo dpkg -i android-studio-2022.3.1.deb
 sudo apt --fix-broken install -y
 
