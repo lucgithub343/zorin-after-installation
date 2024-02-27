@@ -187,7 +187,7 @@ then
     echo "O diretorio  ~/Installation/netbeans-plugins  ja existe"
 else
     echo -e "\n\n\n\n Netbeans Plugins"
-    git clone https://github.com/lucotavio/netbeans-plugins.git
+    git clone https://github.com/lucgithub343/netbeans-plugins.git
     cp -r ~/Downloads/Softwares/netbeans-plugins/ ~/Installation/
 fi
 
@@ -199,7 +199,7 @@ then
     echo "O diretorio  ~/Installation/drivers-JDBC  ja existe"
 else
     echo -e "\n\n\n\n Drivers JDBC"
-    git clone https://github.com/lucotavio/drivers-jdbc.git
+    git clone https://github.com/lucgithub343/drivers-jdbc.git
     cp -r ~/Downloads/Softwares/drivers-jdbc/ ~/Installation/
 fi
 
@@ -235,8 +235,14 @@ then
     echo "O diretorio  ~/.themes/WhiteSur-dark-solid  ja existe"
 else
     echo -e "\n\n\n\n WhiteSur Dark solid"
-    git clone https://github.com/lucotavio/gnome-themes.git
-    cp -r ~/Downloads/Softwares/gnome-themes/WhiteSur-dark-solid/ ~/.themes/
+    wget https://github.com/lucgithub343/gnome-themes/releases/download/gnome-themes/WhiteSur-dark-solid.tar.gz
+    cp WhiteSur-dark-solid.tar.gz ~/.themes/
+    cd ~/.themes/
+    tar -xvzf WhiteSur-dark-solid.tar.gz
+    rm WhiteSur-dark-solid.tar.gz
+
+    ## Entrando na para pasta de programas
+    cd ~/Downloads/Softwares/
 fi
 
 
@@ -246,12 +252,11 @@ if [ -d ~/.icons/Deepin ];
 then
     echo "O diretorio  ~/.icons/Deepin  ja existe"
 else
-    wget https://github.com/lucotavio/gnome-icons/releases/download/gnome-icons/Uos-fulldistro-icons.tar.xz
-    cp Uos-fulldistro-icons.tar.xz ~/.icons/
+    wget https://github.com/lucgithub343/gnome-icons/releases/download/gnome-icons/Deepin.tar.gz
+    cp Deepin.tar.gz ~/.icons/
     cd ~/.icons/
-    tar -xvf Uos-fulldistro-icons.tar.xz
-    mv Uos-fulldistro-icons/ Deepin/
-    rm Uos-fulldistro-icons.tar.xz
+    tar -xvzf Deepin.tar.gz
+    rm Deepin.tar.gz
 
     ## Entrando na para pasta de programas
     cd ~/Downloads/Softwares/
@@ -263,7 +268,7 @@ if [ -d ~/.icons/BigSur ];
 then
     echo "O diretorio  ~/.icons/BigSur ja existe"
 else
-    wget https://github.com/lucotavio/gnome-icons/releases/download/gnome-icons/BigSur.tar.gz
+    wget https://github.com/lucgithub343/gnome-icons/releases/download/gnome-icons/BigSur.tar.gz
     cp BigSur.tar.gz ~/.icons/
     cd ~/.icons/
     tar -xvzf BigSur.tar.gz
@@ -281,8 +286,13 @@ then
     echo "O diretorio  ~/.icons/McMojave-cursors  ja existe"
 else
     echo -e "\n\n\n\n MacMojave cursores"
-    git clone https://github.com/lucotavio/gnome-cursors.git
-    cp -r ~/Downloads/Softwares/gnome-cursors/McMojave-cursors/ ~/.icons/
+    wget https://github.com/lucgithub343/gnome-cursors/releases/download/gnome-cursosrs/McMojave-cursors.tar.gz
+    cp McMojave-cursors.tar.gz ~/.icons/
+    tar -xvzf McMojave-cursors.tar.gz
+    rm McMojave-cursors.tar.gz
+
+    ## Entrando na para pasta de programas
+    cd ~/Downloads/Softwares/
 fi
 
 
@@ -339,12 +349,12 @@ fi
 
 
 ## Download Apache Netbeans
-if [ -e apache-netbeans_20-1_all.deb ];
+if [ -e apache-netbeans_21-1_all.deb ];
 then
-    echo "O arquivo  apapache-netbeans_20-1_all.deb  ja existe"
+    echo "O arquivo  apache-netbeans_21-1_all.deb  ja existe"
 else
     echo -e "\n\n\n\n Apache Netbeans"
-    wget https://github.com/lucgithub343/apache-netbeans/releases/download/apache-netbeans/apache-netbeans_20-1_all.deb
+    wget https://github.com/lucgithub343/apache-netbeans/releases/download/apache-netbeans/apache-netbeans_21-1_all.deb
 fi
 
 
@@ -532,6 +542,17 @@ then
 else
     echo -e "\n\n\n\n Scene Builder"
     wget https://github.com/lucgithub343/scene-builder/releases/download/Scene-Builder/SceneBuilder-21.0.0.deb
+fi
+
+
+
+## Download Skype
+if [ -e skypeforlinux-64.deb ];
+then
+    echo "O arquivo  skypeforlinux-64.deb  ja existe"
+else
+    echo -e "\n\n\n\n Skype"
+    wget https://github.com/lucgithub343/skype/releases/download/Skype/skypeforlinux-64.deb
 fi
 
 

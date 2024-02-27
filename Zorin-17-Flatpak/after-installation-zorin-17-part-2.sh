@@ -39,7 +39,7 @@ sudo apt install manpages-dev  -y
 ## Instalando VMware
 sudo ./VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle
 
-## Alterando icone  do VMware
+## Alterando icone  do VMwareskypeforlinux-64.deb
 ## sudo mkdir /opt/vmware-icon/
 ## sudo cp vmware.png /opt/vmware-icon/
 ## sudo sed -i 's\vmware-player\/opt/vmware-icon/vmware.png\g' /usr/share/applications/vmware-player.desktop
@@ -222,13 +222,15 @@ sudo dpkg -i SceneBuilder-21.0.0.deb
 sudo apt --fix-broken install -y
 
 
+## Skype
+sudo dpkg -i skypeforlinux-64.deb
+sudo apt --fix-broken install -y
+sudo apt-key export DF7587C3 | sudo gpg --dearmor -o /usr/share/keyrings/skype.gpg
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/skype.gpg] https://repo.skype.com/deb stable main' | sudo tee /etc/apt/sources.list.d/skype-stable.list
+
+
 ## Star UML
 sudo dpkg -i StarUML_5.1.0_amd64.deb
-sudo apt --fix-broken install -y
-
-
-## Visual Studio Code
-sudo dpkg -i code_1.86.0-1706698139_amd64.deb
 sudo apt --fix-broken install -y
 
 
@@ -245,25 +247,67 @@ sudo apt --fix-broken install -y
 ############################################################## INSTALANDO  APACHE  NETBEANS #########################################################
 
 ## Apache Netbeans
-sudo dpkg -i apache-netbeans_20-1_all.deb
+sudo dpkg -i apache-netbeans_21-1_all.deb
 sudo apt --fix-broken install -y
 
 
 ## Baixando repositorio Classes do Git Hub
-if [ -d ~/.netbeans/20/config/Templates/Classes/ ];
+if [ -d ~/.netbeans/21/config/Templates/Classes/ ];
 then
-    echo "O diretorio  ~/.netbeans/20/config/Templates/Classes/  ja existe"
+    echo "O diretorio  ~/.netbeans/21/config/Templates/Classes/  ja existe"
 else
 
   ## Criando a pasta onde vao ficar os templates modificados
-  mkdir -p ~/.netbeans/20/config/Templates/
+  mkdir -p ~/.netbeans/21/config/Templates/
 
   echo -e "\n\n\n\n Clonando repositorio Classes do Git Hub"
-  git clone https://github.com/lucotavio/Classes.git
-  cp -r Classes/ ~/.netbeans/20/config/Templates/
+  git clone https://github.com/lucgithub343/Classes.git
+  cp -r Classes/ ~/.netbeans/21/config/Templates/
 fi
 
-########################################################## FIM DA  INSTALACAO  DO  APACHE  NETBEANS##################################################
+########################################################## FIM  DA  INSTALACAO  DO  APACHE  NETBEANS#################################################
+
+
+
+
+########################################################## INSTALANDO  VISUAL  STUDIO  CODE #########################################################
+
+sudo dpkg -i code_1.86.0-1706698139_amd64.deb
+sudo apt --fix-broken install -y
+
+
+## INSTALANDO  EXTENÇÕES  DO  VISUAL  STUDIO  CODE
+
+## Instalando Material Icon themes
+code --install-extension PKief.material-icon-theme
+
+## Instalando Mithril Emmet
+code --install-extension PFallenMax.mithril-emmet
+
+## Instalando ESlint
+code --install-extension dbaeumer.vscode-eslint
+
+## Instlando Better Comments
+code --install-extension aaron-bond.better-comments
+
+## Instlando GitLens
+code --install-extension eamodio.gitlens
+
+## Instlando Tabnine
+code --install-extension TabNine.tabnine-vscodes
+
+
+
+## INSTALANDO  PARENTESES  AUTOMATICOS  NOS  METODOS  JAVASCRIPT  E  TYPESCRIPT
+
+
+## parenteses atumomaticos nos metodos do TypeScript
+echo '"typescript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code/User/settings.json
+
+## parenteses atumomaticos nas funcoes do JavaScript
+echo '"javascript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code/User/settings.json
+
+################################################### FIM  DA  INSTALACAO  DO  VISUAL  STUDIO  CODE ###################################################
 
 
 echo "***********************************************************************************************************************************************"
