@@ -403,6 +403,17 @@ fi
 
 
 
+## Download Eclipse C C++
+if [ -e eclipse-cpp-2023-12.deb ];
+then
+    echo "O arquivo  eclipse-cpp-2023-12.deb  ja existe"
+else
+    echo -e "\n\n\n\n Eclipse C C++"
+    wget https://github.com/lucgithub343/eclipse/releases/download/eclipse/eclipse-cpp-2023-12.deb
+fi
+
+
+
 ## Download GitKraken
 if [ -e gitkraken-amd64.deb ];
 then
@@ -436,13 +447,13 @@ fi
 
 
 
-## Download Intellij Community
-if [ -e intellij-Community-2023.3.2.deb ];
+## Download Intellij Ultimate
+if [ -e intellij-ultimate-2023-3-4.deb ];
 then
-    echo "O arquivo  intellij-Community-2023.3.2.deb ja existe"
+    echo "O arquivo  intellij-ultimate-2023-3-4.deb ja existe"
 else
-    echo -e "\n\n\n\n Intellij Community"
-    wget https://github.com/lucgithub343/intellij/releases/download/intellij/intellij-Community-2023.3.2.deb
+    echo -e "\n\n\n\n Intellij Ultimate"
+    wget https://github.com/lucgithub343/intellij/releases/download/intellij/intellij-ultimate-2023-3-4.deb
 fi
 
 

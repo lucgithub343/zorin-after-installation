@@ -14,6 +14,7 @@ sudo update-alternatives --config java
 ## Spring tool Suite
 sudo dpkg -i spring-tool-suite-4.21.0.deb
 sudo apt --fix-broken install -y
+sudo rm /.eclipseproduct
 
 ## Instalando Lombok no Spring Tools Suite
 chmod +x lombok-1-18-30.jar
@@ -160,6 +161,11 @@ sudo apt --fix-broken install -y
 sudo dpkg -i dbeaver-le_23.2.0_amd64.deb
 sudo apt --fix-broken install -y
 
+## Eclipse C and C++
+sudo dpkg -i --force-overwrite eclipse-cpp-2023-12.deb
+sudo rm /.eclipseproduct
+sudo apt --fix-broken install -y
+
 
 ## GitKraken
 sudo dpkg -i gitkraken-amd64.deb
@@ -176,8 +182,8 @@ sudo dpkg -i insync_3.8.6.50504-jammy_amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Intellij Community
-sudo dpkg -i intellij-Community-2023.3.2.deb
+## Intellij Ultimate
+sudo dpkg -i intellij-ultimate-2023-3-4.deb
 sudo apt --fix-broken install -y
 
 
@@ -295,6 +301,12 @@ code --install-extension eamodio.gitlens
 
 ## Instlando Tabnine
 code --install-extension TabNine.tabnine-vscodes
+
+## Suporte a arquivos yml
+code --install-extension redhat.vscode-yaml
+
+## Suporte ao Vim
+code --install-extension vscodevim.vim
 
 
 
