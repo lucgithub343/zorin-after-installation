@@ -69,20 +69,21 @@ do
     echo -e "\n\nDigite opção 1 ou 2"
     echo "1 - DESKTOP"
     echo "2 - NOTEBOOK  PESSOAL"
-    echo "3 - OUTRA OPCAO"
+    echo "3 - NOTEBOOK  EMPRESA"
 
     echo "Digite a opção: "
     read opcao
 
     sudo apt update -y
     sudo ubuntu-drivers devices
-    sudo apt install -y ubuntu-advantage-tools
+    sudo apt install ubuntu-advantage-tools -y
 
     if [ $opcao -eq 1 ];
     then
         echo -e "\n\n*************************************DESKTOP *****************************************************"
 
-        sudo apt install -y nvidia-driver-390
+          sudo apt install -y nvidia-driver-390
+          sudo ua attach C1NN7PA4J2HtxnsvSiTUPEs5bUU7Y
 
         echo -e "\n\n**************************************************************************************************"
         break
@@ -90,13 +91,18 @@ do
     then
         echo -e "\n\n*********************************** NOTEBOOK LUCIANO *********************************************"
 
-        sudo apt install -y nvidia-driver-525
+          sudo apt install -y nvidia-driver-525
+          sudo ua attach C1x3zxz1GFawrD8EY4oT7RsxsEfH1
 
         echo -e "\n\n**************************************************************************************************"
         break
     elif [ $opcao -eq 3 ];
     then
-        echo -e "\n\n***************************************** OUTRA OPCAO *********************************************"
+        echo -e "\n\n********************************* NOTEBOOK EMPRESA ***********************************************"
+
+          sudo ua attach C12Jp442FKeioyspXdSyrbG9aHn9hw
+
+        echo -e "\n\n**************************************************************************************************"
         break
     else
         echo -e "\n\nOpcao invalida"

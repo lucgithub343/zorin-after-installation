@@ -45,7 +45,6 @@ mkdir -p ~/Servers
 ## Criando diretorio Courses
 mkdir -p ~/Courses
 
-
 ## Entrando na para pasta de programas
 cd ~/Downloads/Softwares/
 
@@ -261,7 +260,7 @@ else
     ## Entrando na para pasta de programas
     cd ~/Downloads/Softwares/
 fi
-
+OUTRA OPCAO
 
 ## Download BigSur Icon
 if [ -d ~/.icons/BigSur ];
@@ -966,14 +965,6 @@ sudo add-apt-repository ppa:savoury1/chromium -y
 sudo apt update -y
 sudo apt install chromium-browser -y
 
-## Removendo o Firefox Flatpak
-flatpak uninstall org.mozilla.firefox  -y
-
-## Instalando Firefox .deb
-sudo add-apt-repository ppa:mozillateam/ppa -y
-sudo apt update -y
-sudo apt install firefox -y
-
 ## Instalando Navegador Brave
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
@@ -993,7 +984,29 @@ sudo apt install palemoon -y
 sudo apt install luckybackup-data -y
 
 ## Instalando SDKMAN
-curl -s https://get.sdkman.io | bash
+curl -s get.sdkman.io | bash
+source "~/.sdkman/bin/sdkman-init.sh"
+
+## Instalando Groovy
+sdk install groovy
+
+## Ver versão do groovy
+## groovy -version
+
+
+
+############################################################ INSTALANDO  FIREFOX  NATIVO ############################################################
+
+## Removendo o Firefox Flatpak
+flatpak uninstall org.mozilla.firefox  -y
+
+## Instalando Firefox .deb
+sudo add-apt-repository ppa:mozillateam/ppa -y
+sudo apt update -y
+sudo apt install firefox -y
+
+
+###################################################### FIM  DA  INSTALACAO  DO  FIREFOX  NATIVO #####################################################
 
 echo  "**********************************************************************************************************************************************"
 
