@@ -257,6 +257,12 @@ sudo dpkg -i waterfox-G6.0.8.deb
 sudo apt --fix-broken install -y
 
 
+## Zoom
+sudo dpkg -i zoom_amd64.deb
+sudo apt --fix-broken install -y
+
+
+
 ############################################################## INSTALANDO  APACHE  NETBEANS #########################################################
 
 ## Apache Netbeans

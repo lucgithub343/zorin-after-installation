@@ -691,6 +691,17 @@ fi
 
 
 
+## Download Zoom
+if [ -e zoom_amd64.deb ];
+then
+    echo "O arquivo  zoom_amd64.deb   ja existe"
+else
+    echo -e "\n\n\n\n Zoom"
+    wget https://github.com/lucgithub343/zoom/releases/download/Zoom/zoom_amd64.deb
+fi
+
+
+
 echo "***********************************************************************************************************************************************"
 
 
