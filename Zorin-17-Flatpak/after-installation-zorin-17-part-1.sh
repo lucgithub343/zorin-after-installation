@@ -699,8 +699,11 @@ echo -e "\n\n\n************************************************** INSTALACAO DO 
 
 
 ## Instalando SDKMAN
-curl -s get.sdkman.io | bash
-source "~/.sdkman/bin/sdkman-init.sh"
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+## ver Versão do SDKMAN
+## sdk version
 
 
 ## Site de referencia
