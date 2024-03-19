@@ -379,6 +379,18 @@ else
 fi
 
 
+## Download Icon Balena Etcher
+if [ -e Etcher-icon.png ];
+then
+    echo "O arquivo  Etcher-icon.png  ja existe"
+else
+    echo -e "\n\n\n\n Balena Etcher Icon"
+    wget https://github.com/lucgithub343/balena-etcher/releases/download/balena-etcher/Etcher-icon.png
+    sudo mkdir -p /opt/balena-etcher-icon/
+    sudo cp Etcher-icon.png /opt/balena-etcher-icon/
+fi
+
+
 
 ## Download Chrome
 if [ -e google-chrome-stable_current_amd64.deb ];
@@ -683,102 +695,72 @@ echo "**************************************************************************
 
 
 
-
-echo -e "\n\n\n************************************************** INSTALACAO DO JDK-21 **************************************************************"
-
-## Download JDK
-if [ -e jdk-21_linux-x64_bin.deb ];
-then
-    echo "O arquivo  jdk-21_linux-x64_bin.deb  ja existe"
-else
-    wget https://github.com/lucgithub343/jdk/releases/download/jdk/jdk-21_linux-x64_bin.deb
-fi
+echo -e "\n\n\n************************************************** INSTALACAO DO SDKMAN **************************************************************"
 
 
-## Inalando JDK
-chmod +x jdk-21_linux-x64_bin.deb
-sudo dpkg -i jdk-21_linux-x64_bin.deb
+## Instalando SDKMAN
+curl -s get.sdkman.io | bash
+source "~/.sdkman/bin/sdkman-init.sh"
 
 
-## Instalando JRE
-sudo apt update -y
-sudo apt-get install openjdk-21-jre -y
+## Site de referencia
+## https://www.baeldung.com/java-sdkman-intro
 
 
-## Selecionando qual versão do java vai ser a padrao
-sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-21-oracle-x64/bin/java 4
-sudo update-alternatives --config java
+## Listando todos os SDKs
+## sdk list
 
 
-## Configurando variaveis de ambiente do Java
-if grep -qi "export JAVA_HOME=/usr/lib/jvm/jdk-21-oracle-x64" ~/.bashrc;
-then
-    echo "Variaveis de ambiente Java ja configurados"
-else
-    echo "" >> ~/.bashrc
-    echo "export JAVA_HOME=/usr/lib/jvm/jdk-21-oracle-x64" >> ~/.bashrc
-    echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> ~/.bashrc
-fi
+## Listando versões de um SDK especifico
+## sdk list NOME_DO_SDK
+## Exemplo:
+## sdk list java
+## sdk list kotlin
 
-## Usando o comando source para executar o arquivo .bashrc
-## source ~/.bashrc
 
+## Trocar temporariamente de versão
+## sdk use java 21.0.2-oracle
+
+
+## Configurar versão como padrão
+## sdk default java 21.0.2-oracle
+
+
+## Desinstalar uma versão
+## sdk uninstall java 21.0.2-oracle
+
+
+## Instalando Java
+sdk install java 21.0.2-oracle
+
+## Ver versão do Java instalado
+java -version
+
+
+
+## Instalando Kotlin ultima versao
+sdk install kotlin
+
+## Ver versão do Kotlin instalado
+kotlinc -version
+
+
+
+## Instalando Groovy
+sdk install groovy 4.0.20
+
+## Ver versão do groovy
+groovy -version
+
+
+## Instalando o Maven
+sdk install maven 3.9.6
+
+## Ver versão do Maven
+mvn -v
 echo "***********************************************************************************************************************************************"
 
 
-
-
-echo -e "\n\n\n************************************************** INSTALACAO DO  KOTLIN *************************************************************"
-
-## Entrando na para pasta de programas
-cd ~/Downloads/Softwares/
-
-## Download Kotlin
-if [ -e kotlin-1.9.22.deb ];
-then
-    echo "O arquivo  kotlin-1.9.22.deb  ja existe"
-else
-    wget https://github.com/lucgithub343/kotlin/releases/download/kotlin/kotlin-1.9.22.deb
-fi
-
-sudo dpkg -i kotlin-1.9.22.deb
-
-
-## Configurando variaveis de ambiente do Java
-if grep -qi "export KOTLIN_HOME=/usr/local/bin/kotlin" ~/.bashrc;
-then
-    echo "Variaveis de ambiente Java ja configurados"
-else
-    echo "" >> ~/.bashrc
-    echo "export KOTLIN_HOME=/usr/local/bin/kotlin" >> ~/.bashrc
-    echo "export PATH=\$PATH:\$KOTLIN_HOME/bin" >> ~/.bashrc
-fi
-
-## Usando o comando source para executar o arquivo .bashrc
-## source ~/.bashrc
-
-echo -e "\n\n\n********************************************** INSTALANDO  O  MAVEN ******************************************************************"
-
-sudo apt update -y
-sudo apt install maven -y
-
-
-## Configurando variaveis de ambiente do Maven
-if grep -qi "export MAVEN_HOME=/usr/share/maven" ~/.bashrc;
-then
-    echo "Variaveis de Ambiente do Maven configurados"
-else
-    ## Espaco em branco
-    echo "" >> ~/.bashrc
-    echo "export MAVEN_HOME=/usr/share/maven" >> ~/.bashrc
-    echo "export PATH=\$PATH:\$MAVEN_HOME/bin" >> ~/.bashrc
-fi
-
-
-## Usando o comando source para executar o arquivo .bashrc
-## source ~/.bashrc
-
-echo "***********************************************************************************************************************************************"
 
 
 
@@ -957,6 +939,9 @@ sudo apt install synaptic -y
 ## Instalando Umbrelo
 sudo apt install umbrello -y
 
+## Instalando terminal Terminator
+sudo apt install terminator -y
+
 ## Instalando o modulo "libcanberra-gtk-module" para que nao ocorra o erro: “failed to load module canberra-gtk-module”
 sudo apt install libcanberra-gtk-module libcanberra-gtk3-module -y
 
@@ -983,15 +968,8 @@ sudo apt install palemoon -y
 ## Instalando ferramenta de Backup
 sudo apt install luckybackup-data -y
 
-## Instalando SDKMAN
-curl -s get.sdkman.io | bash
-source "~/.sdkman/bin/sdkman-init.sh"
-
-## Instalando Groovy
-sdk install groovy
-
-## Ver versão do groovy
-## groovy -version
+## Instalando outro terminal
+sudo apt install terminator -y
 
 
 

@@ -156,6 +156,7 @@ sudo sed -i 's\env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false /usr/bin/atom
 ## Balena Etcher
 sudo dpkg -i balena-etcher_1.19.4_amd64.deb
 sudo apt --fix-broken install -y
+sudo sed -i 's\Icon=balena-etcher\Icon=/opt/balena-etcher-icon/Etcher-icon.png\g' /usr/share/applications/balena-etcher.desktop
 
 
 ## Chrome
