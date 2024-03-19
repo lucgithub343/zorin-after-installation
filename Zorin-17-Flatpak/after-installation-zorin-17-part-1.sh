@@ -642,12 +642,12 @@ fi
 
 
 ## Download VMware Workstation
-if [ -e VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle ];
+if [ -e VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle ];
 then
-    echo "O arquivo  VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle  ja existe"
+    echo "O arquivo  VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle  ja existe"
 else
     echo -e "\n\n\n\n VMware Workstation"
-    wget https://github.com/lucgithub343/vmware-workstation/releases/download/vmware-workstation/VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle
+    wget https://github.com/lucgithub343/vmware-workstation/releases/download/vmware-workstation/VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle
 fi
 
 

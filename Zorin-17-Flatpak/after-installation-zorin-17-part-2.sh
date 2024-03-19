@@ -38,7 +38,7 @@ sudo apt install build-essential -y
 sudo apt install manpages-dev  -y
 
 ## Instalando VMware
-sudo ./VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle
+sudo ./VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle
 
 ## Alterando icone  do VMwareskypeforlinux-64.deb
 ## sudo mkdir /opt/vmware-icon/
