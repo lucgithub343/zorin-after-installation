@@ -902,6 +902,10 @@ sudo apt install hardinfo -y
 ## Instalando gcc g++
 sudo apt install gcc g++ make -y
 
+## Reinstalando o GCC 12 e fazendo um link simbolico
+sudo apt install --reinstall gcc-12
+sudo ln -s -f /usr/bin/gcc-12 /usr/bin/gcc
+
 ## Instalando o Transmission
 sudo apt install transmission -y
 
