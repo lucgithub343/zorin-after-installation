@@ -593,7 +593,7 @@ fi
 
 
 ## Download Spring Tool Suite
-if [ -e spring-tool-suite-4.22.0.RELEASE.deb ];
+if [ -e spring-tool-suite-4.22.0.RELEASE.deb];
 then
     echo "O arquivo  spring-tool-suite-4.22.0.RELEASE.deb  ja existe"
 else
@@ -703,7 +703,6 @@ else
 fi
 
 
-
 ## Download Zoom
 if [ -e zoom_amd64.deb ];
 then
@@ -714,13 +713,7 @@ else
 fi
 
 
-
-echo "***********************************************************************************************************************************************"
-
-
-
-
-echo -e "\n\n\n************************************************** INSTALACAO DO JDK-21 **************************************************************"
+echo -e "\n\n\n**************************************************** INSTALANDO  O  DOCKER  **********************************************************"
 
 ## Download JDK
 if [ -e jdk-21_linux-x64_bin.deb ];
@@ -945,9 +938,6 @@ sudo apt install libcanberra-gtk-module libcanberra-gtk3-module -y
 sudo add-apt-repository ppa:savoury1/chromium -y
 sudo apt update -y
 sudo apt install chromium-browser -y
-
-## Instalando terminal terminator
-sudo apt install terminator -y
 
 ## Instalando Navegador Brave
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
