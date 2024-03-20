@@ -28,18 +28,29 @@ else
     cp config ~/.ssh/
 fi
 
+
 cd ~/.ssh
 
-## Configurando conta luc-git-projects
+
+
+echo -e "\n\n\n********************************************************* LUC-GIT-PROJECTS ***********************************************************"
+
 echo "Configurando conta luc-git-projects"
 ssh-keygen -t rsa -C "luc.git.projects@hotmail.com" -f "luc-git-projects"
 gedit ~/.ssh/luc-git-projects.pub
 ssh-add ~/.ssh/luc-git-projects
 
+echo "***********************************************************************************************************************************************"
+
+
 cd ~/.ssh
 
-## Configurando conta lucgithub343
+
+echo -e "\n\n\n********************************************************* LUCGITHUB343 ***************************************************************"
+
 echo "Configurando conta lucgithub343"
 ssh-keygen -t rsa -C "luc.github@hotmail.com" -f "lucgithub343"
 gedit ~/.ssh/lucgithub343.pub
 ssh-add ~/.ssh/lucgithub343
+
+echo "***********************************************************************************************************************************************"

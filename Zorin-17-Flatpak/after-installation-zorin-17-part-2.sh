@@ -194,6 +194,21 @@ sudo dpkg -i insync_3.8.6.50504-jammy_amd64.deb
 sudo apt --fix-broken install -y
 
 
+
+## Ver se o processar é do modelo do notebook pessoal
+ideapad_processador="`grep -cm 1  "142" /proc/cpuinfo`"
+
+## Se o Modelo for do Ideapad notebok
+## insta-la o Iriun Webcam
+if [ $ideapad_processador == 1 ];
+then
+    ## Iriun Webcam
+    sudo dpkg -i iriunwebcam-2.8.2.deb
+    sudo apt --fix-broken install -y
+fi
+
+
+
 ## Intellij Ultimate
 sudo dpkg -i intellij-ultimate-2023-3-4.deb
 sudo apt --fix-broken install -y
