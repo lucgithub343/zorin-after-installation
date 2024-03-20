@@ -12,7 +12,7 @@ echo -e "\n\n\n *************************************  INSTALANDO  SPRING TOOLS 
 sudo update-alternatives --config java
 
 ## Spring tool Suite
-sudo dpkg -i spring-tool-suite-4.21.0.deb
+sudo dpkg -i spring-tool-suite-4.22.0.RELEASE.deb
 sudo apt --fix-broken install -y
 sudo rm /.eclipseproduct
 
@@ -30,7 +30,7 @@ echo "**************************************************************************
 
 echo -e "\n\n\n**************************************************INSTALANDO  VMWARE  PLAYER *********************************************************"
 
-chmod +x VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle
+chmod +x VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle
 
 ## Dependencias do VMware
 sudo apt update -y
@@ -38,7 +38,7 @@ sudo apt install build-essential -y
 sudo apt install manpages-dev  -y
 
 ## Instalando VMware
-sudo ./VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle
+sudo ./VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle
 
 ## Alterando icone  do VMwareskypeforlinux-64.deb
 ## sudo mkdir /opt/vmware-icon/
@@ -156,6 +156,7 @@ sudo sed -i 's\env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false /usr/bin/atom
 ## Balena Etcher
 sudo dpkg -i balena-etcher_1.19.4_amd64.deb
 sudo apt --fix-broken install -y
+sudo sed -i 's\Icon=balena-etcher\Icon=/opt/balena-etcher-icon/Etcher-icon.png\g' /usr/share/applications/balena-etcher.desktop
 
 
 ## Chrome
@@ -166,6 +167,11 @@ sudo apt --fix-broken install -y
 ## Dbeaver
 sudo dpkg -i dbeaver-le_23.2.0_amd64.deb
 sudo apt --fix-broken install -y
+
+## Discord
+sudo dpkg -i discord-0.0.46.deb
+sudo apt --fix-broken install -y
+
 
 ## Eclipse C and C++
 sudo dpkg -i --force-overwrite eclipse-cpp-2023-12.deb
@@ -253,6 +259,11 @@ sudo apt --fix-broken install -y
 
 ## Waterfox
 sudo dpkg -i waterfox-G6.0.8.deb
+sudo apt --fix-broken install -y
+
+
+## Zoom
+sudo dpkg -i zoom_amd64.deb
 sudo apt --fix-broken install -y
 
 

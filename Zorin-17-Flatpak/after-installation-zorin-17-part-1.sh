@@ -379,6 +379,20 @@ else
 fi
 
 
+## Download Balena Etcher Icon
+if [ -e Etcher-icon.png];
+then
+    echo "O arquivo  Etcher-icon.png  ja existe"
+else
+    echo -e "\n\n\n\n Balena Etcher Icon"
+    wget https://github.com/lucgithub343/balena-etcher/releases/download/balena-etcher/Etcher-icon.png
+
+    sudo mkdir -p /opt/balena-etcher-icon/
+    sudo cp Etcher-icon.png /opt/balena-etcher-icon/
+
+fi
+
+
 
 ## Download Chrome
 if [ -e google-chrome-stable_current_amd64.deb ];
@@ -398,6 +412,17 @@ then
 else
     echo -e "\n\n\n\n DBeaver"
     wget https://github.com/lucgithub343/dbeaver/releases/download/dbeaver/dbeaver-le_23.2.0_amd64.deb
+fi
+
+
+
+## Download Discord
+if [ -e discord-0.0.46.deb ];
+then
+    echo "O arquivo  discord-0.0.46.deb  ja existe"
+else
+    echo -e "\n\n\n\n Discord"
+    wget https://github.com/lucgithub343/discord/releases/download/discord/discord-0.0.46.deb
 fi
 
 
@@ -568,12 +593,12 @@ fi
 
 
 ## Download Spring Tool Suite
-if [ -e spring-tool-suite-4.21.0.deb ];
+if [ -e spring-tool-suite-4.22.0.RELEASE.deb ];
 then
-    echo "O arquivo  spring-tool-suite-4.21.0.deb  ja existe"
+    echo "O arquivo  spring-tool-suite-4.22.0.RELEASE.deb  ja existe"
 else
     echo -e "\n\n\n\n Spring Tool Suite"
-    wget https://github.com/lucgithub343/spring-tool-suite/releases/download/spring-tool-suite/spring-tool-suite-4.21.0.deb
+    wget https://github.com/lucgithub343/spring-tool-suite/releases/download/spring-tool-suite/spring-tool-suite-4.22.0.RELEASE.deb
 fi
 
 
@@ -630,12 +655,12 @@ fi
 
 
 ## Download VMware Workstation
-if [ -e VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle ];
+if [ -e VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle ];
 then
-    echo "O arquivo  VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle  ja existe"
+    echo "O arquivo  VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle  ja existe"
 else
     echo -e "\n\n\n\n VMware Workstation"
-    wget https://github.com/lucgithub343/vmware-workstation/releases/download/vmware-workstation/VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle
+    wget https://github.com/lucgithub343/vmware-workstation/releases/download/vmware-workstation/VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle
 fi
 
 
@@ -675,6 +700,17 @@ else
 
     ## Entrando na para pasta de programas
     cd ~/Downloads/Softwares/
+fi
+
+
+
+## Download Zoom
+if [ -e zoom_amd64.deb ];
+then
+    echo "O arquivo  zoom_amd64.deb   ja existe"
+else
+    echo -e "\n\n\n\n Zoom"
+    wget https://github.com/lucgithub343/zoom/releases/download/Zoom/zoom_amd64.deb
 fi
 
 
@@ -719,61 +755,6 @@ else
     echo "export JAVA_HOME=/usr/lib/jvm/jdk-21-oracle-x64" >> ~/.bashrc
     echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> ~/.bashrc
 fi
-
-## Usando o comando source para executar o arquivo .bashrc
-## source ~/.bashrc
-
-echo "***********************************************************************************************************************************************"
-
-
-
-
-echo -e "\n\n\n************************************************** INSTALACAO DO  KOTLIN *************************************************************"
-
-## Entrando na para pasta de programas
-cd ~/Downloads/Softwares/
-
-## Download Kotlin
-if [ -e kotlin-1.9.22.deb ];
-then
-    echo "O arquivo  kotlin-1.9.22.deb  ja existe"
-else
-    wget https://github.com/lucgithub343/kotlin/releases/download/kotlin/kotlin-1.9.22.deb
-fi
-
-sudo dpkg -i kotlin-1.9.22.deb
-
-
-## Configurando variaveis de ambiente do Java
-if grep -qi "export KOTLIN_HOME=/usr/local/bin/kotlin" ~/.bashrc;
-then
-    echo "Variaveis de ambiente Java ja configurados"
-else
-    echo "" >> ~/.bashrc
-    echo "export KOTLIN_HOME=/usr/local/bin/kotlin" >> ~/.bashrc
-    echo "export PATH=\$PATH:\$KOTLIN_HOME/bin" >> ~/.bashrc
-fi
-
-## Usando o comando source para executar o arquivo .bashrc
-## source ~/.bashrc
-
-echo -e "\n\n\n********************************************** INSTALANDO  O  MAVEN ******************************************************************"
-
-sudo apt update -y
-sudo apt install maven -y
-
-
-## Configurando variaveis de ambiente do Maven
-if grep -qi "export MAVEN_HOME=/usr/share/maven" ~/.bashrc;
-then
-    echo "Variaveis de Ambiente do Maven configurados"
-else
-    ## Espaco em branco
-    echo "" >> ~/.bashrc
-    echo "export MAVEN_HOME=/usr/share/maven" >> ~/.bashrc
-    echo "export PATH=\$PATH:\$MAVEN_HOME/bin" >> ~/.bashrc
-fi
-
 
 ## Usando o comando source para executar o arquivo .bashrc
 ## source ~/.bashrc
@@ -965,6 +946,9 @@ sudo add-apt-repository ppa:savoury1/chromium -y
 sudo apt update -y
 sudo apt install chromium-browser -y
 
+## Instalando terminal terminator
+sudo apt install terminator -y
+
 ## Instalando Navegador Brave
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
@@ -984,14 +968,28 @@ sudo apt install palemoon -y
 sudo apt install luckybackup-data -y
 
 ## Instalando SDKMAN
-curl -s get.sdkman.io | bash
-source "~/.sdkman/bin/sdkman-init.sh"
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 ## Instalando Groovy
 sdk install groovy
 
 ## Ver versão do groovy
-## groovy -version
+groovy -version
+
+## Instalando Kotlin ultima versao
+sdk install kotlin
+
+## Ver versão do Kotlin instalado
+kotlinc -version
+
+## Instalando o Maven
+sdk install maven 3.9.6
+
+## Ver versão do Maven
+mvn -v
+
+## https://www.baeldung.com/java-sdkman-HISTCONTROL
 
 
 
@@ -1003,10 +1001,46 @@ flatpak uninstall org.mozilla.firefox  -y
 ## Instalando Firefox .deb
 sudo add-apt-repository ppa:mozillateam/ppa -y
 sudo apt update -y
-sudo apt install firefox -y
+sudo apt install --target-release 'o=LP-PPA-mozillateam' firefox -y
 
 
-###################################################### FIM  DA  INSTALACAO  DO  FIREFOX  NATIVO #####################################################
+echo "Package: firefox*" | sudo tee -a /etc/apt/preferences.d/mozillateamppa
+echo "Pin: release o=LP-PPA-mozillateam" | sudo tee -a /etc/apt/preferences.d/mozillateamppa
+echo "Pin-Priority: 501" | sudo tee -a /etc/apt/preferences.d/mozillateamppa
+
+#####################################################################################################################################################
+
+
+
+########################################################## INSTALANDO  OBS  STUDIO  NATIVO ##########################################################
+
+flatpak uninstall com.obsproject.Studio  -y
+
+sudo add-apt-repository ppa:obsproject/obs-studio -y
+sudo apt update -y
+sudo apt install obs-studio -y
+
+
+#####################################################################################################################################################
+
+
+
+########################################################### INSTALANDO  HANDBRAKE  NATIVO ###########################################################
+
+flatpak uninstall fr.handbrake.ghb -y
+
+sudo apt install handbrake -y
+
+#####################################################################################################################################################
+
+
+
+########################################################### INSTALANDO  KDENLIVE  NATIVO ###########################################################
+
+flatpak uninstall org.kde.kdenlive -y
+
+sudo apt install kdenlive -y
+
 
 echo  "**********************************************************************************************************************************************"
 
