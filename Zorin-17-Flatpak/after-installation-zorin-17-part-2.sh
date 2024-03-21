@@ -255,13 +255,6 @@ sudo dpkg -i SceneBuilder-21.0.0.deb
 sudo apt --fix-broken install -y
 
 
-## Skype
-sudo dpkg -i skypeforlinux-64.deb
-sudo apt --fix-broken install -y
-sudo apt-key export DF7587C3 | sudo gpg --dearmor -o /usr/share/keyrings/skype.gpg
-echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/skype.gpg] https://repo.skype.com/deb stable main' | sudo tee /etc/apt/sources.list.d/skype-stable.list
-
-
 ## Star UML
 sudo dpkg -i StarUML_5.1.0_amd64.deb
 sudo apt --fix-broken install -y

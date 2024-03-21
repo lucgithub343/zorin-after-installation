@@ -601,17 +601,6 @@ fi
 
 
 
-## Download Skype
-if [ -e skypeforlinux-64.deb ];
-then
-    echo "O arquivo  skypeforlinux-64.deb  ja existe"
-else
-    echo -e "\n\n\n\n Skype"
-    wget https://github.com/lucgithub343/skype/releases/download/Skype/skypeforlinux-64.deb
-fi
-
-
-
 ## Download Spring Tool Suite
 if [ -e spring-tool-suite-4.22.0.RELEASE.deb];
 then
