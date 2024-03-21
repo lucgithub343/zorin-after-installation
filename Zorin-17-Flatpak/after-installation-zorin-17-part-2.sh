@@ -357,6 +357,16 @@ echo '"javascript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code
 echo "***********************************************************************************************************************************************"
 
 
+
+echo -e "\n\n\n************************************************* IMPEDIR  AJUSTE  AUTOMATICO  DO SOM ************************************************"
+
+
+sudo sed -i 's\volume = merge\volume = 100\g' /usr/share/pulseaudio/alsa-mixer/paths/analog-input-internal-mic.conf
+
+
+echo "***********************************************************************************************************************************************"
+
+
 ## Atualizando a maneira de atualizar as keys dos repositorio sao salva
 sudo cp /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 

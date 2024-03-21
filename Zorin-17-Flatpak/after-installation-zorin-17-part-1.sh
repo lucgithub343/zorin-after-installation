@@ -891,6 +891,9 @@ sudo apt update -y
 ## Instalando fonte Notepadqq
 sudo apt install notepadqq -y
 
+## Instalando terminal terminator
+sudo apt install terminator -y
+
 ## Instalando fonte firecode
 sudo apt install fonts-firacode -y
 
