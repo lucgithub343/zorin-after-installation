@@ -395,12 +395,12 @@ fi
 
 
 ## Download Chrome
-if [ -e google-chrome-stable_current_amd64.deb ];
+if [ -e chrome-stable_current_amd64.deb ];
 then
-    echo "O arquivo  google-chrome-stable_current_amd64.deb  ja existe"
+    echo "O arquivo  chrome-stable_current_amd64.deb  ja existe"
 else
     echo -e "\n\n\n\n Chrome"
-    wget https://github.com/lucgithub343/chrome/releases/download/chrome/google-chrome-stable_current_amd64.deb
+    wget https://github.com/lucgithub343/chrome/releases/download/chrome/chrome-stable_current_amd64.deb
 fi
 
 
