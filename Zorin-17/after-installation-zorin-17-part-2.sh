@@ -256,7 +256,7 @@ sudo apt --fix-broken install -y
 
 
 ## Star UML
-sudo dpkg -i StarUML_5.1.0_amd64.deb
+sudo dpkg -i StarUML_6.1.0_amd64.deb
 sudo apt --fix-broken install -y
 
 

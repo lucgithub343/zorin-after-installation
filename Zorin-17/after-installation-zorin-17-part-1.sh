@@ -613,12 +613,12 @@ fi
 
 
 ## Download StarUML
-if [ -e StarUML_5.1.0_amd64.deb ];
+if [ -e StarUML_6.1.0_amd64.deb ];
 then
-    echo "O arquivo  StarUML_5.1.0_amd64.deb  ja existe"
+    echo "O arquivo  StarUML_6.1.0_amd64.deb  ja existe"
 else
     echo -e "\n\n\n\n StarUML"
-    wget https://github.com/lucgithub343/starUML/releases/download/starUML/StarUML_5.1.0_amd64.deb
+    wget https://github.com/lucgithub343/starUML/releases/download/starUML/StarUML_6.1.0_amd64.deb
 fi
 
 
