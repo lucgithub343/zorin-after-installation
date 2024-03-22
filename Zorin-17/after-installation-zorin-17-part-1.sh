@@ -287,6 +287,7 @@ else
     echo -e "\n\n\n\n MacMojave cursores"
     wget https://github.com/lucgithub343/gnome-cursors/releases/download/gnome-cursosrs/McMojave-cursors.tar.gz
     cp McMojave-cursors.tar.gz ~/.icons/
+    cd ~/.icons/
     tar -xvzf McMojave-cursors.tar.gz
     rm McMojave-cursors.tar.gz
 
@@ -968,31 +969,6 @@ sudo apt install palemoon -y
 
 ## Instalando ferramenta de Backup
 sudo apt install luckybackup-data -y
-
-## Instalando SDKMAN
-curl -s "https://get.sdkman.io" | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-## Instalando Groovy
-sdk install groovy
-
-## Ver versão do groovy
-groovy -version
-
-## Instalando Kotlin ultima versao
-sdk install kotlin
-
-## Ver versão do Kotlin instalado
-kotlinc -version
-
-## Instalando o Maven
-sdk install maven 3.9.6
-
-## Ver versão do Maven
-mvn -v
-
-## https://www.baeldung.com/java-sdkman-HISTCONTROL
-
 
 
 ############################################################ INSTALANDO  FIREFOX  NATIVO ############################################################

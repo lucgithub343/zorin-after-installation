@@ -360,6 +360,38 @@ sudo sed -i 's\volume = merge\volume = 100\g' /usr/share/pulseaudio/alsa-mixer/p
 echo "***********************************************************************************************************************************************"
 
 
+
+
+echo -e "\n\n\n********************************************************* INSTALACAO  SDKMAN *********************************************************"
+
+
+## Instalando SDKMAN
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+## Instalando Groovy
+sdk install groovy
+
+## Ver versão do groovy
+groovy -version
+
+## Instalando Kotlin ultima versao
+sdk install kotlin
+
+## Ver versão do Kotlin instalado
+kotlinc -version
+
+## Instalando o Maven
+sdk install maven 3.9.6
+
+## Ver versão do Maven
+mvn -v
+
+## https://www.baeldung.com/java-sdkman-HISTCONTROL
+
+echo "***********************************************************************************************************************************************"
+
+
 ## Atualizando a maneira de atualizar as keys dos repositorio sao salva
 sudo cp /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 
