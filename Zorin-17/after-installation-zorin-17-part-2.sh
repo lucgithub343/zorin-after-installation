@@ -2,32 +2,7 @@
 
 
 ## Entrando na para pasta de programas
-cd /home/$USER/Downloads/Softwares/
-
-
-echo -e "\n\n******************************************** INSTALANDO  IMPRESSORA  CANON *************************************************************"
-
-## https://th.canon/en/support/PIXMA%20G3010/model
-## Download Driver Impressora
-echo -e "\n\n\n Driver Impressora"
-if [ -d /impressora-Canon-G-3110-deb ];
-then
-  cd impressora-Canon-G-3110-deb/
-  chmod +x install.sh
-  sudo ./install.sh
-else
-    wget https://github.com/lucotavio/impressora-canon/releases/download/impressora-canon/impressora-Canon-G-3110-deb.tar.gz
-    descompactar-tar-gz impressora-Canon-G-3110-deb.tar.gz
-    cd impressora-Canon-G-3110-deb/
-    chmod +x install.sh
-    sudo ./install.sh
-fi
-
-## Entrando na para pasta de Software
-cd /home/$USER/Downloads/Softwares/
-
-echo -e "\n\n****************************************************************************************************************************************"
-
+cd ~/Downloads/Softwares/
 
 
 
@@ -37,8 +12,9 @@ echo -e "\n\n\n *************************************  INSTALANDO  SPRING TOOLS 
 sudo update-alternatives --config java
 
 ## Spring tool Suite
-sudo dpkg -i spring-tool-suite-4.21.0.deb
+sudo dpkg -i spring-tool-suite-4.22.0.RELEASE.deb
 sudo apt --fix-broken install -y
+sudo rm /.eclipseproduct
 
 ## Instalando Lombok no Spring Tools Suite
 chmod +x lombok-1-18-30.jar
@@ -54,7 +30,7 @@ echo "**************************************************************************
 
 echo -e "\n\n\n**************************************************INSTALANDO  VMWARE  PLAYER *********************************************************"
 
-chmod +x VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle
+chmod +x VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle
 
 ## Dependencias do VMware
 sudo apt update -y
@@ -62,9 +38,9 @@ sudo apt install build-essential -y
 sudo apt install manpages-dev  -y
 
 ## Instalando VMware
-sudo ./VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle
+sudo ./VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle
 
-## Alterando icone  do VMware
+## Alterando icone  do VMwareskypeforlinux-64.deb
 ## sudo mkdir /opt/vmware-icon/
 ## sudo cp vmware.png /opt/vmware-icon/
 ## sudo sed -i 's\vmware-player\/opt/vmware-icon/vmware.png\g' /usr/share/applications/vmware-player.desktop
@@ -73,11 +49,11 @@ sudo ./VMware-Workstation-Full-17.0.2-21581411.x86_64.bundle
 vmware
 
 ## Consertando o problema de 3d não suportado
-if grep -qi 'mks.gl.allowBlacklistedDrivers = "TRUE"' /home/$USER/.vmware/preferences;
+if grep -qi 'mks.gl.allowBlacklistedDrivers = "TRUE"' ~/.vmware/preferences;
 then
     echo "VMWare ja configurado"
 else
-    echo 'mks.gl.allowBlacklistedDrivers = "TRUE"' >> /home/$USER/.vmware/preferences
+    echo 'mks.gl.allowBlacklistedDrivers = "TRUE"' >> ~/.vmware/preferences
 fi
 
 echo -e "\n\n\n**************************************************************************************************************************************"
@@ -92,20 +68,22 @@ while true
 do
     echo -e "\n\nDigite opção 1 ou 2"
     echo "1 - DESKTOP"
-    echo "2 - NOTEBOOK PESSOAL"
+    echo "2 - NOTEBOOK  PESSOAL"
+    echo "3 - NOTEBOOK  EMPRESA"
 
     echo "Digite a opção: "
     read opcao
 
     sudo apt update -y
     sudo ubuntu-drivers devices
-    sudo apt install -y ubuntu-advantage-tools
+    sudo apt install ubuntu-advantage-tools -y
 
     if [ $opcao -eq 1 ];
     then
         echo -e "\n\n*************************************DESKTOP *****************************************************"
 
-        sudo apt install -y nvidia-driver-390
+          sudo apt install -y nvidia-driver-390
+          sudo ua attach C1NN7PA4J2HtxnsvSiTUPEs5bUU7Y
 
         echo -e "\n\n**************************************************************************************************"
         break
@@ -113,7 +91,16 @@ do
     then
         echo -e "\n\n*********************************** NOTEBOOK LUCIANO *********************************************"
 
-        sudo apt install -y nvidia-driver-525
+          sudo apt install -y nvidia-driver-525
+          sudo ua attach C1x3zxz1GFawrD8EY4oT7RsxsEfH1
+
+        echo -e "\n\n**************************************************************************************************"
+        break
+    elif [ $opcao -eq 3 ];
+    then
+        echo -e "\n\n********************************* NOTEBOOK EMPRESA ***********************************************"
+
+          sudo ua attach C12Jp442FKeioyspXdSyrbG9aHn9hw
 
         echo -e "\n\n**************************************************************************************************"
         break
@@ -129,7 +116,9 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALANDO  PACOTES  FLATPACK *****************************************************"
 
+flatpak install flathub dev.aunetx.deezer -y
 flatpak install flathub org.gnome.Solanum -y
+flatpak install flathub com.bitwarden.desktop -y
 
 echo "***********************************************************************************************************************************************"
 
@@ -149,7 +138,12 @@ sudo apt --fix-broken install -y
 
 
 ## Android Studio
-sudo dpkg -i android-studio-2023.1.1.deb
+sudo dpkg -i adventure-quest-worlds.deb
+sudo apt --fix-broken install -y
+
+
+## Android Studio
+sudo dpkg -i android-studio-2022.3.1.deb
 sudo apt --fix-broken install -y
 
 
@@ -160,17 +154,28 @@ sudo sed -i 's\env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false /usr/bin/atom
 
 
 ## Balena Etcher
-sudo dpkg -i balena-etcher_1.18.11_amd64.deb
+sudo dpkg -i balena-etcher_1.19.4_amd64.deb
 sudo apt --fix-broken install -y
+sudo sed -i 's\Icon=balena-etcher\Icon=/opt/balena-etcher-icon/Etcher-icon.png\g' /usr/share/applications/balena-etcher.desktop
 
 
 ## Chrome
-sudo dpkg -i chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
 sudo apt --fix-broken install -y
 
 
 ## Dbeaver
 sudo dpkg -i dbeaver-le_23.2.0_amd64.deb
+sudo apt --fix-broken install -y
+
+## Discord
+sudo dpkg -i discord-0.0.46.deb
+sudo apt --fix-broken install -y
+
+
+## Eclipse C and C++
+sudo dpkg -i --force-overwrite eclipse-cpp-2023-12.deb
+sudo rm /.eclipseproduct
 sudo apt --fix-broken install -y
 
 
@@ -180,7 +185,7 @@ sudo apt --fix-broken install -y
 
 
 ## Insomnia
-sudo dpkg -i Insomnia.Core-2023.5.8.deb
+sudo dpkg -i Insomnia.Core-8.6.0.deb
 sudo apt --fix-broken install -y
 
 
@@ -189,8 +194,23 @@ sudo dpkg -i insync_3.8.6.50504-jammy_amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Intellij Community
-sudo dpkg -i intellij-Community-2023.3.2.deb
+
+## Ver se o processar é do modelo do notebook pessoal
+ideapad_processador="`grep -cm 1  "142" /proc/cpuinfo`"
+
+## Se o Modelo for do Ideapad notebok
+## insta-la o Iriun Webcam
+if [ $ideapad_processador == 1 ];
+then
+    ## Iriun Webcam
+    sudo dpkg -i iriunwebcam-2.8.2.deb
+    sudo apt --fix-broken install -y
+fi
+
+
+
+## Intellij Ultimate
+sudo dpkg -i intellij-ultimate-2023-3-6.deb
 sudo apt --fix-broken install -y
 
 
@@ -200,7 +220,12 @@ sudo apt --fix-broken install -y
 
 
 ## Microsoft Edge
-sudo dpkg -i microsoft-edge-stable_120.0.2210.133-1_amd64.deb
+sudo dpkg -i microsoft-edge-stable_121.0.2277.98-1_amd64.deb
+sudo apt --fix-broken install -y
+
+
+## Microsoft Teams
+sudo dpkg -i teams-for-linux_1.4.12_amd64.deb
 sudo apt --fix-broken install -y
 
 
@@ -215,8 +240,18 @@ sudo apt --fix-broken install -y
 sudo sed -i '/Terminal=false/a StartupWMClass=DesktopEditors' /usr/share/applications/onlyoffice-desktopeditors.desktop
 
 
+## Opera
+sudo dpkg -i opera-stable_106.0.4998.70_amd64.deb
+sudo apt --fix-broken install -y
+
+
 ## Postman
-sudo dpkg -i postman-10.18.5.deb
+sudo dpkg -i postman-10.22.10.deb
+sudo apt --fix-broken install -y
+
+
+## Scene Builder
+sudo dpkg -i SceneBuilder-21.0.0.deb
 sudo apt --fix-broken install -y
 
 
@@ -225,38 +260,104 @@ sudo dpkg -i StarUML_5.1.0_amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Visual Studio Code
-sudo dpkg -i visual_studio_code_1.82.2-1694671812_amd64.deb
+## Vivaldi
+sudo dpkg -i vivaldi-stable_6.5.3206.63-1_amd64.deb
+sudo apt --fix-broken install -y
+
+
+## Waterfox
+sudo dpkg -i waterfox-G6.0.8.deb
+sudo apt --fix-broken install -y
+
+
+## Zoom
+sudo dpkg -i zoom_amd64.deb
 sudo apt --fix-broken install -y
 
 
 ############################################################## INSTALANDO  APACHE  NETBEANS #########################################################
 
 ## Apache Netbeans
-sudo dpkg -i apache-netbeans_20-1_all.deb
+sudo dpkg -i apache-netbeans_21-1_all.deb
 sudo apt --fix-broken install -y
 
 
 ## Baixando repositorio Classes do Git Hub
-if [ -d /home/$USER/.netbeans/20/config/Templates/Classes/ ];
+if [ -d ~/.netbeans/21/config/Templates/Classes/ ];
 then
-    echo "O diretorio  /home/$USER/.netbeans/20/config/Templates/Classes/  ja existe"
+    echo "O diretorio  ~/.netbeans/21/config/Templates/Classes/  ja existe"
 else
 
   ## Criando a pasta onde vao ficar os templates modificados
-  mkdir -p /home/$USER/.netbeans/20/config/Templates/
+  mkdir -p ~/.netbeans/21/config/Templates/
 
   echo -e "\n\n\n\n Clonando repositorio Classes do Git Hub"
-  git clone https://github.com/lucotavio/Classes.git
-  cp -r Classes/ /home/$USER/.netbeans/20/config/Templates/
+  git clone https://github.com/lucgithub343/Classes.git
+  cp -r Classes/ ~/.netbeans/21/config/Templates/
 fi
 
-########################################################## FIM DA  INSTALACAO  DO  APACHE  NETBEANS##################################################
+########################################################## FIM  DA  INSTALACAO  DO  APACHE  NETBEANS#################################################
+
+
+
+
+########################################################## INSTALANDO  VISUAL  STUDIO  CODE #########################################################
+
+sudo dpkg -i code_1.86.0-1706698139_amd64.deb
+sudo apt --fix-broken install -y
+
+
+## INSTALANDO  EXTENÇÕES  DO  VISUAL  STUDIO  CODE
+
+## Instalando Material Icon themes
+code --install-extension PKief.material-icon-theme
+
+## Instalando Mithril Emmet
+code --install-extension PFallenMax.mithril-emmet
+
+## Instalando ESlint
+code --install-extension dbaeumer.vscode-eslint
+
+## Instlando Better Comments
+code --install-extension aaron-bond.better-comments
+
+## Instlando GitLens
+code --install-extension eamodio.gitlens
+
+## Instlando Tabnine
+code --install-extension TabNine.tabnine-vscodes
+
+## Suporte a arquivos yml
+code --install-extension redhat.vscode-yaml
+
+## Suporte ao Vim
+code --install-extension vscodevim.vim
+
+
+
+## INSTALANDO  PARENTESES  AUTOMATICOS  NOS  METODOS  JAVASCRIPT  E  TYPESCRIPT
+
+
+## parenteses atumomaticos nos metodos do TypeScript
+echo '"typescript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code/User/settings.json
+
+## parenteses atumomaticos nas funcoes do JavaScript
+echo '"javascript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code/User/settings.json
+
+################################################### FIM  DA  INSTALACAO  DO  VISUAL  STUDIO  CODE ###################################################
 
 
 echo "***********************************************************************************************************************************************"
 
 
+
+echo -e "\n\n\n************************************************* IMPEDIR  AJUSTE  AUTOMATICO  DO SOM ************************************************"
+
+
+sudo sed -i 's\volume = merge\volume = 100\g' /usr/share/pulseaudio/alsa-mixer/paths/analog-input-internal-mic.conf
+
+
+echo "***********************************************************************************************************************************************"
 
 
 ## Atualizando a maneira de atualizar as keys dos repositorio sao salva
