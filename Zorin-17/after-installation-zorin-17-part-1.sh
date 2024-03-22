@@ -481,12 +481,12 @@ fi
 
 
 ## Download Insync
-if [ -e insync_3.8.6.50504-jammy_amd64.deb ];
+if [ -e insync_3.8.7.50516-jammy_amd64.deb ];
 then
-    echo "O arquivo  insync_3.8.6.50504-jammy_amd64.deb ja existe"
+    echo "O arquivo  insync_3.8.7.50516-jammy_amd64.deb ja existe"
 else
     echo -e "\n\n\n\n Insync"
-    wget https://github.com/lucgithub343/insync/releases/download/insync/insync_3.8.6.50504-jammy_amd64.deb
+    wget https://github.com/lucgithub343/insync/releases/download/insync/insync_3.8.7.50516-jammy_amd64.deb
 fi
 
 

@@ -190,7 +190,7 @@ sudo apt --fix-broken install -y
 
 
 ## Insync
-sudo dpkg -i insync_3.8.6.50504-jammy_amd64.deb
+sudo dpkg -i insync_3.8.7.50516-jammy_amd64.deb
 sudo apt --fix-broken install -y
 
 
