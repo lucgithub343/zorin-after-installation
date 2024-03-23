@@ -919,6 +919,9 @@ sudo apt install notepadqq -y
 ## Instalando terminal terminator
 sudo apt install terminator -y
 
+## Instalando Dconf Editor
+sudo apt install dconf-editor -y
+
 ## Instalando fonte firecode
 sudo apt install fonts-firacode -y
 
