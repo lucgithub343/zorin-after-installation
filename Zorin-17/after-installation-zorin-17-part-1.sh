@@ -515,12 +515,12 @@ fi
 
 
 ## Download Lombok
-if [ -e lombok-1-18-30.jar ];
+if [ -e lombok-1.18.32.jar ];
 then
-    echo "O arquivo lombok-1-18-30.jar ja existe"
+    echo "O arquivo lombok-1.18.32.jar ja existe"
 else
     echo -e "\n\n\n\n Lombok"
-    wget https://github.com/lucgithub343/lombok/releases/download/lombok/lombok-1-18-30.jar
+    wget https://github.com/lucgithub343/lombok/releases/download/lombok/lombok-1.18.32.jar
 fi
 
 
@@ -796,6 +796,41 @@ else
     chmod +x docker-compose
     sudo cp docker-compose /usr/local/bin/
 fi
+
+echo "***********************************************************************************************************************************************"
+
+
+
+
+echo -e "\n\n\n********************************************************* INSTALACAO  SDKMAN *********************************************************"
+
+
+## Instalando SDKMAN
+curl -s "https://get.sdkman.io" | bash
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+## Instalando Java
+sdk install java 21.0.2-oracle
+
+## Instalando Groovy
+sdk install groovy
+
+## Ver versão do groovy
+groovy -version
+
+## Instalando Kotlin ultima versao
+sdk install kotlin
+
+## Ver versão do Kotlin instalado
+kotlinc -version
+
+## Instalando o Maven
+sdk install maven 3.9.6
+
+## Ver versão do Maven
+mvn -v
+
+## https://www.baeldung.com/java-sdkman-intro
 
 echo "***********************************************************************************************************************************************"
 

@@ -17,8 +17,8 @@ sudo apt --fix-broken install -y
 sudo rm /.eclipseproduct
 
 ## Instalando Lombok no Spring Tools Suite
-chmod +x lombok-1-18-30.jar
-sudo java -jar lombok-1-18-30.jar
+chmod +x lombok-1.18.32.jar
+sudo ~/.sdkman/candidates/java/21.0.2-oracle/bin/java -jar lombok-1.18.32.jar
 
 ## Removendo o arquivo .eclipseproduct
 ## sudo rm /.eclipseproduct
@@ -358,39 +358,6 @@ sudo sed -i 's\volume = merge\volume = 100\g' /usr/share/pulseaudio/alsa-mixer/p
 
 
 echo "***********************************************************************************************************************************************"
-
-
-
-
-echo -e "\n\n\n********************************************************* INSTALACAO  SDKMAN *********************************************************"
-
-
-## Instalando SDKMAN
-curl -s "https://get.sdkman.io" | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-## Instalando Groovy
-sdk install groovy
-
-## Ver versão do groovy
-groovy -version
-
-## Instalando Kotlin ultima versao
-sdk install kotlin
-
-## Ver versão do Kotlin instalado
-kotlinc -version
-
-## Instalando o Maven
-sdk install maven 3.9.6
-
-## Ver versão do Maven
-mvn -v
-
-## https://www.baeldung.com/java-sdkman-HISTCONTROL
-
-echo "***********************************************************************************************************************************************"
-
 
 ## Atualizando a maneira de atualizar as keys dos repositorio sao salva
 sudo cp /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
