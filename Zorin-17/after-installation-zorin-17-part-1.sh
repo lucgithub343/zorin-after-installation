@@ -642,12 +642,12 @@ fi
 
 
 ## Download Visual Studio Code
-if [ -e code_1.86.0-1706698139_amd64.deb ];
+if [ -e visual-studio-code_1.87.2-1709912201_amd64.deb ];
 then
-    echo "O arquivo  code_1.86.0-1706698139_amd64.deb   ja existe"
+    echo "O arquivo  visual-studio-code_1.87.2-1709912201_amd64.deb   ja existe"
 else
     echo -e "\n\n\n\n Visual Studio Code"
-    wget https://github.com/lucgithub343/visual-studio-code/releases/download/visual-studio-code/code_1.86.0-1706698139_amd64.deb
+    wget https://github.com/lucgithub343/visual-studio-code/releases/download/visual-studio-code/visual-studio-code_1.87.2-1709912201_amd64.deb
 fi
 
 
