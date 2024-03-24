@@ -180,30 +180,6 @@ fi
 
 
 
-## Download Netbeans plugins
-if [ -d ~/Installation/netbeans-plugins ];
-then
-    echo "O diretorio  ~/Installation/netbeans-plugins  ja existe"
-else
-    echo -e "\n\n\n\n Netbeans Plugins"
-    git clone https://github.com/lucgithub343/netbeans-plugins.git
-    cp -r ~/Downloads/Softwares/netbeans-plugins/ ~/Installation/
-fi
-
-
-
-#Download Drivers JDBC
-if [ -d ~/Installation/drivers-JDBC ];
-then
-    echo "O diretorio  ~/Installation/drivers-JDBC  ja existe"
-else
-    echo -e "\n\n\n\n Drivers JDBC"
-    git clone https://github.com/lucgithub343/drivers-jdbc.git
-    cp -r ~/Downloads/Softwares/drivers-jdbc/ ~/Installation/
-fi
-
-
-
 ## Download Wallpapers
 if [ -d ~/Wallpaper/ ];
 then
@@ -260,7 +236,8 @@ else
     ## Entrando na para pasta de programas
     cd ~/Downloads/Softwares/
 fi
-OUTRA OPCAO
+
+
 
 ## Download BigSur Icon
 if [ -d ~/.icons/BigSur ];
@@ -603,7 +580,7 @@ fi
 
 
 ## Download Spring Tool Suite
-if [ -e spring-tool-suite-4.22.0.RELEASE.deb];
+if [ -e spring-tool-suite-4.22.0.RELEASE.deb ];
 then
     echo "O arquivo  spring-tool-suite-4.22.0.RELEASE.deb  ja existe"
 else
@@ -723,48 +700,6 @@ else
 fi
 
 
-echo -e "\n\n\n**************************************************** INSTALANDO  O  DOCKER  **********************************************************"
-
-## Download JDK
-if [ -e jdk-21_linux-x64_bin.deb ];
-then
-    echo "O arquivo  jdk-21_linux-x64_bin.deb  ja existe"
-else
-    wget https://github.com/lucgithub343/jdk/releases/download/jdk/jdk-21_linux-x64_bin.deb
-fi
-
-
-## Inalando JDK
-chmod +x jdk-21_linux-x64_bin.deb
-sudo dpkg -i jdk-21_linux-x64_bin.deb
-
-
-## Instalando JRE
-sudo apt update -y
-sudo apt-get install openjdk-21-jre -y
-
-
-## Selecionando qual versão do java vai ser a padrao
-sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk-21-oracle-x64/bin/java 4
-sudo update-alternatives --config java
-
-
-## Configurando variaveis de ambiente do Java
-if grep -qi "export JAVA_HOME=/usr/lib/jvm/jdk-21-oracle-x64" ~/.bashrc;
-then
-    echo "Variaveis de ambiente Java ja configurados"
-else
-    echo "" >> ~/.bashrc
-    echo "export JAVA_HOME=/usr/lib/jvm/jdk-21-oracle-x64" >> ~/.bashrc
-    echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> ~/.bashrc
-fi
-
-## Usando o comando source para executar o arquivo .bashrc
-## source ~/.bashrc
-
-echo "***********************************************************************************************************************************************"
-
-
 
 
 echo -e "\n\n\n**************************************************** INSTALANDO  O  DOCKER  **********************************************************"
@@ -863,21 +798,17 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALANDO  NODE.JS ***************************************************************"
 
-## Instalando o Node.js
-sudo apt update -y
-sudo apt install ca-certificates -y
-sudo apt install gnupg -y
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+# installs NVM (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
-NODE_MAJOR=18
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg, arch=amd64] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+# download and install Node.js
+nvm install 20
 
-sudo apt update -y
-sudo apt install nodejs -y
+# verifies the right Node.js version is in the environment
+node -v # should print `v20.11.1`
 
-## Como ver versao do Node.js
-node -v
+# verifies the right NPM version is in the environment
+npm -v # should print `10.2.4`
 
 echo "***********************************************************************************************************************************************"
 
@@ -886,7 +817,7 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALANDO  ANGULAR ***************************************************************"
 
-sudo npm install -g  @angular/cli@16.2.0
+sudo npm install -g  @angular/cli@16.2.12
 
 #### Como ver versao do Angular
 ## ng v
