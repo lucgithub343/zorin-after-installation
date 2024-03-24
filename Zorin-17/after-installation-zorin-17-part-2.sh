@@ -302,7 +302,7 @@ echo "**************************************************************************
 
 
 
-echo -e "\n\n\n ***************************************************  INSTALANDO   ***************************************************"
+echo -e "\n\n\n ****************************************************  INSTALANDO  VISUAL  STUDIO  CODE  E  EXTENCOES  ****************************************************"
 
 sudo dpkg -i visual-studio-code_1.87.2-1709912201_amd64.deb
 sudo apt --fix-broken install -y
@@ -333,6 +333,16 @@ code --install-extension redhat.vscode-yaml
 
 ## Suporte ao Vim
 code --install-extension vscodevim.vim
+
+## Melhor sintaxe para shell script
+code --install-extension jeff-hykin.better-shellscript-syntax
+
+## Auto complete de sintaxe para Shelll Script
+code --install-extension tetradresearch.vscode-h2o
+
+## Mostra Reultados quando vc muda o codigo no TypeScript e no JavaScript
+code --install-extension jeff-hykin.better-shellscript-syntax
+
 
 
 
