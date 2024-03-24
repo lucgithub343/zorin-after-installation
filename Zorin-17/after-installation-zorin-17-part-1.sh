@@ -798,17 +798,17 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALANDO  NODE.JS ***************************************************************"
 
-# installs NVM (Node Version Manager)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+sudo apt update -y
+sudo apt install ca-certificates curl gnupg -y
 
-# download and install Node.js
-nvm install 20
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 
-# verifies the right Node.js version is in the environment
-node -v # should print `v20.11.1`
+NODE_MAJOR=20
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg arch=amd64] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
-# verifies the right NPM version is in the environment
-npm -v # should print `10.2.4`
+sudo apt update -y
+sudo apt install nodejs -y
 
 echo "***********************************************************************************************************************************************"
 
