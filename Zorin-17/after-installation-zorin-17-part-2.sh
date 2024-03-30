@@ -75,14 +75,12 @@ do
     read opcao
 
     sudo apt update -y
-    sudo ubuntu-drivers devices
     sudo apt install ubuntu-advantage-tools -y
 
     if [ $opcao -eq 1 ];
     then
         echo -e "\n\n*************************************DESKTOP *****************************************************"
 
-          sudo apt install -y nvidia-driver-390
           sudo ua attach C1NN7PA4J2HtxnsvSiTUPEs5bUU7Y
 
         echo -e "\n\n**************************************************************************************************"
@@ -91,7 +89,6 @@ do
     then
         echo -e "\n\n*********************************** NOTEBOOK LUCIANO *********************************************"
 
-          sudo apt install -y nvidia-driver-525
           sudo ua attach C1x3zxz1GFawrD8EY4oT7RsxsEfH1
 
         echo -e "\n\n**************************************************************************************************"
@@ -181,6 +178,11 @@ sudo apt --fix-broken install -y
 
 ## GitKraken
 sudo dpkg -i gitkraken-amd64.deb
+sudo apt --fix-broken install -y
+
+
+## Instalacao da GPU Radeon R5230
+sudo dpkg -i gpu-radeon-r5-230.deb
 sudo apt --fix-broken install -y
 
 
@@ -302,7 +304,8 @@ echo "**************************************************************************
 
 
 
-echo -e "\n\n\n ****************************************************  INSTALANDO  VISUAL  STUDIO  CODE  E  EXTENCOES  ****************************************************"
+echo -e "\n\n\n ***************************************  INSTALANDO  VISUAL  STUDIO  CODE  E  EXTENCOES  ********************************************"
+
 
 sudo dpkg -i visual-studio-code_1.87.2-1709912201_amd64.deb
 sudo apt --fix-broken install -y
@@ -355,10 +358,33 @@ echo '"typescript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code
 ## parenteses atumomaticos nas funcoes do JavaScript
 echo '"javascript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code/User/settings.json
 
-################################################### FIM  DA  INSTALACAO  DO  VISUAL  STUDIO  CODE ###################################################
+
+echo "***********************************************************************************************************************************************"
+
+
+
+
+echo -e "\n\n\n ****************************************************  INSTALANDO  WARP  EDITOR  *****************************************************"
+
+
+sudo dpkg -i warp-terminal_0.2024.03.26.08.02.stable.02_amd64.deb
+sudo cp warp.png /opt/warpdotdev/warp-terminal/
+sudo sed -i 's\Icon=dev.warp.Warp\Icon=/opt/warpdotdev/warp-terminal/warp.png\g' /usr/share/applications/dev.warp.Warp.desktop
+
+sudo apt install python3-pip -y
+pip install nautilus-open-any-terminal
+nautilus -q
+
+glib-compile-schemas ~/.local/share/glib-2.0/schemas/
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal warp
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
+sudo update-alternatives --install /usr/bin/editor editor /opt/warpdotdev/warp-terminal/warp 100
 
 
 echo "***********************************************************************************************************************************************"
+
 
 
 

@@ -426,6 +426,16 @@ else
 fi
 
 
+## Download GPU Radeon R5 230
+if [ -e gpu-radeon-r5-230.deb ];
+then
+    echo "O arquivo  gpu-radeon-r5-230.deb  ja existe"
+else
+    echo -e "\n\n\n\n GPU Radeon R5 230"
+    wget https://github.com/lucgithub343/gpu/releases/download/GPU/gpu-radeon-r5-230.deb
+fi
+
+
 
 ## Download Insomnia
 if [ -e Insomnia.Core-8.6.0.deb ];
@@ -640,6 +650,28 @@ fi
 
 
 
+## Download Warp Terminal
+if [ -e warp-terminal_0.2024.03.26.08.02.stable.02_amd64.deb ];
+then
+    echo "O arquivo  warp-terminal_0.2024.03.26.08.02.stable.02_amd64.deb   ja existe"
+else
+    echo -e "\n\n\n\n Warp Terminal"
+    wget https://github.com/lucgithub343/warp/releases/download/Warp/warp-terminal_0.2024.03.26.08.02.stable.02_amd64.deb
+fi
+
+
+
+## Download Warp Terminal Icon
+if [ -e warp.png ];
+then
+    echo "O arquivo  warp.png  ja existe"
+else
+    echo -e "\n\n\n\n Warp Terminal Icon"
+    wget https://github.com/lucgithub343/warp/releases/download/Warp/warp.png
+fi
+
+
+
 
 ## Download VMware Workstation
 if [ -e VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle ];
@@ -846,6 +878,9 @@ sudo apt update -y
 
 ## Instalando fonte Notepadqq
 sudo apt install notepadqq -y
+
+## Instalando fonte Vim editor
+sudo apt install vim -y
 
 ## Instalando terminal terminator
 sudo apt install terminator -y
