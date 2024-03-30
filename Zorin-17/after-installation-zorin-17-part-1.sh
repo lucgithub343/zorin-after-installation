@@ -939,9 +939,6 @@ sudo apt install kolourpaint -y
 ## Instalando Gparted
 sudo apt install gparted -y
 
-## Instalando VirtualBox
-sudo apt install virtualbox -y
-
 ## Instalando Gerenciador de pacote Synaptic
 sudo apt install synaptic -y
 
@@ -973,6 +970,27 @@ sudo apt install palemoon -y
 
 ## Instalando ferramenta de Backup
 sudo apt install luckybackup-data -y
+
+
+
+############################################################ INSTALANDO  VIRTUAL  BOX  7 ############################################################
+
+sudo apt update -y
+sudo apt install curl wget gnupg2 lsb-release -y
+curl -fsSL https://www.virtualbox.org/download/oracle_vbox_2016.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/vbox.gpg
+curl -fsSL https://www.virtualbox.org/download/oracle_vbox.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/oracle_vbox.gpg
+echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+
+sudo apt update -y
+sudo apt install -y linux-headers-$(uname -r) dkms
+sudo apt install virtualbox-7.0 -y
+
+sudo usermod -aG vboxusers $USER
+newgrp vboxusers
+
+
+#####################################################################################################################################################
+
 
 
 ############################################################ INSTALANDO  FIREFOX  NATIVO ############################################################
