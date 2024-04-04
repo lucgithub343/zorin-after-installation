@@ -364,23 +364,18 @@ echo "**************************************************************************
 
 
 
-echo -e "\n\n\n ****************************************************  INSTALANDO  WARP  EDITOR  *****************************************************"
-
-
-sudo dpkg -i warp-terminal_0.2024.03.26.08.02.stable.02_amd64.deb
-sudo cp warp.png /opt/warpdotdev/warp-terminal/
-sudo sed -i 's\Icon=dev.warp.Warp\Icon=/opt/warpdotdev/warp-terminal/warp.png\g' /usr/share/applications/dev.warp.Warp.desktop
+echo -e "\n\n\n ************************************************  ADICIONANDO  TERMINATOR  AO  MENU  ************************************************"
 
 sudo apt install python3-pip -y
 pip install nautilus-open-any-terminal
 nautilus -q
 
 glib-compile-schemas ~/.local/share/glib-2.0/schemas/
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal warp
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal terminator
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
-sudo update-alternatives --install /usr/bin/editor editor /opt/warpdotdev/warp-terminal/warp 100
+
 
 
 echo "***********************************************************************************************************************************************"

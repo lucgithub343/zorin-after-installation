@@ -650,29 +650,6 @@ fi
 
 
 
-## Download Warp Terminal
-if [ -e warp-terminal_0.2024.03.26.08.02.stable.02_amd64.deb ];
-then
-    echo "O arquivo  warp-terminal_0.2024.03.26.08.02.stable.02_amd64.deb   ja existe"
-else
-    echo -e "\n\n\n\n Warp Terminal"
-    wget https://github.com/lucgithub343/warp/releases/download/Warp/warp-terminal_0.2024.03.26.08.02.stable.02_amd64.deb
-fi
-
-
-
-## Download Warp Terminal Icon
-if [ -e warp.png ];
-then
-    echo "O arquivo  warp.png  ja existe"
-else
-    echo -e "\n\n\n\n Warp Terminal Icon"
-    wget https://github.com/lucgithub343/warp/releases/download/Warp/warp.png
-fi
-
-
-
-
 ## Download VMware Workstation
 if [ -e VMware-Workstation-Full-17.5.1-23298084.x86_64.bundle ];
 then
@@ -973,7 +950,7 @@ sudo apt install luckybackup-data -y
 
 
 
-############################################################ INSTALANDO  VIRTUAL  BOX  7 ############################################################
+echo -e "\n\n\n**************************************************** INSTALANDO  VIRTUAL  BOX  7 ****************************************************"
 
 sudo apt update -y
 sudo apt install curl wget gnupg2 lsb-release -y
@@ -986,14 +963,12 @@ sudo apt install -y linux-headers-$(uname -r) dkms
 sudo apt install virtualbox-7.0 -y
 
 sudo usermod -aG vboxusers $USER
-newgrp vboxusers
 
-
-#####################################################################################################################################################
+echo "***********************************************************************************************************************************************"
 
 
 
-############################################################ INSTALANDO  FIREFOX  NATIVO ############################################################
+echo -e "\n\n\n**************************************************** INSTALANDO  FIREFOX  NATIVO ****************************************************"
 
 ## Removendo o Firefox Flatpak
 flatpak uninstall org.mozilla.firefox  -y
@@ -1008,11 +983,11 @@ echo "Package: firefox*" | sudo tee -a /etc/apt/preferences.d/mozillateamppa
 echo "Pin: release o=LP-PPA-mozillateam" | sudo tee -a /etc/apt/preferences.d/mozillateamppa
 echo "Pin-Priority: 501" | sudo tee -a /etc/apt/preferences.d/mozillateamppa
 
-#####################################################################################################################################################
+echo "***********************************************************************************************************************************************"
 
 
 
-########################################################## INSTALANDO  OBS  STUDIO  NATIVO ##########################################################
+echo -e "\n\n\n*************************************************** INSTALANDO  OBS  STUDIO  NATIVO **************************************************"
 
 flatpak uninstall com.obsproject.Studio  -y
 
@@ -1021,21 +996,21 @@ sudo apt update -y
 sudo apt install obs-studio -y
 
 
-#####################################################################################################################################################
+echo "***********************************************************************************************************************************************"
 
 
 
-########################################################### INSTALANDO  HANDBRAKE  NATIVO ###########################################################
+echo -e "\n\n\n*************************************************** INSTALANDO  HANDBRAKE  NATIVO ****************************************************"
 
 flatpak uninstall fr.handbrake.ghb -y
 
 sudo apt install handbrake -y
 
-#####################################################################################################################################################
+echo "***********************************************************************************************************************************************"
 
 
 
-########################################################### INSTALANDO  KDENLIVE  NATIVO ###########################################################
+echo -e "\n\n\n**************************************************** INSTALANDO  KDENLIVE  NATIVO ****************************************************"
 
 flatpak uninstall org.kde.kdenlive -y
 
