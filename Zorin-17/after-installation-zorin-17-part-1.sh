@@ -512,6 +512,17 @@ fi
 
 
 
+## Download Master PDF
+if [ -e master-pdf-editor-5.9.82.deb ];
+then
+    echo "O arquivo  master-pdf-editor-5.9.82.deb ja  existe"
+else
+    echo -e "\n\n\n\n Master PDF"
+    wget https://github.com/lucgithub343/master-pdf/releases/download/master-pdf/master-pdf-editor-5.9.82.deb
+fi
+
+
+
 ## Download Microsoft Edge
 if [ -e microsoft-edge-stable_121.0.2277.98-1_amd64.deb ];
 then
@@ -861,6 +872,9 @@ sudo apt install vim -y
 
 ## Instalando terminal terminator
 sudo apt install terminator -y
+
+## Instalando terminal leitor de PDF Okular
+sudo apt install okular -y
 
 ## Instalando Dconf Editor
 sudo apt install dconf-editor -y

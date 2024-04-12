@@ -134,7 +134,7 @@ sudo dpkg -i 4kvideodownloader_4.21.7-1_amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Android Studio
+## Adventure Quest World
 sudo dpkg -i adventure-quest-worlds.deb
 sudo apt --fix-broken install -y
 
@@ -181,11 +181,6 @@ sudo dpkg -i gitkraken-amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Instalacao da GPU Radeon R5230
-sudo dpkg -i gpu-radeon-r5-230.deb
-sudo apt --fix-broken install -y
-
-
 ## Insomnia
 sudo dpkg -i Insomnia.Core-8.6.0.deb
 sudo apt --fix-broken install -y
@@ -218,6 +213,11 @@ sudo apt --fix-broken install -y
 
 ## Japersoft studio
 sudo dpkg -i jaspersoft-sudio-6.20.0_linux_amd64.deb
+sudo apt --fix-broken install -y
+
+
+## MasterPDF
+sudo dpkg -i master-pdf-editor-5.9.82.deb
 sudo apt --fix-broken install -y
 
 
