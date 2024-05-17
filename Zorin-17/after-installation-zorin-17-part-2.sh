@@ -329,7 +329,7 @@ code --install-extension aaron-bond.better-comments
 code --install-extension eamodio.gitlens
 
 ## Instlando Tabnine
-code --install-extension TabNine.tabnine-vscodes
+code --install-extension TabNine.tabnine-vscode
 
 ## Suporte a arquivos yml
 code --install-extension redhat.vscode-yaml
