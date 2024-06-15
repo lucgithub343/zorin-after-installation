@@ -205,9 +205,8 @@ then
 fi
 
 
-
 ## Intellij Ultimate
-sudo dpkg -i intellij-ultimate-2023-3-6.deb
+sudo dpkg -i intellij-ultimate-2024-1-3.deb
 sudo apt --fix-broken install -y
 
 

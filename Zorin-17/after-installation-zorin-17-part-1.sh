@@ -480,12 +480,12 @@ fi
 
 
 ## Download Intellij Ultimate
-if [ -e intellij-ultimate-2023-3-6.deb ];
+if [ -e intellij-ultimate-2024-1-3.deb ];
 then
-    echo "O arquivo  intellij-ultimate-2023-3-6.deb ja existe"
+    echo "O arquivo  intellij-ultimate-2024-1-3.deb ja existe"
 else
     echo -e "\n\n\n\n Intellij Ultimate"
-    wget https://github.com/lucgithub343/intellij/releases/download/intellij/intellij-ultimate-2023-3-6.deb
+    wget https://github.com/lucgithub343/intellij/releases/download/intellij/intellij-ultimate-2024-1-3.deb
 fi
 
 
