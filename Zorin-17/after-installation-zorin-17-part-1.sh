@@ -534,17 +534,6 @@ fi
 
 
 
-## Download Microsoft Teams
-if [ -e teams-for-linux_1.4.12_amd64.deb ];
-then
-    echo "O arquivo  teams-for-linux_1.4.12_amd64.deb ja  existe"
-else
-    echo -e "\n\n\n\n Microsoft Teams"
-    wget https://github.com/lucgithub343/microsoft-teams/releases/download/Microsoft-Teams/teams-for-linux_1.4.12_amd64.deb
-fi
-
-
-
 ## Download MySql Workbench
 if [ -e mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb ];
 then

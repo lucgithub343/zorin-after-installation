@@ -116,6 +116,7 @@ echo -e "\n\n\n************************************************** INSTALANDO  PA
 flatpak install flathub dev.aunetx.deezer -y
 flatpak install flathub org.gnome.Solanum -y
 flatpak install flathub com.bitwarden.desktop -y
+flatpak install flathub com.github.IsmaelMartinez.teams_for_linux -y
 
 echo "***********************************************************************************************************************************************"
 
@@ -222,11 +223,6 @@ sudo apt --fix-broken install -y
 
 ## Microsoft Edge
 sudo dpkg -i microsoft-edge-stable_121.0.2277.98-1_amd64.deb
-sudo apt --fix-broken install -y
-
-
-## Microsoft Teams
-sudo dpkg -i teams-for-linux_1.4.12_amd64.deb
 sudo apt --fix-broken install -y
 
 
