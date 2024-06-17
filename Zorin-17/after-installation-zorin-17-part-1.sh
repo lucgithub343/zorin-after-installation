@@ -447,23 +447,13 @@ else
 fi
 
 
-
-## Ver se o processar é do modelo do notebook pessoal
-ideapad_processador="`grep -cm 1  "142" /proc/cpuinfo`"
-
-## Se o Modelo for do Ideapad notebok
-## faz download da Iriun Webcam
-if [ $ideapad_processador == 1 ];
+## Download Iriun Webcam
+if [ -e iriunwebcam-2.8.2.deb ];
 then
-
-    ## Download Iriun Webcam
-    if [ -e iriunwebcam-2.8.2.deb ];
-    then
-        echo "O arquivo  iriunwebcam-2.8.2.deb  ja existe"
-    else
-        echo -e "\n\n\n\n Iriun Webcam"
-        wget https://github.com/lucgithub343/iriun-webcam/releases/download/iriun-webcam/iriunwebcam-2.8.2.deb
-    fi
+    echo "O arquivo  iriunwebcam-2.8.2.deb  ja existe"
+else
+    echo -e "\n\n\n\n Iriun Webcam"
+    wget https://github.com/lucgithub343/iriun-webcam/releases/download/iriun-webcam/iriunwebcam-2.8.2.deb
 fi
 
 
