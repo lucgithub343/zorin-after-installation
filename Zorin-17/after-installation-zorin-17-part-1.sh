@@ -326,12 +326,12 @@ fi
 
 
 ## Download Apache Netbeans
-if [ -e apache-netbeans_21-1_all.deb ];
+if [ -e apache-netbeans_22-1_all.deb ];
 then
-    echo "O arquivo  apache-netbeans_21-1_all.deb  ja existe"
+    echo "O arquivo  apache-netbeans_22-1_all.deb  ja existe"
 else
     echo -e "\n\n\n\n Apache Netbeans"
-    wget https://github.com/lucgithub343/apache-netbeans/releases/download/apache-netbeans/apache-netbeans_21-1_all.deb
+    wget https://github.com/lucgithub343/apache-netbeans/releases/download/apache-netbeans/apache-netbeans_22-1_all.deb
 fi
 
 
@@ -423,16 +423,6 @@ then
 else
     echo -e "\n\n\n\n GitKraken"
     wget https://github.com/lucgithub343/git-kraken/releases/download/git-kraken/gitkraken-amd64.deb
-fi
-
-
-## Download GPU Radeon R5 230
-if [ -e gpu-radeon-r5-230.deb ];
-then
-    echo "O arquivo  gpu-radeon-r5-230.deb  ja existe"
-else
-    echo -e "\n\n\n\n GPU Radeon R5 230"
-    wget https://github.com/lucgithub343/gpu/releases/download/GPU/gpu-radeon-r5-230.deb
 fi
 
 
@@ -943,24 +933,6 @@ sudo apt install palemoon -y
 
 ## Instalando ferramenta de Backup
 sudo apt install luckybackup-data -y
-
-
-echo -e "\n\n\n**************************************************** INSTALANDO  FIREFOX  NATIVO ****************************************************"
-
-## Removendo o Firefox Flatpak
-flatpak uninstall org.mozilla.firefox  -y
-
-## Instalando Firefox .deb
-sudo add-apt-repository ppa:mozillateam/ppa -y
-sudo apt update -y
-sudo apt install --target-release 'o=LP-PPA-mozillateam' firefox -y
-
-
-echo "Package: firefox*" | sudo tee -a /etc/apt/preferences.d/mozillateamppa
-echo "Pin: release o=LP-PPA-mozillateam" | sudo tee -a /etc/apt/preferences.d/mozillateamppa
-echo "Pin-Priority: 501" | sudo tee -a /etc/apt/preferences.d/mozillateamppa
-
-echo "***********************************************************************************************************************************************"
 
 
 

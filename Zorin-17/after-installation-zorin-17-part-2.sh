@@ -267,7 +267,7 @@ sudo apt --fix-broken install -y
 echo -e "\n\n\n ***************************************************  INSTALANDO  APACHE  NETBEANS ***************************************************"
 
 ## Apache Netbeans
-sudo dpkg -i apache-netbeans_21-1_all.deb
+sudo dpkg -i apache-netbeans_22-1_all.deb
 sudo apt --fix-broken install -y
 
 
@@ -376,9 +376,6 @@ echo -e "\n\n\n************************************************* IMPEDIR  AJUSTE
 
 
 echo "***********************************************************************************************************************************************"
-
-## Atualizando a maneira de atualizar as keys dos repositorio sao salva
-sudo cp /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 
 
 ## Deletando dependencias que nao estao sendo utilizadas
