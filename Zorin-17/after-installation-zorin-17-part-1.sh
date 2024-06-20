@@ -618,6 +618,16 @@ else
 fi
 
 
+## Download Visual Studio Codium
+if [ -e vs-codium_1.90.2.24171_amd64.deb ];
+then
+    echo "O arquivo  vs-codium_1.90.2.24171_amd64.deb   ja existe"
+else
+    echo -e "\n\n\n\n Visual Studio Codium"
+    wget https://github.com/lucgithub343/visual-studio-codium/releases/download/visual-studio-codium/vs-codium_1.90.2.24171_amd64.deb
+fi
+
+
 
 ## Download Vivaldi
 if [ -e vivaldi-stable_6.5.3206.63-1_amd64.deb ];

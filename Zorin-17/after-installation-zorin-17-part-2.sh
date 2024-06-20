@@ -248,6 +248,11 @@ sudo dpkg -i StarUML_6.1.0_amd64.deb
 sudo apt --fix-broken install -y
 
 
+## Visual Studio Codium
+sudo dpkg -i vs-codium_1.90.2.24171_amd64.deb
+sudo apt --fix-broken install -y
+
+
 ## Vivaldi
 sudo dpkg -i vivaldi-stable_6.5.3206.63-1_amd64.deb
 sudo apt --fix-broken install -y
@@ -337,12 +342,20 @@ code --install-extension jeff-hykin.better-shellscript-syntax
 
 ## INSTALANDO  PARENTESES  AUTOMATICOS  NOS  METODOS  JAVASCRIPT  E  TYPESCRIPT
 
+## parenteses atumomaticos nas funcoes do JavaScript
+echo '"javascript.suggest.completeFunctionCalls": true,' | tee ~/.config/Code/User/settings.json
 
 ## parenteses atumomaticos nos metodos do TypeScript
 echo '"typescript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code/User/settings.json
 
-## parenteses atumomaticos nas funcoes do JavaScript
-echo '"javascript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code/User/settings.json
+## Configurando TabNine
+echo '"tabnine.experimentalAutoImports": true,' | tee -a ~/.config/Code/User/settings.json
+
+## Configurando os icones
+echo '"workbench.iconTheme": "material-icon-theme"' | tee -a ~/.config/Code/User/settings.json
+
+## Copiando o arquivo de configuracao do VsCode para o VsCodium
+cp ~/.config/Code/User/settings.json /.config/VSCodium/User/
 
 
 echo "***********************************************************************************************************************************************"
