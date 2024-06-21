@@ -254,7 +254,7 @@ sudo apt --fix-broken install -y
 
 
 ## Vivaldi
-sudo dpkg -i vivaldi-stable_6.5.3206.63-1_amd64.deb
+sudo dpkg -i vivaldi-stable_6.8.3381.44-1_amd64.deb
 sudo apt --fix-broken install -y
 
 

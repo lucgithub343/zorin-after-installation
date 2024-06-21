@@ -630,12 +630,12 @@ fi
 
 
 ## Download Vivaldi
-if [ -e vivaldi-stable_6.5.3206.63-1_amd64.deb ];
+if [ -e vivaldi-stable_6.8.3381.44-1_amd64.deb ];
 then
-    echo "O arquivo  vivaldi-stable_6.5.3206.63-1_amd64.deb   ja existe"
+    echo "O arquivo  vivaldi-stable_6.8.3381.44-1_amd64.deb   ja existe"
 else
     echo -e "\n\n\n\n Vivaldi"
-    wget https://github.com/lucgithub343/vivaldi/releases/download/Vivaldi/vivaldi-stable_6.5.3206.63-1_amd64.deb
+    wget https://github.com/lucgithub343/vivaldi/releases/download/Vivaldi/vivaldi-stable_6.8.3381.44-1_amd64.deb
 fi
 
 
