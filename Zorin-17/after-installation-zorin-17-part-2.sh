@@ -197,11 +197,6 @@ sudo dpkg -i iriunwebcam-2.8.2.deb
 sudo apt --fix-broken install -y
 
 
-## Intellij Ultimate
-sudo dpkg -i intellij-ultimate-2024-1-3.deb
-sudo apt --fix-broken install -y
-
-
 ## Japersoft studio
 sudo dpkg -i jaspersoft-sudio-6.20.0_linux_amd64.deb
 sudo apt --fix-broken install -y
@@ -277,17 +272,17 @@ sudo apt --fix-broken install -y
 
 
 ## Baixando repositorio Classes do Git Hub
-if [ -d ~/.netbeans/21/config/Templates/Classes/ ];
+if [ -d ~/.netbeans/22/config/Templates/Classes/ ];
 then
     echo "O diretorio  ~/.netbeans/21/config/Templates/Classes/  ja existe"
 else
 
   ## Criando a pasta onde vao ficar os templates modificados
-  mkdir -p ~/.netbeans/21/config/Templates/
+  mkdir -p ~/.netbeans/22/config/Templates/
 
   echo -e "\n\n\n\n Clonando repositorio Classes do Git Hub"
   git clone https://github.com/lucgithub343/Classes.git
-  cp -r Classes/ ~/.netbeans/21/config/Templates/
+  cp -r Classes/ ~/.netbeans/22/config/Templates/
 fi
 
 echo "***********************************************************************************************************************************************"

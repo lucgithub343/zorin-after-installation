@@ -459,17 +459,6 @@ fi
 
 
 
-## Download Intellij Ultimate
-if [ -e intellij-ultimate-2024-1-3.deb ];
-then
-    echo "O arquivo  intellij-ultimate-2024-1-3.deb ja existe"
-else
-    echo -e "\n\n\n\n Intellij Ultimate"
-    wget https://github.com/lucgithub343/intellij/releases/download/intellij/intellij-ultimate-2024-1-3.deb
-fi
-
-
-
 ## Download Jasper Studio
 if [ -e jaspersoft-sudio-6.20.0_linux_amd64.deb ];
 then
@@ -804,7 +793,7 @@ sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 
 NODE_MAJOR=20
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg arch=amd64] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg arch=amd] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
 sudo apt update -y
 sudo apt install nodejs -y
@@ -944,6 +933,29 @@ sudo apt install palemoon -y
 ## Instalando ferramenta de Backup
 sudo apt install luckybackup-data -y
 
+
+
+echo -e "\n\n\n*************************************************** INSTALANDO  IDES  DA  JETBRAINS **************************************************"
+
+## https://github.com/JonasGroeger/jetbrains-ppa
+
+
+## Adicionando a chave do repositorio
+curl -s https://s3.eu-central-1.amazonaws.com/jetbrains-ppa/0xA6E8698A.pub.asc | gpg --dearmor | sudo tee /usr/share/keyrings/jetbrains-ppa-archive-keyring.gpg > /dev/null
+
+## Adicionando o repositorios
+echo "deb [signed-by=/usr/share/keyrings/jetbrains-ppa-archive-keyring.gpg arch=amd64] http://jetbrains-ppa.s3-website.eu-central-1.amazonaws.com any main" | sudo tee /etc/apt/sources.list.d/jetbrains-ppa.list > /dev/null
+
+sudo apt update -y
+
+## Instalando Intellij ultimate
+sudo apt-get install intellij-idea-ultimate -y
+
+## Instalando PyCharm Professional
+sudo apt install pycharm-professional -y
+
+## Instalando PHP Storm
+sudo apt install phpstorm -y
 
 
 echo -e "\n\n\n*************************************************** INSTALANDO  OBS  STUDIO  NATIVO **************************************************"
