@@ -63,12 +63,14 @@ echo -e "\n\n\n*****************************************************************
 
 echo -e "\n\n\n********************************* ADICIONANDO  SUPORTE  EXTENDIDO  AO  ZORIN **********************************************************************"
 
-    sudo apt update -y
-    sudo apt install ubuntu-advantage-tools -y
-    sudo apt update -y
+## https://ubuntu.com/pro/subscribe
 
-    sudo pro attach C1euiqRh17uebyf3GVTv71hYEtN2b
-    sudo apt update -y
+sudo apt update -y
+sudo apt install ubuntu-advantage-tools -y
+sudo apt update -y
+
+sudo pro attach C1euiqRh17uebyf3GVTv71hYEtN2b
+sudo apt update -y
 
 echo "***********************************************************************************************************************************************"
 
