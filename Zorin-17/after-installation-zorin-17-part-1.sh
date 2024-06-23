@@ -525,17 +525,6 @@ fi
 
 
 
-## Download Opera
-if [ -e opera-stable_106.0.4998.70_amd64.deb ];
-then
-    echo "O arquivo  opera-stable_106.0.4998.70_amd64.deb  ja existe"
-else
-    echo -e "\n\n\n\n Opera"
-    wget https://github.com/lucgithub343/opera/releases/download/Opera/opera-stable_106.0.4998.70_amd64.deb
-fi
-
-
-
 ## Download Postman
 if [ -e postman-10.22.10.deb ];
 then

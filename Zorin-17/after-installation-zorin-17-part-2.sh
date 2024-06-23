@@ -189,11 +189,6 @@ sudo apt --fix-broken install -y
 sudo sed -i '/Terminal=false/a StartupWMClass=DesktopEditors' /usr/share/applications/onlyoffice-desktopeditors.desktop
 
 
-## Opera
-sudo dpkg -i opera-stable_106.0.4998.70_amd64.deb
-sudo apt --fix-broken install -y
-
-
 ## Postman
 sudo dpkg -i postman-10.22.10.deb
 sudo apt --fix-broken install -y
