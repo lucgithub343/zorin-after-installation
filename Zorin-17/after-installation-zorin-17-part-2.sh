@@ -61,50 +61,14 @@ echo -e "\n\n\n*****************************************************************
 
 
 
-echo -e "\n\n\n********************************* INSTALANDO  DRIVER  DE  VIDEO **********************************************************************"
-
-
-while true
-do
-    echo -e "\n\nDigite opção 1 ou 2"
-    echo "1 - DESKTOP"
-    echo "2 - NOTEBOOK  PESSOAL"
-    echo "3 - NOTEBOOK  EMPRESA"
-
-    echo "Digite a opção: "
-    read opcao
+echo -e "\n\n\n********************************* ADICIONANDO  SUPORTE  EXTENDIDO  AO  ZORIN **********************************************************************"
 
     sudo apt update -y
     sudo apt install ubuntu-advantage-tools -y
+    sudo apt update -y
 
-    if [ $opcao -eq 1 ];
-    then
-        echo -e "\n\n*************************************DESKTOP *****************************************************"
-
-          sudo ua attach C1NN7PA4J2HtxnsvSiTUPEs5bUU7Y
-
-        echo -e "\n\n**************************************************************************************************"
-        break
-    elif [ $opcao -eq 2 ];
-    then
-        echo -e "\n\n*********************************** NOTEBOOK LUCIANO *********************************************"
-
-          sudo ua attach C1x3zxz1GFawrD8EY4oT7RsxsEfH1
-
-        echo -e "\n\n**************************************************************************************************"
-        break
-    elif [ $opcao -eq 3 ];
-    then
-        echo -e "\n\n********************************* NOTEBOOK EMPRESA ***********************************************"
-
-          sudo ua attach C12Jp442FKeioyspXdSyrbG9aHn9hw
-
-        echo -e "\n\n**************************************************************************************************"
-        break
-    else
-        echo -e "\n\nOpcao invalida"
-    fi
-done
+    sudo pro attach C1euiqRh17uebyf3GVTv71hYEtN2b
+    sudo apt update -y
 
 echo "***********************************************************************************************************************************************"
 
