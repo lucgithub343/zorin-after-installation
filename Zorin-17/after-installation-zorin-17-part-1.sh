@@ -733,7 +733,10 @@ curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 ## Instalando Java
-sdk install java 21.0.2-oracle
+sdk install java 21.0.3-oracle
+
+## Listar todas as versoes do JAVA
+## sdk list java
 
 ## Instalando Groovy
 sdk install groovy
