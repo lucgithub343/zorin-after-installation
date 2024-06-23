@@ -315,8 +315,11 @@ echo '"tabnine.experimentalAutoImports": true,' | tee -a ~/.config/Code/User/set
 ## Configurando os icones
 echo '"workbench.iconTheme": "material-icon-theme"' | tee -a ~/.config/Code/User/settings.json
 
+## abrindo o VsCodium
+codium
+
 ## Copiando o arquivo de configuracao do VsCode para o VsCodium
-cp ~/.config/Code/User/settings.json /.config/VSCodium/User/
+cp ~/.config/Code/User/settings.json ~/.config/VSCodium/User/
 
 
 echo "***********************************************************************************************************************************************"
