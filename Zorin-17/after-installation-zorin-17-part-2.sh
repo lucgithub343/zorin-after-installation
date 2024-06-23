@@ -322,7 +322,8 @@ echo "Continuando execucao do Script"
 codium
 
 
-## Parando o script por um tempo para que o VsCodium abra
+## Parando o script por um tempo para que o VsCodium abra e crie sua pasta de configuracao
+## Para que o arquivo settings.js possa ser copiado para sua pasta de configurcao
 tempoParado=30
 echo "Parando o Script por $tempoParado segundos para o VsCodium abrir";
 sleep $tempoParado;
