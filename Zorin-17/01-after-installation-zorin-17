@@ -503,6 +503,17 @@ fi
 
 
 
+## Download Midori
+if [ -e midori_11.3.3_amd64.deb ];
+then
+    echo "O arquivo  midori_11.3.3_amd64.deb ja  existe"
+else
+    echo -e "\n\n\n\n Midori"
+    wget https://github.com/lucgithub343/midori/releases/download/midori/midori_11.3.3_amd64.deb
+fi
+
+
+
 ## Download MySql Workbench
 if [ -e mysql-workbench-community_8.0.36-1ubuntu22.04_amd64.deb ];
 then
