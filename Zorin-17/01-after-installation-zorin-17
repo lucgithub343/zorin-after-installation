@@ -547,6 +547,16 @@ fi
 
 
 
+## Download SlimJet browser
+if [ -e slimjet_amd64.deb ];
+then
+    echo "O arquivo  slimjet_amd64.deb  ja existe"
+else
+    echo -e "\n\n\n\n SlimJet browser"
+    wget https://github.com/lucgithub343/slimjet-browser/releases/download/slimjet-browser/slimjet_amd64.deb
+fi
+
+
 ## Download Spring Tool Suite
 if [ -e spring-tool-suite-4.22.0.RELEASE.deb ];
 then
