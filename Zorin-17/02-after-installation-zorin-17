@@ -317,9 +317,6 @@ echo '"typescript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code
 ## Configurando TabNine
 echo '"tabnine.experimentalAutoImports": true,' | tee -a ~/.config/Code/User/settings.json
 
-## Configurando os icones
-echo '"workbench.iconTheme": "material-icon-theme"' | tee -a ~/.config/Code/User/settings.json
-
 
 ## abrindo o VsCodium
 codium
