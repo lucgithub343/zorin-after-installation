@@ -214,11 +214,6 @@ sudo dpkg -i StarUML_6.1.0_amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Visual Studio Codium
-sudo dpkg -i vs-codium_1.90.2.24171_amd64.deb
-sudo apt --fix-broken install -y
-
-
 ## Vivaldi
 sudo dpkg -i vivaldi-stable_6.8.3381.44-1_amd64.deb
 sudo apt --fix-broken install -y
@@ -266,6 +261,18 @@ echo -e "\n\n\n ***************************************  INSTALANDO  VISUAL  STU
 
 sudo dpkg -i visual-studio-code_1.87.2-1709912201_amd64.deb
 sudo apt --fix-broken install -y
+
+
+## Abrindo o Visual Studio Code
+code
+
+
+## Parando o script por um tempo para que o Visual Studio Code abra e crie sua pasta de configuracao
+tempoParado=20
+echo "Parando o Script por $tempoParado segundos para o VsCodium abrir";
+sleep $tempoParado;
+echo "Continuando execucao do Script"
+
 
 
 ## INSTALANDO  EXTENÇÕES  DO  VISUAL  STUDIO  CODE
@@ -317,14 +324,24 @@ echo '"typescript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code
 ## Configurando TabNine
 echo '"tabnine.experimentalAutoImports": true,' | tee -a ~/.config/Code/User/settings.json
 
+echo "***********************************************************************************************************************************************"
 
-## abrindo o VsCodium
+
+
+
+echo -e "\n\n\n ***********************************************  INSTALANDO  VISUAL  STUDIO  CODIUM  ************************************************"
+
+sudo dpkg -i vs-codium_1.90.2.24171_amd64.deb
+sudo apt --fix-broken install -y
+
+
+## abrindo o Visual Studio Codium
 codium
 
 
 ## Parando o script por um tempo para que o VsCodium abra e crie sua pasta de configuracao
 ## Para que o arquivo settings.js possa ser copiado para sua pasta de configurcao
-tempoParado=30
+tempoParado=20
 echo "Parando o Script por $tempoParado segundos para o VsCodium abrir";
 sleep $tempoParado;
 echo "Continuando execucao do Script"
@@ -332,10 +349,6 @@ echo "Continuando execucao do Script"
 
 ## Copiando o arquivo de configuracao do VsCode para o VsCodium
 cp ~/.config/Code/User/settings.json ~/.config/VSCodium/User/
-
-
-echo "***********************************************************************************************************************************************"
-
 
 
 
