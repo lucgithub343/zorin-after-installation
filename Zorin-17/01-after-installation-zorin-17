@@ -111,7 +111,7 @@ fi
 
 
 ## Criando modelo de arquivo Dockerfile
-if [ -e ~/Templates/Dockerfile];
+if [ -e ~/Templates/Dockerfile ];
 then
     echo "O arquivo  Dockerfile  ja existe"
 else
