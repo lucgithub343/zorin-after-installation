@@ -119,6 +119,24 @@ else
 fi
 
 
+## Criando modelo de arquivo TypeScript
+if [ -e ~/Templates/TypeScript.ts ];
+then
+    echo "O arquivo TypeScript.ts  ja existe"
+else
+    touch ~/Templates/TypeScript.ts
+fi
+
+
+## Criando modelo de arquivo JavaScript
+if [ -e ~/Templates/JavaScript.js ];
+then
+    echo "O arquivo JavaScript.js  ja existe"
+else
+    touch ~/Templates/JavaScript.js
+fi
+
+
 
 
 echo -e "\n\n\n********************************************** INSTALANDO  RESTRICTED  EXTRAS*********************************************************"
