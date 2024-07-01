@@ -147,6 +147,18 @@ echo "**************************************************************************
 
 
 
+echo -e "\n\n\n********************************************* INSTALANDO  VIRTUALBOX  E  EXTENSION  PACK *********************************************"
+
+## Instalando VirtualBox
+sudo apt install virtualbox -y
+
+## Instalando VirtualBox Extension Pack
+sudo apt install virtualbox-ext-pack -y
+
+echo "***********************************************************************************************************************************************"
+
+
+
 
 echo -e "\n\n\n************************************************** INSTALANDO  NODE.JS ***************************************************************"
 
@@ -1020,9 +1032,6 @@ sudo apt install synaptic -y
 
 ## Instalando Umbrelo
 sudo apt install umbrello -y
-
-## Instalando VirtualBox
-sudo apt install virtualbox -y
 
 ## Instalando Browser Midori
 sudo wget -O /etc/apt/trusted.gpg.d/midori-archive-keyring.gpg http://repo.astian.org/midori-archive-keyring.gpg
