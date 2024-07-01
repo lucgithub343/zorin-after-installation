@@ -263,18 +263,6 @@ sudo dpkg -i visual-studio-code_1.87.2-1709912201_amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Abrindo o Visual Studio Code
-code
-
-
-## Parando o script por um tempo para que o Visual Studio Code abra e crie sua pasta de configuracao
-tempoParado=20
-echo "Parando o Script por $tempoParado segundos para o VsCodium abrir";
-sleep $tempoParado;
-echo "Continuando execucao do Script"
-
-
-
 ## INSTALANDO  EXTENÇÕES  DO  VISUAL  STUDIO  CODE
 
 ## Instalando Material Icon themes
