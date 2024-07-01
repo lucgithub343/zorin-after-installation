@@ -812,16 +812,27 @@ echo "**************************************************************************
 echo -e "\n\n\n************************************************** INSTALANDO  NODE.JS ***************************************************************"
 
 sudo apt update -y
-sudo apt install ca-certificates curl gnupg -y
 
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+sudo apt install curl -y
 
-NODE_MAJOR=20
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg arch=amd64] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
-sudo apt update -y
+## Download the Node.js setup script:
+curl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+
+
+## Run the Node.js setup script with sudo
+sudo -E bash nodesource_setup.sh
+
+
+## Install Node.js
 sudo apt install nodejs -y
+
+## To see version of Node.js
+node -v
+
+
+## To see version of Node Package Manager (NPM)
+npm -v
 
 echo "***********************************************************************************************************************************************"
 
@@ -830,7 +841,7 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALANDO  ANGULAR ***************************************************************"
 
-sudo npm install -g  @angular/cli@16.2.12
+sudo npm install -g  @angular/cli@17.3.8
 
 #### Como ver versao do Angular
 ## ng v
@@ -988,11 +999,6 @@ sudo apt install pycharm-professional -y
 ## Instalando PHP Storm
 sudo apt install phpstorm -y
 
-## Instalacao do WebStorm
-sudo apt install webstorm -y
-
-## Instalacao do CLion
-sudo apt install clion -y
 
 echo -e "\n\n\n*************************************************** INSTALANDO  OBS  STUDIO  NATIVO **************************************************"
 
