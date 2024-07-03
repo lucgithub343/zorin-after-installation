@@ -314,6 +314,23 @@ else
 fi
 
 
+## Download tema Dracula
+if [ -d ~/.themes/Dracula ];
+then
+    echo "O diretorio  ~/.themes/Dracula  ja existe"
+else
+    echo -e "\n\n\n\n Dracula"
+    wget https://github.com/lucgithub343/gnome-themes/releases/download/gnome-themes/Dracula.tar.gz
+    cp Dracula.tar.gz ~/.themes/
+    cd ~/.themes/
+    tar -xvzf Dracula.tar.gz
+    rm Dracula.tar.gz
+
+    ## Entrando na para pasta de programas
+    cd ~/Downloads/Softwares/
+fi
+
+
 
 ## Download Deepin Icon
 if [ -d ~/.icons/Deepin ];
