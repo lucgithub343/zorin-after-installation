@@ -1121,6 +1121,9 @@ sudo apt install pycharm-professional -y
 ## Instalando PHP Storm
 sudo apt install phpstorm -y
 
+## Instalando o WebStorm
+sudo apt install webstorm -y
+
 
 echo -e "\n\n\n*************************************************** INSTALANDO  OBS  STUDIO  NATIVO **************************************************"
 
