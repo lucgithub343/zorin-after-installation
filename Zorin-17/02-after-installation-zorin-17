@@ -325,6 +325,45 @@ sudo dpkg -i vs-codium_1.90.2.24171_amd64.deb
 sudo apt --fix-broken install -y
 
 
+# INSTALANDO  EXTENÇÕES  DO  VISUAL  STUDIO  CODIUM
+
+## Instalando Material Icon themes
+codium --install-extension PKief.material-icon-theme
+
+## Instalando Mithril Emmet
+codium --install-extension PFallenMax.mithril-emmet
+
+## Instalando ESlint
+codium --install-extension dbaeumer.vscode-eslint
+
+## Instlando Better Comments
+codium --install-extension aaron-bond.better-comments
+
+## Instlando GitLens
+codium --install-extension eamodio.gitlens
+
+## Instlando Tabnine
+codium --install-extension TabNine.tabnine-vscode
+
+## Suporte a arquivos yml
+codium --install-extension redhat.vscode-yaml
+
+## Suporte ao Vim
+codium --install-extension vscodevim.vim
+
+## Melhor sintaxe para shell script
+codium --install-extension jeff-hykin.better-shellscript-syntax
+
+## Auto complete de sintaxe para Shelll Script
+codium --install-extension tetradresearch.vscode-h2o
+
+## Mostra Reultados quando vc muda o codigo no TypeScript e no JavaScript
+codium --install-extension jeff-hykin.better-shellscript-syntax
+
+## Live Server para mostrar modificacoes na pagina
+codium --install-extension ritwickdey.LiveServer
+
+
 ## abrindo o Visual Studio Codium
 codium
 
