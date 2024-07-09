@@ -298,6 +298,8 @@ code --install-extension tetradresearch.vscode-h2o
 ## Mostra Reultados quando vc muda o codigo no TypeScript e no JavaScript
 code --install-extension jeff-hykin.better-shellscript-syntax
 
+## Live Server para mostrar modificacoes na pagina
+code --install-extension ritwickdey.LiveServer
 
 
 
