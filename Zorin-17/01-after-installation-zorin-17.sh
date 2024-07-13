@@ -368,6 +368,23 @@ else
 fi
 
 
+## Download tema Dracula
+if [ -d ~/.themes/Snow-alien ];
+then
+    echo "O diretorio  ~/.themes/Snow-alien  ja existe"
+else
+    echo -e "\n\n\n\n Snow Alien"
+    wget https://github.com/lucgithub343/gnome-themes/releases/download/gnome-themes/Snow-alien.tar.gz
+    cp Snow-alien.tar.gz ~/.themes/
+    cd ~/.themes/
+    tar -xvzf Snow-alien.tar.gz
+    rm Snow-alien.tar.gz
+
+    ## Entrando na para pasta de programas
+    cd ~/Downloads/Softwares/
+fi
+
+
 
 ## Download Deepin Icon
 if [ -d ~/.icons/Deepin ];
