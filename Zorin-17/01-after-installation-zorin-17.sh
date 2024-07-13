@@ -1048,12 +1048,6 @@ sudo apt install synaptic -y
 ## Instalando Umbrelo
 sudo apt install umbrello -y
 
-## Instalando Browser Midori
-sudo wget -O /etc/apt/trusted.gpg.d/midori-archive-keyring.gpg http://repo.astian.org/midori-archive-keyring.gpg
-echo "deb http://repo.astian.org midori main" | sudo tee /etc/apt/sources.list.d/midori.list
-sudo apt update -y
-sudo apt install midori -y
-
 ## Instalando o modulo "libcanberra-gtk-module" para que nao ocorra o erro: “failed to load module canberra-gtk-module”
 sudo apt install libcanberra-gtk-module libcanberra-gtk3-module -y
 
