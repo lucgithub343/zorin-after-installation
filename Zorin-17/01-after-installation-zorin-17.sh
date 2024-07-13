@@ -444,17 +444,6 @@ fi
 
 
 
-## Download Android Studio
-if [ -e android-studio-2022.3.1.deb ];
-then
-    echo "O arquivo  android-studio-2022.3.1.deb  ja existe"
-else
-    echo -e "\n\n\n\n Android Studio"
-    wget https://github.com/lucgithub343/android-studio/releases/download/android-studio/android-studio-2022.3.1.deb
-fi
-
-
-
 ## Download Apache Netbeans
 if [ -e apache-netbeans_22-1_all.deb ];
 then
@@ -1117,6 +1106,13 @@ sudo apt install phpstorm -y
 
 ## Instalando o WebStorm
 sudo apt install webstorm -y
+
+
+## Instalando Android Studio
+sudo apt update -y
+sudo add-apt-repository ppa:maarten-fonville/android-studio -y
+sudo apt update -y
+sudo apt install android-studio -y
 
 
 echo -e "\n\n\n*************************************************** INSTALANDO  OBS  STUDIO  NATIVO **************************************************"
