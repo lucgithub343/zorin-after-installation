@@ -351,6 +351,23 @@ else
 fi
 
 
+## Download tema Kimi Dark
+if [ -d ~/.themes/Kimi-dark ];
+then
+    echo "O diretorio  ~/.themes/Kimi-dark  ja existe"
+else
+    echo -e "\n\n\n\n Kimi Dark"
+    wget https://github.com/lucgithub343/gnome-themes/releases/download/gnome-themes/Kimi-dark.tar.gz
+    cp Kimi-dark.tar.gz ~/.themes/
+    cd ~/.themes/
+    tar -xvzf Kimi-dark.tar.gz
+    rm Kimi-dark.tar.gz
+
+    ## Entrando na para pasta de programas
+    cd ~/Downloads/Softwares/
+fi
+
+
 
 ## Download Deepin Icon
 if [ -d ~/.icons/Deepin ];
