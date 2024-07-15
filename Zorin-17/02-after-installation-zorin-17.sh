@@ -61,7 +61,95 @@ echo -e "\n\n\n*****************************************************************
 
 
 
-echo -e "\n\n\n********************************* ADICIONANDO  SUPORTE  EXTENDIDO  AO  ZORIN **********************************************************************"
+echo -e "\n\n\n************************************************** INSTALANDO  NODE.JS ***************************************************************"
+
+sudo apt update -y
+
+sudo apt install curl -y
+
+
+## Download the Node.js setup script:
+curl -fsSL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+
+
+## Run the Node.js setup script with sudo
+sudo -E bash nodesource_setup.sh
+
+
+## Install Node.js
+sudo apt install nodejs -y
+
+## To see version of Node.js
+node -v
+
+
+## To see version of Node Package Manager (NPM)
+npm -v
+
+echo "***********************************************************************************************************************************************"
+
+
+
+
+echo -e "\n\n\n************************************************** INSTALANDO  ANGULAR ***************************************************************"
+
+sudo npm install -g  @angular/cli@17.3.8
+
+#### Como ver versao do Angular
+ng v
+
+echo "***********************************************************************************************************************************************"
+
+
+
+
+echo -e "\n\n\n************************************************** INSTALANDO  TYPESCRIPT ************************************************************"
+
+sudo npm install -g typescript
+
+## Como ver versao do Typescript
+tsc -v
+
+echo "***********************************************************************************************************************************************"
+
+
+
+
+echo -e "\n\n\n********************************************* INSTALANDO  VIRTUALBOX  E  EXTENSION  PACK *********************************************"
+
+## Instalando VirtualBox
+sudo apt install virtualbox -y
+
+## Instalando VirtualBox Extension Pack
+sudo apt install virtualbox-ext-pack -y
+
+echo "***********************************************************************************************************************************************"
+
+
+
+
+echo -e "\n\n\n***************************************************** INSTALANDO  RUST ***************************************************************"
+
+sudo apt update -y
+
+curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
+
+source "$HOME/.cargo/env"
+
+rustc --version
+
+sudo apt update -y
+
+sudo apt install build-essential -y
+
+rustup update
+
+echo "***********************************************************************************************************************************************"
+
+
+
+
+echo -e "\n\n\n********************************************* ADICIONANDO  SUPORTE  EXTENDIDO  AO  ZORIN *********************************************"
 
 ## https://ubuntu.com/pro/subscribe
 
