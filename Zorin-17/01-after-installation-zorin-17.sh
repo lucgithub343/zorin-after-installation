@@ -1063,6 +1063,25 @@ sudo apt update -y
 sudo apt install android-studio -y
 
 
+
+
+echo -e "\n\n\n*************************************************** INSTALANDO  FIREFOX  NATIVO ******************************************************"
+
+ flatpak uninstall org.mozilla.firefox -y
+
+ sudo rm /etc/apt/preferences.d/mozilla -y
+
+ sudo add-apt-repository ppa:mozillateam/ppa -y
+
+ echo 'Package: firefox*' | sudo tee /etc/apt/preferences.d/mozillateamppa
+ echo 'Pin: release o=LP-PPA-mozillateam' | sudo tee -a /etc/apt/preferences.d/mozillateamppa
+ echo 'Pin-Priority: 1001' | sudo tee -a /etc/apt/preferences.d/mozillateamppa
+
+ sudo apt update -y
+ sudo apt install firefox -y
+ 
+
+
 echo -e "\n\n\n*************************************************** INSTALANDO  OBS  STUDIO  NATIVO **************************************************"
 
 flatpak uninstall com.obsproject.Studio  -y
