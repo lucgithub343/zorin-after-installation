@@ -6,6 +6,21 @@ cd ~/Downloads/Softwares/
 
 
 
+echo -e "\n\n\n ***********************************************  TERMINO  DA   INSTALACAO  RUBY *****************************************************"
+
+rbenv -v
+
+rbenv install -l
+
+echo "Escolha a versao a ser instalada"
+read versao
+rbenv install $versao
+
+echo "***********************************************************************************************************************************************"
+
+
+
+
 echo -e "\n\n\n *************************************  INSTALANDO  SPRING TOOLS  SUITE  COM  LOMBOK **************************************************"
 
 ## Selecionando qual versão do java vai ser a padrao
