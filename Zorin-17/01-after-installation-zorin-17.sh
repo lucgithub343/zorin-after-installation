@@ -1055,6 +1055,9 @@ sudo apt install phpstorm -y
 ## Instalando o WebStorm
 sudo apt install webstorm -y
 
+## RustRover
+sudo apt install rustrover-eap -y
+
 
 ## Instalando Android Studio
 sudo apt update -y
