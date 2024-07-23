@@ -1058,6 +1058,9 @@ sudo apt install webstorm -y
 ## RustRover
 sudo apt install rustrover-eap -y
 
+## Instalndo RubyMine
+sudo apt install rubymine -y
+
 
 ## Instalando Android Studio
 sudo apt update -y
