@@ -1234,6 +1234,21 @@ rm ~/Templates/LibreOffice\ Writer.odt
 
 echo "***********************************************************************************************************************************************"
 
-sudo apt autoremove -y
+
+
+echo -e "\n\n\n********************************************** SUBSTITUINDO  FIREFOX  SNAP  PELO  NATIVO  *********************************************"
+
+flatpak uninstall org.mozilla.firefox -y
+
+sudo mkdir -p /etc/apt/keyrings
+wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc arch=amd64]  https://packages.mozilla.org/apt mozilla main" | sudo tee /etc/apt/sources.list.d/mozilla.list > /dev/null
+
+echo "Package: firefox*"|sudo tee /etc/apt/preferences.d/mozilla
+echo "Pin: origin packages.mozilla.org"|sudo tee /etc/apt/preferences.d/mozilla
+echo "Pin-Priority: 1001"|sudo tee /etc/apt/preferences.d/mozilla
+
+sudo apt update -y
+sudo apt install firefox -y
 
 echo -e "\n\n\n******************************************REINICIAR  O  COMPUTADOR********************************************************************"
