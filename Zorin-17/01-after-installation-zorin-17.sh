@@ -60,53 +60,12 @@ else
 fi
 
 
-## Criando modelo de arquivo de script de banco de dados
-if [ -e ~/Templates/SQL.sql ];
+## Criando modelo de arquivo .txt
+if [ -e ~/Templates/TXT.txt ];
 then
-    echo "O arquivo  SQL.sql  ja existe"
+    echo "O arquivo  TXT.txt  ja existe"
 else
-    touch ~/Templates/SQL.sql
-fi
-
-
-## Criando modelo de arquivo xml
-if [ -e ~/Templates/HTML.html ];
-then
-    echo "O arquivo  HTML.html  ja existe"
-else
-    touch ~/Templates/HTML.html
-
-    echo '<!DOCTYPE html>' | tee -a ~/Templates/HTML.html
-    echo '<html lang="en">' | tee -a ~/Templates/HTML.html
-    echo '' | tee -a ~/Templates/HTML.html
-    echo '<head>' | tee -a ~/Templates/HTML.html
-    echo '    <meta charset="UTF-8">' | tee -a ~/Templates/HTML.html
-    echo '    <meta name="viewport" content="width=device-width, initial-scale=1.0">' | tee -a ~/Templates/HTML.html
-    echo '    <title>Document</title>' | tee -a ~/Templates/HTML.html
-    echo '</head>' | tee -a ~/Templates/HTML.html
-    echo '' | tee -a ~/Templates/HTML.html
-    echo '<body>' | tee -a ~/Templates/HTML.html
-    echo '</body>' | tee -a ~/Templates/HTML.html
-    echo '' | tee -a ~/Templates/HTML.html
-    echo '</html>' | tee -a ~/Templates/HTML.html
-fi
-
-
-## Criando modelo de arquivo java
-if [ -e ~/Templates/JAVA.java ];
-then
-    echo "O arquivo  JAVA.java  ja existe"
-else
-    touch ~/Templates/JAVA.java
-fi
-
-
-## Criando modelo de arquivo yml
-if [ -e ~/Templates/YML.yml ];
-then
-    echo "O arquivo  YML.yml  ja existe"
-else
-    touch ~/Templates/YML.yml
+    touch ~/Templates/TXT.txt
 fi
 
 
@@ -118,22 +77,12 @@ else
     touch ~/Templates/Dockerfile
 fi
 
-
-## Criando modelo de arquivo TypeScript
-if [ -e ~/Templates/TypeScript.ts ];
+## Criando modelo de arquivo docker-compose.yml
+if [ -e ~/Templates/docker-compose.yml ];
 then
-    echo "O arquivo TypeScript.ts  ja existe"
+    echo "O arquivo  docker-compose.yml  ja existe"
 else
-    touch ~/Templates/TypeScript.ts
-fi
-
-
-## Criando modelo de arquivo JavaScript
-if [ -e ~/Templates/JavaScript.js ];
-then
-    echo "O arquivo JavaScript.js  ja existe"
-else
-    touch ~/Templates/JavaScript.js
+    touch ~/Templates/docker-compose.yml
 fi
 
 
