@@ -21,6 +21,40 @@ echo "**************************************************************************
 
 
 
+echo -e "\n\n\n********************************************* INSTALANDO  VIRTUALBOX  E  EXTENSION  PACK *********************************************"
+
+## Instalando VirtualBox
+sudo apt install virtualbox -y
+
+## Instalando VirtualBox Extension Pack
+sudo apt install virtualbox-ext-pack -y
+
+echo "***********************************************************************************************************************************************"
+
+
+
+
+echo -e "\n\n\n***************************************************** INSTALANDO  RUST ***************************************************************"
+
+sudo apt update -y
+
+curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
+
+source "$HOME/.cargo/env"
+
+rustc --version
+
+sudo apt update -y
+
+sudo apt install build-essential -y
+
+rustup update
+
+echo "***********************************************************************************************************************************************"
+
+
+
+
 echo -e "\n\n\n *************************************  INSTALANDO  SPRING TOOLS  SUITE  COM  LOMBOK **************************************************"
 
 ## Selecionando qual versão do java vai ser a padrao
@@ -126,41 +160,6 @@ sudo npm install -g typescript
 tsc -v
 
 echo "***********************************************************************************************************************************************"
-
-
-
-
-echo -e "\n\n\n********************************************* INSTALANDO  VIRTUALBOX  E  EXTENSION  PACK *********************************************"
-
-## Instalando VirtualBox
-sudo apt install virtualbox -y
-
-## Instalando VirtualBox Extension Pack
-sudo apt install virtualbox-ext-pack -y
-
-echo "***********************************************************************************************************************************************"
-
-
-
-
-echo -e "\n\n\n***************************************************** INSTALANDO  RUST ***************************************************************"
-
-sudo apt update -y
-
-curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
-
-source "$HOME/.cargo/env"
-
-rustc --version
-
-sudo apt update -y
-
-sudo apt install build-essential -y
-
-rustup update
-
-echo "***********************************************************************************************************************************************"
-
 
 
 
