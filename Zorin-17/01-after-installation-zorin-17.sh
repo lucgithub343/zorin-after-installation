@@ -97,7 +97,7 @@ echo "**************************************************************************
 
 
 
-echo -e "\n\n\n************************************* INSTALANDO  COMPACTADORES  E  DESCOMPACTADORES  ***********************************************"
+echo -e "\n\n\n************************************* INSTALANDO  COMPACTADORES  E  DESCOMPACTADORES  ************************************************"
 
 ## E nescessario instalar os compactadores
 ## e descompactadores aqui, porque
@@ -884,6 +884,9 @@ sudo apt update -y
 ## Instalando fonte VirtualBox
 sudo apt install virtualbox -y
 
+## Instalando linguagem de programação Go
+sudo apt install golang-go -y
+
 ## Instalando fonte Notepadqq
 sudo apt install notepadqq -y
 
@@ -1034,6 +1037,9 @@ sudo apt install rubymine -y
 
 ## Instalndo CLion
 sudo apt install clion -y
+
+## Instalndo GoLand
+sudo apt install goland -y
 
 ## Instalando Android Studio
 sudo apt update -y
