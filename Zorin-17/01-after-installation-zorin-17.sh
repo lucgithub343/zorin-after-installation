@@ -97,7 +97,7 @@ echo "**************************************************************************
 
 
 
-echo -e "\n\n\n************************************* INSTALANDO  COMPACTADORES  E  DESCOMPACTADORES  ************************************************"
+echo -e "\n\n\n************************************* INSTALANDO  COMPACTADORES  E  DESCOMPACTADORES  ***********************************************"
 
 ## E nescessario instalar os compactadores
 ## e descompactadores aqui, porque
