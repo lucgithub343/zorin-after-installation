@@ -203,13 +203,8 @@ sudo dpkg -i 4kvideodownloader_4.21.7-1_amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Adventure Quest World
-sudo dpkg -i adventure-quest-worlds.deb
-sudo apt --fix-broken install -y
-
-
-## Android Studio
-sudo dpkg -i android-studio-2022.3.1.deb
+## Driver placa de Video AMD Radeon R5-230
+sudo dpkg -i amdgpu-install_6.1.60103-1_all.deb
 sudo apt --fix-broken install -y
 
 
