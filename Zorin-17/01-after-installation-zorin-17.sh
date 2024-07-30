@@ -215,23 +215,23 @@ fi
 
 
 ## Download tema Kimi Dark
-if [ -d ~/.themes/Kimi-dark ];
+if [ -d ~/.themes/Kimi-dark-v40 ];
 then
-    echo "O diretorio  ~/.themes/Kimi-dark  ja existe"
+    echo "O diretorio  ~/.themes/Kimi-dark-v40  ja existe"
 else
     echo -e "\n\n\n\n Kimi Dark"
-    wget https://github.com/lucgithub343/gnome-themes/releases/download/gnome-themes/Kimi-dark.tar.gz
-    cp Kimi-dark.tar.gz ~/.themes/
+    wget https://github.com/lucgithub343/gnome-themes/releases/download/gnome-themes/Kimi-dark-v40.tar.gz
+    cp Kimi-dark-v40.tar.gz ~/.themes/
     cd ~/.themes/
-    tar -xvzf Kimi-dark.tar.gz
-    rm Kimi-dark.tar.gz
+    tar -xvzf Kimi-dark-v40.tar.gz
+    rm Kimi-dark-v40.tar.gz
 
     ## Entrando na para pasta de programas
     cd ~/Downloads/Softwares/
 fi
 
 
-## Download tema Dracula
+## Download tema Snow Alien
 if [ -d ~/.themes/Snow-alien ];
 then
     echo "O diretorio  ~/.themes/Snow-alien  ja existe"
@@ -241,7 +241,7 @@ else
     cp Snow-alien.tar.gz ~/.themes/
     cd ~/.themes/
     tar -xvzf Snow-alien.tar.gz
-    rm DSnow-alien.tar.gz
+    rm Snow-alien.tar.gz
 
     ## Entrando na para pasta de programas
     cd ~/Downloads/Softwares/
@@ -330,13 +330,13 @@ fi
 
 
 
-## Download Adventure Quest Worlds
-if [ -e adventure-quest-worlds.deb ];
+## Download driver placa de Video AMD Radeon R5-230
+if [ -e amdgpu-install_6.1.60103-1_all.deb ];
 then
-    echo "O arquivo  adventure-quest-worlds.deb  ja existe"
+    echo "O arquivo  amdgpu-install_6.1.60103-1_all.deb  ja existe"
 else
-    echo -e "\n\n\n\n Adventure Quest Worlds"
-    wget https://github.com/lucgithub343/adventure-quest-worlds/releases/download/adventure-quest-worlds/adventure-quest-worlds.deb
+    echo -e "\n\n\n\n amdgpu-install_6.1.60103-1_all.deb"
+    wget https://github.com/lucgithub343/amd-radeon-r5-230/releases/download/Radeon-R5-230/amdgpu-install_6.1.60103-1_all.deb
 fi
 
 
@@ -881,6 +881,9 @@ echo -e "\n\n\n************************************************** INSTALANDO  AP
 ## Atualizando PPA
 sudo apt update -y
 
+## Instalando fonte VirtualBox
+sudo apt install virtualbox -y
+
 ## Instalando fonte Notepadqq
 sudo apt install notepadqq -y
 
@@ -1029,6 +1032,8 @@ sudo apt install rustrover-eap -y
 ## Instalndo RubyMine
 sudo apt install rubymine -y
 
+## Instalndo CLion
+sudo apt install clion -y
 
 ## Instalando Android Studio
 sudo apt update -y
@@ -1037,23 +1042,28 @@ sudo apt update -y
 sudo apt install android-studio -y
 
 
+echo "***********************************************************************************************************************************************"
 
 
-echo -e "\n\n\n*************************************************** INSTALANDO  FIREFOX  NATIVO ******************************************************"
 
- flatpak uninstall org.mozilla.firefox -y
 
- sudo rm /etc/apt/preferences.d/mozilla -y
+echo -e "\n\n\n******************************************** SUBSTITUINDO  FIREFOX  FLATPAK  PELO  NATIVO  *******************************************"
 
- sudo add-apt-repository ppa:mozillateam/ppa -y
+flatpak uninstall org.mozilla.firefox -y
 
- echo 'Package: firefox*' | sudo tee /etc/apt/preferences.d/mozillateamppa
- echo 'Pin: release o=LP-PPA-mozillateam' | sudo tee -a /etc/apt/preferences.d/mozillateamppa
- echo 'Pin-Priority: 1001' | sudo tee -a /etc/apt/preferences.d/mozillateamppa
+sudo mkdir -p /etc/apt/keyrings
+wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
+echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc arch=amd64]  https://packages.mozilla.org/apt mozilla main" | sudo tee /etc/apt/sources.list.d/mozilla.list > /dev/null
 
- sudo apt update -y
- sudo apt install firefox -y
- 
+echo "Package: firefox*"|sudo tee /etc/apt/preferences.d/mozilla
+echo "Pin: origin packages.mozilla.org"|sudo tee -a /etc/apt/preferences.d/mozilla
+echo "Pin-Priority: 1001"|sudo tee -a /etc/apt/preferences.d/mozilla
+
+sudo apt update -y
+sudo apt install firefox -y
+
+echo "***********************************************************************************************************************************************"
+
 
 
 echo -e "\n\n\n*************************************************** INSTALANDO  OBS  STUDIO  NATIVO **************************************************"
@@ -1180,24 +1190,5 @@ rm ~/Templates/LibreOffice\ Calc.ods
 rm ~/Templates/LibreOffice\ Draw.odg
 rm ~/Templates/LibreOffice\ Impress.odp
 rm ~/Templates/LibreOffice\ Writer.odt
-
-echo "***********************************************************************************************************************************************"
-
-
-
-echo -e "\n\n\n********************************************** SUBSTITUINDO  FIREFOX  SNAP  PELO  NATIVO  *********************************************"
-
-flatpak uninstall org.mozilla.firefox -y
-
-sudo mkdir -p /etc/apt/keyrings
-wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
-echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc arch=amd64]  https://packages.mozilla.org/apt mozilla main" | sudo tee /etc/apt/sources.list.d/mozilla.list > /dev/null
-
-echo "Package: firefox*"|sudo tee /etc/apt/preferences.d/mozilla
-echo "Pin: origin packages.mozilla.org"|sudo tee /etc/apt/preferences.d/mozilla
-echo "Pin-Priority: 1001"|sudo tee /etc/apt/preferences.d/mozilla
-
-sudo apt update -y
-sudo apt install firefox -y
 
 echo -e "\n\n\n******************************************REINICIAR  O  COMPUTADOR********************************************************************"
