@@ -16,6 +16,9 @@ echo "Escolha a versao a ser instalada"
 read versao
 rbenv install $versao
 
+## Instalacao global da Versao do Ruby
+rbenv global $versao
+
 echo "***********************************************************************************************************************************************"
 
 
@@ -428,14 +431,16 @@ code --install-extension ritwickdey.LiveServer
 
 ## INSTALANDO  PARENTESES  AUTOMATICOS  NOS  METODOS  JAVASCRIPT  E  TYPESCRIPT
 
+echo '{' | tee ~/.config/Code/User/settings.json
+
 ## parenteses atumomaticos nas funcoes do JavaScript
-echo '"javascript.suggest.completeFunctionCalls": true,' | tee ~/.config/Code/User/settings.json
+echo '"javascript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code/User/settings.json
 
 ## parenteses atumomaticos nos metodos do TypeScript
 echo '"typescript.suggest.completeFunctionCalls": true,' | tee -a ~/.config/Code/User/settings.json
 
-## Configurando TabNine
-echo '"tabnine.experimentalAutoImports": true,' | tee -a ~/.config/Code/User/settings.json
+
+echo '}' | tee  -a ~/.config/Code/User/settings.json
 
 echo "***********************************************************************************************************************************************"
 
@@ -540,3 +545,5 @@ sudo apt autoremove -y
 sudo update-alternatives --config java
 
 echo -e "\n\n\n******************************************REINICIAR  O  COMPUTADOR********************************************************************"
+
+rbenv global 3.3.4
