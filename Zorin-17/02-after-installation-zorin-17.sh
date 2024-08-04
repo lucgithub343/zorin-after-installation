@@ -412,9 +412,6 @@ code --install-extension TabNine.tabnine-vscode
 ## Suporte a arquivos yml
 code --install-extension redhat.vscode-yaml
 
-## Suporte ao Vim
-code --install-extension vscodevim.vim
-
 ## Melhor sintaxe para shell script
 code --install-extension jeff-hykin.better-shellscript-syntax
 
@@ -475,9 +472,6 @@ codium --install-extension TabNine.tabnine-vscode
 
 ## Suporte a arquivos yml
 codium --install-extension redhat.vscode-yaml
-
-## Suporte ao Vim
-codium --install-extension vscodevim.vim
 
 ## Melhor sintaxe para shell script
 codium --install-extension jeff-hykin.better-shellscript-syntax
