@@ -410,28 +410,6 @@ fi
 
 
 
-## Download Discord
-if [ -e discord-0.0.46.deb ];
-then
-    echo "O arquivo  discord-0.0.46.deb  ja existe"
-else
-    echo -e "\n\n\n\n Discord"
-    wget https://github.com/lucgithub343/discord/releases/download/discord/discord-0.0.46.deb
-fi
-
-
-
-## Download Eclipse C C++
-if [ -e eclipse-cpp-2023-12.deb ];
-then
-    echo "O arquivo  eclipse-cpp-2023-12.deb  ja existe"
-else
-    echo -e "\n\n\n\n Eclipse C C++"
-    wget https://github.com/lucgithub343/eclipse/releases/download/eclipse/eclipse-cpp-2023-12.deb
-fi
-
-
-
 ## Download GitKraken
 if [ -e gitkraken-amd64.deb ];
 then
