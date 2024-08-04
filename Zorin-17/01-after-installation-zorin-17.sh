@@ -831,6 +831,48 @@ python3 --version
 echo "***********************************************************************************************************************************************"
 
 
+
+
+echo -e "\n\n\n********************************************************* INSTALACAO  GOLANG *********************************************************"
+
+## Endereco de Donwload das versoes
+## https://go.dev/dl/
+
+cd ~/Downloads/Softwares/
+
+
+## Removendo diretorio go/
+if [ -e ~/Downloads/Softwares/go ];
+    then
+        echo "O diretorio  go/  ja existe. Removendo diretorio go/"
+        rm -r go/
+fi
+
+
+## Download Golang
+if [ -e ~/Downloads/Softwares/go1.22.5.linux-amd64.tar.gz ];
+    then
+        echo "O arquivo  go1.22.5.linux-amd64.tar.gz  ja existe."
+    else
+        wget https://github.com/lucgithub343/golang/releases/download/Golang/go1.22.5.linux-amd64.tar.gz
+fi
+
+tar -xvzf go1.22.5.linux-amd64.tar.gz
+
+sudo cp -r go/ /usr/local/
+
+
+if grep -qi 'export PATH=$PATH:/usr/local/go/bin' ~/.profile;
+    then
+        echo "Golang ja configurado"
+    else
+        echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
+fi
+
+echo "***********************************************************************************************************************************************"
+
+
+
 echo -e "\n\n\n********************************************************* INSTALACAO  PARCIAL  DO  RUBY **********************************************"
 
 
@@ -883,9 +925,6 @@ sudo apt update -y
 
 ## Instalando fonte VirtualBox
 sudo apt install virtualbox -y
-
-## Instalando linguagem de programação Go
-sudo apt install golang-go -y
 
 ## Instalando fonte Notepadqq
 sudo apt install notepadqq -y
