@@ -462,6 +462,17 @@ fi
 
 
 
+## Download Evolve
+if [ -e evolve-1.5.1.deb ];
+then
+    echo "O arquivo  evolve-1.5.1.deb  ja existe"
+else
+    echo -e "\n\n\n\n Evolve"
+    wget https://github.com/lucgithub343/evolve/releases/download/Evolve/evolve-1.5.1.deb
+fi
+
+
+
 ## Download GitKraken
 if [ -e gitkraken-amd64.deb ];
 then
