@@ -953,6 +953,9 @@ echo -e "\n\n\n************************************************** INSTALANDO  AP
 ## Atualizando PPA
 sudo apt update -y
 
+## Instalando GNOME Text Editor
+sudo apt install gnome-text-editor -y
+
 ## Instalando fonte VirtualBox
 sudo apt install virtualbox -y
 
