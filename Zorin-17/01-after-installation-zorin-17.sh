@@ -214,6 +214,7 @@ else
 fi
 
 
+
 ## Download tema Kimi Dark
 if [ -d ~/.themes/Kimi-dark-v40 ];
 then
@@ -229,6 +230,7 @@ else
     ## Entrando na para pasta de programas
     cd ~/Downloads/Softwares/
 fi
+
 
 
 ## Download tema Snow Alien
@@ -248,6 +250,39 @@ else
 fi
 
 
+
+## Download tema Evergreen
+if [ -d ~/.themes/Evergreen-GTK-AT ];
+then
+    echo "O diretorio  ~/.themes/Evergreen-GTK-AT  ja existe"
+else
+    echo -e "\n\n\n\n Evergreen"
+    wget https://github.com/lucgithub343/gnome-themes/releases/download/gnome-themes/Evergreen-GTK-AT.tar.gz
+    cp Evergreen-GTK-AT.tar.gz ~/.themes/
+    cd ~/.themes/
+    tar -xvzf Evergreen-GTK-AT.tar.gz
+    rm Evergreen-GTK-AT.tar.gz
+
+    ## Entrando na para pasta de programas
+    cd ~/Downloads/Softwares/
+fi
+
+
+
+## Download Deepin Icon
+if [ -d ~/.icons/Deepin ];
+then
+    echo "O diretorio  ~/.icons/Deepin  ja existe"
+else
+    wget https://github.com/lucgithub343/gnome-icons/releases/download/gnome-icons/Deepin.tar.gz
+    cp Deepin.tar.gz ~/.icons/
+    cd ~/.icons/
+    tar -xvzf Deepin.tar.gz
+    rm Deepin.tar.gz
+
+    ## Entrando na para pasta de programas
+    cd ~/Downloads/Softwares/
+fi
 
 ## Download Deepin Icon
 if [ -d ~/.icons/Deepin ];
@@ -276,6 +311,23 @@ else
     cd ~/.icons/
     tar -xvzf BigSur.tar.gz
     rm BigSur.tar.gz
+
+    ## Entrando na para pasta de programas
+    cd ~/Downloads/Softwares/
+fi
+
+
+
+## Download Evergreen Forest Dark Icon
+if [ -d ~/.icons/Everforest-Dark ];
+then
+    echo "O diretorio  ~/.icons/Everforest-Dark ja existe"
+else
+    wget https://github.com/lucgithub343/gnome-icons/releases/download/gnome-icons/Everforest-Dark.tar.gz
+    cp Everforest-Dark.tar.gz ~/.icons/
+    cd ~/.icons/
+    tar -xvzf Everforest-Dark.tar.gz
+    rm Everforest-Dark.tar.gz
 
     ## Entrando na para pasta de programas
     cd ~/Downloads/Softwares/
