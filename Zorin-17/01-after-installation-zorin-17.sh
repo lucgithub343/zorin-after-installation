@@ -60,14 +60,6 @@ else
 fi
 
 
-## Criando modelo de arquivo .txt
-if [ -e ~/Templates/TXT.txt ];
-then
-    echo "O arquivo  TXT.txt  ja existe"
-else
-    touch ~/Templates/TXT.txt
-fi
-
 
 ## Criando modelo de arquivo Dockerfile
 if [ -e ~/Templates/Dockerfile ];
@@ -76,6 +68,8 @@ then
 else
     touch ~/Templates/Dockerfile
 fi
+
+
 
 ## Criando modelo de arquivo docker-compose.yml
 if [ -e ~/Templates/docker-compose.yml ];
