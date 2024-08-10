@@ -24,12 +24,8 @@ echo "**************************************************************************
 
 
 
-echo -e "\n\n\n********************************************* INSTALANDO  VIRTUALBOX  E  EXTENSION  PACK *********************************************"
+echo -e "\n\n\n********************************************** INSTALANDO  VIRTUALBOX  EXTENSION  PACK ***********************************************"
 
-## Instalando VirtualBox
-sudo apt install virtualbox -y
-
-## Instalando VirtualBox Extension Pack
 sudo apt install virtualbox-ext-pack -y
 
 echo "***********************************************************************************************************************************************"
