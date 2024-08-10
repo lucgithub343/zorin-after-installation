@@ -70,7 +70,7 @@ sudo rm /.eclipseproduct
 
 ## Instalando Lombok no Spring Tools Suite
 chmod +x lombok-1.18.32.jar
-sudo ~/.sdkman/candidates/java/21.0.3-oracle/bin/java -jar lombok-1.18.32.jar
+sudo ~/.sdkman/candidates/java/21.0.4-oracle/bin/java -jar lombok-1.18.32.jar
 
 ## Removendo o arquivo .eclipseproduct
 ## sudo rm /.eclipseproduct
