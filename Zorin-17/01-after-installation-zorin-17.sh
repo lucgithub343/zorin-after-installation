@@ -1097,7 +1097,7 @@ echo "deb [signed-by=/usr/share/keyrings/jetbrains-ppa-archive-keyring.gpg arch=
 sudo apt update -y
 
 ## Instalando Intellij ultimate
-sudo apt-get install intellij-idea-ultimate -y
+sudo apt install intellij-idea-ultimate -y
 
 ## Instalando PyCharm Professional
 sudo apt install pycharm-professional -y
