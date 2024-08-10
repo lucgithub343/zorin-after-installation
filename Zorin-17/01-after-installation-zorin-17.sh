@@ -757,35 +757,37 @@ fi
 
 
 
-echo -e "\n\n\n**************************************************** INSTALANDO  O  DOCKER  **********************************************************"
+echo -e "\n\n\n********************************************* INSTALANDO  O  DOCKER  E  DOCKER  COMPOSE  *********************************************"
 
-## Atualizando os repositorios
+# Add Docker's official GPG key:
+sudo apt update -y
+sudo apt install ca-certificates -y
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$UBUNTU_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+
+# Update list oof repositories
 sudo apt update -y
 
-## Instalando o Docker
-sudo apt install docker.io -y
 
-## Adicionando o usuario logado ao grupo docker
+# Install Docker
+sudo apt install docker-ce \
+                 docker-ce-cli \
+                 containerd.io \
+                 docker-buildx-plugin \
+                 docker-compose-plugin -y
+
+
+## Adding logged in user to docker group
 sudo usermod -aG docker $USER
-
-echo "***********************************************************************************************************************************************"
-
-
-
-
-echo -e "\n\n\n******************************************** INSTALANDO  O  DOCKER-COMPOSE ***********************************************************"
-
-if [ -e docker-compose ];
-then
-    echo "O arquivo  docker-compose  ja existe copiando ele para pasta   /usr/local/bin/"
-    sudo cp docker-compose /usr/local/bin/
-else
-    echo -e "\n\n\n\n Docker Compose"
-    wget https://github.com/lucotavio/docker-compose-program/releases/download/docker-compose/docker-compose
-
-    chmod +x docker-compose
-    sudo cp docker-compose /usr/local/bin/
-fi
 
 echo "***********************************************************************************************************************************************"
 
