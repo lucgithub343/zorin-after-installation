@@ -814,7 +814,7 @@ sdk install kotlin
 kotlinc -version
 
 ## Instalando o Maven
-sdk install maven 3.9.6
+sdk install maven 3.9.8
 
 ## Ver versão do Maven
 mvn -v
