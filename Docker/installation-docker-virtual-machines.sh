@@ -208,6 +208,11 @@ sudo apt update -y
 ## Instalando gcc g++
 sudo apt install gcc g++ make -y
 
+## Intalando Gnome tweaks tools
+sudo apt install gnome-tweaks -y
+
+echo "***********************************************************************************************************************************************"
+
 
 
 
