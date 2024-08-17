@@ -231,11 +231,6 @@ sudo dpkg -i 4kvideodownloader_4.21.7-1_amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Driver placa de Video AMD Radeon R5-230
-sudo dpkg -i amdgpu-install_6.1.60103-1_all.deb
-sudo apt --fix-broken install -y
-
-
 ## Atom
 sudo dpkg -i atom-amd64.deb
 sudo apt --fix-broken install -y

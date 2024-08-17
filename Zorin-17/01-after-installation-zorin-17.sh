@@ -376,17 +376,6 @@ fi
 
 
 
-## Download driver placa de Video AMD Radeon R5-230
-if [ -e amdgpu-install_6.1.60103-1_all.deb ];
-then
-    echo "O arquivo  amdgpu-install_6.1.60103-1_all.deb  ja existe"
-else
-    echo -e "\n\n\n\n amdgpu-install_6.1.60103-1_all.deb"
-    wget https://github.com/lucgithub343/amd-radeon-r5-230/releases/download/Radeon-R5-230/amdgpu-install_6.1.60103-1_all.deb
-fi
-
-
-
 ## Download Apache Netbeans
 if [ -e apache-netbeans_22-1_all.deb ];
 then
