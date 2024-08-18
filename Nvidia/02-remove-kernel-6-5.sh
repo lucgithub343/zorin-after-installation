@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+## Teste
 dpkg -l | grep linux-image
 
 sudo apt purge linux-image-generic-hwe-22.04 -y
