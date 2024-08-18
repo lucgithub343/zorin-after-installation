@@ -92,6 +92,24 @@ echo -e "\n\n\n*****************************************************************
 
 
 
+echo -e "\n\n\n ***********************************************  TERMINO  DA   INSTALACAO  RUBY *****************************************************"
+
+rbenv -v
+
+rbenv install -l
+
+echo "Escolha a versao a ser instalada"
+read versao
+rbenv install $versao
+
+## Instalacao global da Versao do Ruby
+rbenv global $versao
+
+echo "***********************************************************************************************************************************************"
+
+
+
+
 echo -e "\n\n\n************************************************** INSTALANDO  NODE.JS ***************************************************************"
 
 sudo apt update -y
@@ -124,7 +142,7 @@ echo "**************************************************************************
 
 echo -e "\n\n\n************************************************** INSTALANDO  ANGULAR ***************************************************************"
 
-sudo npm install -g  @angular/cli@17.3.8
+sudo npm i @angular/cli
 
 #### Como ver versao do Angular
 ng v
@@ -140,24 +158,6 @@ sudo npm install -g typescript
 
 ## Como ver versao do Typescript
 tsc -v
-
-echo "***********************************************************************************************************************************************"
-
-
-
-
-echo -e "\n\n\n ***********************************************  TERMINO  DA   INSTALACAO  RUBY *****************************************************"
-
-rbenv -v
-
-rbenv install -l
-
-echo "Escolha a versao a ser instalada"
-read versao
-rbenv install $versao
-
-## Instalacao global da Versao do Ruby
-rbenv global $versao
 
 echo "***********************************************************************************************************************************************"
 
