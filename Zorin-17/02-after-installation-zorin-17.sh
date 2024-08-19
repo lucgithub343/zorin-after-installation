@@ -253,11 +253,6 @@ sudo dpkg -i dbeaver-le_23.2.0_amd64.deb
 sudo apt --fix-broken install -y
 
 
-## Discord
-sudo dpkg -i discord-0.0.46.deb
-sudo apt --fix-broken install -y
-
-
 ## Evolve
 sudo dpkg -i evolve-1.5.1.deb
 sudo apt --fix-broken install -y
@@ -349,10 +344,6 @@ sudo apt --fix-broken install -y
 sudo dpkg -i waterfox-G6.0.8.deb
 sudo apt --fix-broken install -y
 
-
-## Zoom
-sudo dpkg -i zoom_amd64.deb
-sudo apt --fix-broken install -y
 
 
 
