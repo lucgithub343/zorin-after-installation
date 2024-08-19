@@ -415,6 +415,16 @@ code --install-extension jeff-hykin.better-shellscript-syntax
 ## Live Server para mostrar modificacoes na pagina
 code --install-extension ritwickdey.LiveServer
 
+## Docker 
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension formulahendry.docker-explorer
+code --install-extension p1c2u.docker-compose
+code --install-extension formulahendry.docker-extension-pack
+code --install-extension george3447.docker-run
+code --install-extension Zim.vsc-docker
+code --install-extension dunstontc.vscode-docker-syntax
+code --install-extension QuentinGruber.dockerfiletemplate
+
 
 
 ## INSTALANDO  PARENTESES  AUTOMATICOS  NOS  METODOS  JAVASCRIPT  E  TYPESCRIPT
@@ -475,6 +485,16 @@ codium --install-extension jeff-hykin.better-shellscript-syntax
 
 ## Live Server para mostrar modificacoes na pagina
 codium --install-extension ritwickdey.LiveServer
+
+# Docker 
+codium --install-extension ms-azuretools.vscode-docker
+codium --install-extension formulahendry.docker-explorer
+codium --install-extension p1c2u.docker-compose
+codium --install-extension formulahendry.docker-extension-pack
+codium --install-extension george3447.docker-run
+codium --install-extension Zim.vsc-docker
+codium --install-extension dunstontc.vscode-docker-syntax
+codium --install-extension QuentinGruber.dockerfiletemplate
 
 
 ## abrindo o Visual Studio Codium
