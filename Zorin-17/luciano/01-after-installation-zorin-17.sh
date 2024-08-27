@@ -109,8 +109,16 @@ echo "**************************************************************************
 echo -e "\n\n\n************************************************** INSTALANDO  GIT *******************************************************************"
 
 ## Instalando o Git
+sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt update -y
-sudo apt install git -y
+sudo apt update -y
+git --version
+
+tempoParado=10
+echo "Parando o Script por $tempoParado segundos para ver a versao do Git";
+sleep $tempoParado;
+echo "Continuando execucao do Script"
+
 ## git config --global credential.helper store
 
 echo "***********************************************************************************************************************************************"
