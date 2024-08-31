@@ -424,6 +424,7 @@ code --install-extension george3447.docker-run
 code --install-extension Zim.vsc-docker
 code --install-extension dunstontc.vscode-docker-syntax
 code --install-extension QuentinGruber.dockerfiletemplate
+code --install-extension ms-vscode-remote.remote-containers
 
 
 
@@ -495,6 +496,7 @@ codium --install-extension george3447.docker-run
 codium --install-extension Zim.vsc-docker
 codium --install-extension dunstontc.vscode-docker-syntax
 codium --install-extension QuentinGruber.dockerfiletemplate
+codium --install-extension ms-vscode-remote.remote-containers
 
 
 ## abrindo o Visual Studio Codium
