@@ -111,7 +111,7 @@ echo -e "\n\n\n************************************************** INSTALANDO  GI
 ## Instalando o Git
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt update -y
-sudo apt update -y
+sudo apt install git -y
 git --version
 
 tempoParado=10
@@ -374,12 +374,12 @@ echo "**************************************************************************
 echo -e "\n\n\n************************************************** DOWNLOAD   DE  PROGRAMAS **********************************************************"
 
 ## Download 4K Video Downloader
-if [ -e 4kvideodownloader_4.21.7-1_amd64.deb ];
+if [ -e 4kvideodownloaderplus_1.8.5-1_amd64.deb ];
 then
-    echo "O arquivo  4kvideodownloader_4.21.7-1_amd64.deb  ja existe"
+    echo "O arquivo  4kvideodownloaderplus_1.8.5-1_amd64.deb  ja existe"
 else
     echo -e "\n\n\n\n 4K Video Downloader"
-    wget https://github.com/lucgithub343/4k-video-downloader/releases/download/4k-video-downloader/4kvideodownloader_4.21.7-1_amd64.deb
+    wget https://github.com/lucgithub343/4k-video-downloader/releases/download/4k-video-downloader/4kvideodownloaderplus_1.8.5-1_amd64.deb
 fi
 
 
@@ -475,15 +475,6 @@ fi
 
 
 
-## Download Insomnia
-if [ -e Insomnia.Core-8.6.0.deb ];
-then
-    echo "O arquivo  Insomnia.Core-8.6.0.deb  ja existe"
-else
-    echo -e "\n\n\n\n Insomnia"
-    wget https://github.com/lucgithub343/insomnia/releases/download/insomnia/Insomnia.Core-8.6.0.deb
-fi
-
 
 ## Download Iriun Webcam
 if [ -e iriunwebcam-2.8.2.deb ];
@@ -505,27 +496,6 @@ else
     wget https://github.com/lucgithub343/insync/releases/download/insync/insync_3.8.7.50516-jammy_amd64.deb
 fi
 
-
-
-## Download Jasper Studio
-if [ -e jaspersoft-sudio-6.20.0_linux_amd64.deb ];
-then
-    echo "O arquivo  jaspersoft-sudio-6.20.0_linux_amd64.deb ja existe"
-else
-    echo -e "\n\n\n\n Jasper Studio"
-    wget https://github.com/lucgithub343/jaspersoft-studio/releases/download/jaspersoft-studio/jaspersoft-sudio-6.20.0_linux_amd64.deb
-fi
-
-
-
-## Download Lombok
-if [ -e lombok-1.18.32.jar ];
-then
-    echo "O arquivo lombok-1.18.32.jar ja existe"
-else
-    echo -e "\n\n\n\n Lombok"
-    wget https://github.com/lucgithub343/lombok/releases/download/lombok/lombok-1.18.32.jar
-fi
 
 
 
@@ -584,24 +554,14 @@ fi
 
 
 
-## Download Postman
-if [ -e postman-10.22.10.deb ];
+
+## Download Slack Desktop
+if [ -e slack-desktop-4.39.95-amd64.deb ];
 then
-    echo "O arquivo  postman-10.22.10.deb  ja existe"
+    echo "O arquivo  slack-desktop-4.39.95-amd64.deb  ja existe"
 else
-    echo -e "\n\n\n\n Postman"
-    wget https://github.com/lucgithub343/postman/releases/download/postman/postman-10.22.10.deb
-fi
-
-
-
-## Download Scene Builder
-if [ -e SceneBuilder-21.0.0.deb ];
-then
-    echo "O arquivo  SceneBuilder-21.0.0.deb  ja existe"
-else
-    echo -e "\n\n\n\n Scene Builder"
-    wget https://github.com/lucgithub343/scene-builder/releases/download/Scene-Builder/SceneBuilder-21.0.0.deb
+    echo -e "\n\n\n\n Slack Desktop"
+    wget https://github.com/lucgithub343/slack-desktop/releases/download/Slack-Desktop/slack-desktop-4.39.95-amd64.deb
 fi
 
 
@@ -616,15 +576,6 @@ else
 fi
 
 
-## Download Spring Tool Suite
-if [ -e spring-tool-suite-4.22.0.RELEASE.deb ];
-then
-    echo "O arquivo  spring-tool-suite-4.22.0.RELEASE.deb  ja existe"
-else
-    echo -e "\n\n\n\n Spring Tool Suite"
-    wget https://github.com/lucgithub343/spring-tool-suite/releases/download/spring-tool-suite/spring-tool-suite-4.22.0.RELEASE.deb
-fi
-
 
 
 ## Download StarUML
@@ -634,23 +585,6 @@ then
 else
     echo -e "\n\n\n\n StarUML"
     wget https://github.com/lucgithub343/starUML/releases/download/starUML/StarUML_6.1.0_amd64.deb
-fi
-
-
-
-## Download Tomcat
-if [ -d ~/Servers/tomcat-10.1.18 ];
-then
-    echo "O diretorio  ~/Servers/tomcat-10.1.18 ja existe"
-else
-    wget https://github.com/lucgithub343/tomcat/releases/download/Tomcat/tomcat-10.1.18.tar.gz
-    cp tomcat-10.1.18.tar.gz ~/Servers/
-    cd ~/Servers/
-    tar -xvzf tomcat-10.1.18.tar.gz
-    rm tomcat-10.1.18.tar.gz
-
-    ## Entrando na para pasta de programas
-    cd ~/Downloads/Softwares/
 fi
 
 
@@ -705,44 +639,6 @@ then
 else
     echo -e "\n\n\n\n Serial VMware Workstation"
     wget https://github.com/lucgithub343/vmware-workstation/releases/download/vmware-workstation/serial-vmware-workstation.txt
-fi
-
-
-
-## Download Waterfox
-if [ -e waterfox-G6.0.8.deb ];
-then
-    echo "O arquivo  waterfox-G6.0.8.deb   ja existe"
-else
-    echo -e "\n\n\n\n Waterfox"
-    wget https://github.com/lucgithub343/waterfox/releases/download/waterfox/waterfox-G6.0.8.deb
-fi
-
-
-
-## Download Wildfly
-if [ -d ~/Servers/wildfly-31.0.0.Final ];
-then
-    echo "O diretorio  ~/Servers/wildfly-31.0.0.Final ja existe"
-else
-    wget https://github.com/lucgithub343/wildfly/releases/download/Wildfly/wildfly-31.0.0.Final.tar.gz
-    cp wildfly-31.0.0.Final.tar.gz ~/Servers/
-    cd ~/Servers/
-    tar -xvzf wildfly-31.0.0.Final.tar.gz
-    rm wildfly-31.0.0.Final.tar.gz
-
-    ## Entrando na para pasta de programas
-    cd ~/Downloads/Softwares/
-fi
-
-
-## Download Zoom
-if [ -e zoom_amd64.deb ];
-then
-    echo "O arquivo  zoom_amd64.deb   ja existe"
-else
-    echo -e "\n\n\n\n Zoom"
-    wget https://github.com/lucgithub343/zoom/releases/download/Zoom/zoom_amd64.deb
 fi
 
 
@@ -907,25 +803,6 @@ echo "**************************************************************************
 
 
 
-echo -e "\n\n\n********************************************************* INSTALACAO  PARCIAL  DO  RUBY **********************************************"
-
-
-sudo apt update -y
-
-sudo apt install git curl autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev -y
-
-
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
-
-echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
-
-echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-
-echo "***********************************************************************************************************************************************"
-
-
-
-
 
 echo -e "\n\n\n************************************* CONFIGURAR  CELULAR  PARA  DESENVOLVIMENTO  ANDROID ********************************************"
 
@@ -1053,6 +930,14 @@ echo 'deb http://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_2
 curl -fsSL https://download.opensuse.org/repositories/home:stevenpusser/xUbuntu_22.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_stevenpusser.gpg > /dev/null
 sudo apt update -y
 sudo apt install brave-browser -y
+
+## Instalando Navegador Waterfox
+sudo apt update -y
+sudo apt install software-properties-common apt-transport-https curl -y
+curl -fsSL https://download.opensuse.org/repositories/home:hawkeye116477:waterfox/xUbuntu_22.04/Release.key | sudo gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_hawkeye116477_waterfox.gpg > /dev/null
+echo 'deb http://download.opensuse.org/repositories/home:/hawkeye116477:/waterfox/xUbuntu_22.04/ /' | sudo tee /etc/apt/sources.list.d/home:hawkeye116477:waterfox.list
+sudo apt update -y
+sudo apt install waterfox-g-kpe -y
 
 ## Instalando ferramenta de Backup
 sudo apt install luckybackup-data -y

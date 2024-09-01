@@ -16,43 +16,9 @@ echo "**************************************************************************
 
 
 
-echo -e "\n\n\n***************************************************** INSTALANDO  RUST ***************************************************************"
+echo -e "\n\n\n******************************************************** INSTALANDO  POSTMAN *********************************************************"
 
-sudo apt update -y
-
-curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
-
-source "$HOME/.cargo/env"
-
-rustc --version
-
-sudo apt update -y
-
-sudo apt install build-essential -y
-
-rustup update
-
-echo "***********************************************************************************************************************************************"
-
-
-
-
-echo -e "\n\n\n *************************************  INSTALANDO  SPRING TOOLS  SUITE  COM  LOMBOK **************************************************"
-
-## Selecionando qual versão do java vai ser a padrao
-sudo update-alternatives --config java
-
-## Spring tool Suite
-sudo dpkg -i spring-tool-suite-4.22.0.RELEASE.deb
-sudo apt --fix-broken install -y
-sudo rm /.eclipseproduct
-
-## Instalando Lombok no Spring Tools Suite
-chmod +x lombok-1.18.32.jar
-sudo ~/.sdkman/candidates/java/21.0.4-oracle/bin/java -jar lombok-1.18.32.jar
-
-## Removendo o arquivo .eclipseproduct
-## sudo rm /.eclipseproduct
+curl https://gist.githubusercontent.com/SanderTheDragon/1331397932abaa1d6fbbf63baed5f043/raw/postman-deb.sh | sh
 
 echo "***********************************************************************************************************************************************"
 
@@ -88,24 +54,6 @@ else
 fi
 
 echo -e "\n\n\n**************************************************************************************************************************************"
-
-
-
-
-echo -e "\n\n\n ***********************************************  TERMINO  DA   INSTALACAO  RUBY *****************************************************"
-
-rbenv -v
-
-rbenv install -l
-
-echo "Escolha a versao a ser instalada"
-read versao
-rbenv install $versao
-
-## Instalacao global da Versao do Ruby
-rbenv global $versao
-
-echo "***********************************************************************************************************************************************"
 
 
 
@@ -227,7 +175,7 @@ chmod +x *.deb
 
 
 ## 4K Video Downloader
-sudo dpkg -i 4kvideodownloader_4.21.7-1_amd64.deb
+sudo dpkg -i 4kvideodownloaderplus_1.8.5-1_amd64.deb
 sudo apt --fix-broken install -y
 
 
@@ -258,19 +206,8 @@ sudo dpkg -i evolve-1.5.1.deb
 sudo apt --fix-broken install -y
 
 
-## Eclipse C and C++
-sudo dpkg -i --force-overwrite eclipse-cpp-2023-12.deb
-sudo rm /.eclipseproduct
-sudo apt --fix-broken install -y
-
-
 ## GitKraken
 sudo dpkg -i gitkraken-amd64.deb
-sudo apt --fix-broken install -y
-
-
-## Insomnia
-sudo dpkg -i Insomnia.Core-8.6.0.deb
 sudo apt --fix-broken install -y
 
 
@@ -281,11 +218,6 @@ sudo apt --fix-broken install -y
 
 ## Iriun Webcam
 sudo dpkg -i iriunwebcam-2.8.2.deb
-sudo apt --fix-broken install -y
-
-
-## Japersoft studio
-sudo dpkg -i jaspersoft-sudio-6.20.0_linux_amd64.deb
 sudo apt --fix-broken install -y
 
 
@@ -314,14 +246,8 @@ sudo dpkg -i onlyoffice-desktopeditors_amd64.deb
 sudo apt --fix-broken install -y
 sudo sed -i '/Terminal=false/a StartupWMClass=DesktopEditors' /usr/share/applications/onlyoffice-desktopeditors.desktop
 
-
-## Postman
-sudo dpkg -i postman-10.22.10.deb
-sudo apt --fix-broken install -y
-
-
-## Scene Builder
-sudo dpkg -i SceneBuilder-21.0.0.deb
+## Slack desktop
+sudo dpkg -i slack-desktop-4.39.95-amd64.deb
 sudo apt --fix-broken install -y
 
 
@@ -337,11 +263,6 @@ sudo apt --fix-broken install -y
 
 ## Vivaldi
 sudo dpkg -i vivaldi-stable_6.8.3381.44-1_amd64.deb
-sudo apt --fix-broken install -y
-
-
-## Waterfox
-sudo dpkg -i waterfox-G6.0.8.deb
 sudo apt --fix-broken install -y
 
 
@@ -585,4 +506,3 @@ sudo update-alternatives --config java
 
 echo -e "\n\n\n******************************************REINICIAR  O  COMPUTADOR********************************************************************"
 
-rbenv global 3.3.4
