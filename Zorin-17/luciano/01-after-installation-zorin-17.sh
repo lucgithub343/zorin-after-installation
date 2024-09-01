@@ -719,18 +719,6 @@ echo "**************************************************************************
 
 
 
-echo -e "\n\n\n********************************************************* INSTALACAO  PHP ************************************************************"
-
-sudo add-apt-repository ppa:ondrej/php -y
-sudo apt update -y
-sudo apt install php8.2 -y
-php --version
-
-echo "***********************************************************************************************************************************************"
-
-
-
-
 echo -e "\n\n\n********************************************************* INSTALACAO  PYTHON *********************************************************"
 
 sudo apt update -y
@@ -986,9 +974,6 @@ sudo apt install intellij-idea-ultimate -y
 
 ## Instalando PyCharm Professional
 sudo apt install pycharm-professional -y
-
-## Instalando PHP Storm
-sudo apt install phpstorm -y
 
 ## Instalando o WebStorm
 sudo apt install webstorm -y
