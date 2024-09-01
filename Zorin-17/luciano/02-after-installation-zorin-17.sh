@@ -376,7 +376,7 @@ echo "**************************************************************************
 echo -e "\n\n\n ***************************************  INSTALANDO  VISUAL  STUDIO  CODE  E  EXTENCOES  ********************************************"
 
 
-sudo dpkg -i visual-studio-code_1.87.2-1709912201_amd64.deb
+sudo dpkg -i visual-studio-code_1.92.2-1723660989_amd64.deb
 sudo apt --fix-broken install -y
 
 
@@ -414,6 +414,9 @@ code --install-extension jeff-hykin.better-shellscript-syntax
 
 ## Live Server para mostrar modificacoes na pagina
 code --install-extension ritwickdey.LiveServer
+
+## Editor Cobol
+code --install-extension rechinformatica.rech-editor-cobol
 
 ## Docker 
 code --install-extension ms-azuretools.vscode-docker
@@ -487,6 +490,9 @@ codium --install-extension jeff-hykin.better-shellscript-syntax
 ## Live Server para mostrar modificacoes na pagina
 codium --install-extension ritwickdey.LiveServer
 
+## Editor Cobol
+codium --install-extension rechinformatica.rech-editor-cobol
+
 # Docker 
 codium --install-extension ms-azuretools.vscode-docker
 codium --install-extension formulahendry.docker-explorer
@@ -497,6 +503,7 @@ codium --install-extension Zim.vsc-docker
 codium --install-extension dunstontc.vscode-docker-syntax
 codium --install-extension QuentinGruber.dockerfiletemplate
 codium --install-extension ms-vscode-remote.remote-containers
+
 
 
 ## abrindo o Visual Studio Codium
