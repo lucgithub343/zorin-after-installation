@@ -415,8 +415,20 @@ code --install-extension jeff-hykin.better-shellscript-syntax
 ## Live Server para mostrar modificacoes na pagina
 code --install-extension ritwickdey.LiveServer
 
+
+
 ## Editor Cobol
 code --install-extension rechinformatica.rech-editor-cobol
+## Endereco insinando a instalar e usar a Extencao
+## https://medium.com/@sousandrosilveira/programando-em-cobol-no-visual-studio-code-55a3b50fdb3c
+
+## Endereco a extensao do Cobol do Marketplace do Visual Studio
+## https://marketplace.visualstudio.com/items?itemName=rechinformatica.rech-editor-cobol
+
+## Comando para compilar o codigo Cobol
+## cobc -x -free [nome-do-arquivo]
+
+
 
 ## Docker 
 code --install-extension ms-azuretools.vscode-docker
@@ -490,8 +502,21 @@ codium --install-extension jeff-hykin.better-shellscript-syntax
 ## Live Server para mostrar modificacoes na pagina
 codium --install-extension ritwickdey.LiveServer
 
+
+
 ## Editor Cobol
 codium --install-extension rechinformatica.rech-editor-cobol
+## Endereco insinando a instalar e usar a Extencao
+## https://medium.com/@sousandrosilveira/programando-em-cobol-no-visual-studio-code-55a3b50fdb3c
+
+## Endereco a extensao do Cobol do Marketplace do Visual Studio
+## https://marketplace.visualstudio.com/items?itemName=rechinformatica.rech-editor-cobol
+
+## Comando para compilar o codigo Cobol
+## cobc -x -free [nome-do-arquivo]
+
+
+
 
 # Docker 
 codium --install-extension ms-azuretools.vscode-docker

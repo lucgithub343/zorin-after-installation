@@ -957,6 +957,9 @@ echo -e "\n\n\n************************************************** INSTALANDO  AP
 ## Atualizando PPA
 sudo apt update -y
 
+## Instalacao deo compilador Cobol
+sudo apt install gnucobol4 -y
+
 ## Instalando GNOME Text Editor
 sudo apt install gnome-text-editor -y
 
