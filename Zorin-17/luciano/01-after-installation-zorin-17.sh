@@ -978,15 +978,6 @@ sudo apt install pycharm-professional -y
 ## Instalando o WebStorm
 sudo apt install webstorm -y
 
-## RustRover
-sudo apt install rustrover-eap -y
-
-## Instalndo RubyMine
-sudo apt install rubymine -y
-
-## Instalndo CLion
-sudo apt install clion -y
-
 ## Instalndo GoLand
 sudo apt install goland -y
 
