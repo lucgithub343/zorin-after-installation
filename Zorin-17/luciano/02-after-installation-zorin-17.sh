@@ -340,6 +340,9 @@ code --install-extension ritwickdey.LiveServer
 ## Executar shell Script
 code --install-extension YasharHabibi.run-bash-script
 
+## Instalando Tema Dracula
+code --install-extension dracula-theme.theme-dracula
+
 
 
 ## Editor Cobol
@@ -429,6 +432,10 @@ codium --install-extension ritwickdey.LiveServer-5.7.9.vsix
 
 ## Executar shell Script
 codium --install-extension YasharHabibi.run-bash-script-0.0.8.vsix
+
+## Instalando Tema Dracula
+codium --install-extension dracula-theme.theme-dracula-2.25.1.vsix
+
 
 
 
