@@ -999,13 +999,6 @@ sudo apt install webstorm -y
 ## Instalndo GoLand
 sudo apt install goland -y
 
-## Instalando Android Studio
-sudo apt update -y
-sudo add-apt-repository ppa:maarten-fonville/android-studio -y
-sudo apt update -y
-sudo apt install android-studio -y
-
-
 echo "***********************************************************************************************************************************************"
 
 
