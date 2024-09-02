@@ -309,8 +309,6 @@ sudo apt --fix-broken install -y
 ## Instalando Material Icon themes
 code --install-extension PKief.material-icon-theme
 
-## Instalando Mithril Emmet
-code --install-extension PFallenMax.mithril-emmet
 
 ## Instalando ESlint
 code --install-extension dbaeumer.vscode-eslint
@@ -338,6 +336,9 @@ code --install-extension jeff-hykin.better-shellscript-syntax
 
 ## Live Server para mostrar modificacoes na pagina
 code --install-extension ritwickdey.LiveServer
+
+## Executar shell Script
+code --install-extension YasharHabibi.run-bash-script
 
 
 
@@ -367,6 +368,7 @@ code --install-extension ms-vscode-remote.remote-containers
 
 
 
+
 ## INSTALANDO  PARENTESES  AUTOMATICOS  NOS  METODOS  JAVASCRIPT  E  TYPESCRIPT
 
 echo '{' | tee ~/.config/Code/User/settings.json
@@ -387,6 +389,11 @@ echo "**************************************************************************
 
 echo -e "\n\n\n ***********************************************  INSTALANDO  VISUAL  STUDIO  CODIUM  ************************************************"
 
+## Entrando no diretorio com as extencoes
+cd ~/Installation/vscode-vscodium-extensions
+
+
+
 sudo dpkg -i vs-codium_1.90.2.24171_amd64.deb
 sudo apt --fix-broken install -y
 
@@ -394,42 +401,39 @@ sudo apt --fix-broken install -y
 # INSTALANDO  EXTENÇÕES  DO  VISUAL  STUDIO  CODIUM
 
 ## Instalando Material Icon themes
-codium --install-extension PKief.material-icon-theme
-
-## Instalando Mithril Emmet
-codium --install-extension PFallenMax.mithril-emmet
+codium --install-extension PKief.material-icon-theme-5.10.0.vsix
 
 ## Instalando ESlint
-codium --install-extension dbaeumer.vscode-eslint
+codium --install-extension dbaeumer.vscode-eslint-3.0.13.vsix
 
 ## Instlando Better Comments
-codium --install-extension aaron-bond.better-comments
+codium --install-extension aaron-bond.better-comments-3.0.2.vsix
 
 ## Instlando GitLens
-codium --install-extension eamodio.gitlens
+codium --install-extension eamodio.gitlens-2024.8.3105.vsix
 
 ## Instlando Tabnine
-codium --install-extension TabNine.tabnine-vscode
+codium --install-extension TabNine.tabnine-vscode-3.147.0.vsix
 
 ## Suporte a arquivos yml
-codium --install-extension redhat.vscode-yaml
+codium --install-extension redhat.vscode-yaml-1.15.0.vsix
 
 ## Melhor sintaxe para shell script
-codium --install-extension jeff-hykin.better-shellscript-syntax
+codium --install-extension jeff-hykin.better-shellscript-syntax-1.10.0.vsix
 
 ## Auto complete de sintaxe para Shelll Script
-codium --install-extension tetradresearch.vscode-h2o
-
-## Mostra Reultados quando vc muda o codigo no TypeScript e no JavaScript
-codium --install-extension jeff-hykin.better-shellscript-syntax
+codium --install-extension tetradresearch.vscode-h2o-0.2.15.vsix
 
 ## Live Server para mostrar modificacoes na pagina
-codium --install-extension ritwickdey.LiveServer
+codium --install-extension ritwickdey.LiveServer-5.7.9.vsix
+
+## Executar shell Script
+codium --install-extension YasharHabibi.run-bash-script-0.0.8.vsix
 
 
 
 ## Editor Cobol
-codium --install-extension rechinformatica.rech-editor-cobol
+codium --install-extension rechinformatica.rech-editor-cobol-1.0.129.vsix
 ## Endereco insinando a instalar e usar a Extencao
 ## https://medium.com/@sousandrosilveira/programando-em-cobol-no-visual-studio-code-55a3b50fdb3c
 
@@ -443,15 +447,15 @@ codium --install-extension rechinformatica.rech-editor-cobol
 
 
 # Docker 
-codium --install-extension ms-azuretools.vscode-docker
-codium --install-extension formulahendry.docker-explorer
-codium --install-extension p1c2u.docker-compose
-codium --install-extension formulahendry.docker-extension-pack
-codium --install-extension george3447.docker-run
-codium --install-extension Zim.vsc-docker
-codium --install-extension dunstontc.vscode-docker-syntax
-codium --install-extension QuentinGruber.dockerfiletemplate
-codium --install-extension ms-vscode-remote.remote-containers
+codium --install-extension ms-azuretools.vscode-docker-1.29.2.vsix
+codium --install-extension formulahendry.docker-explorer-0.1.7.vsix
+codium --install-extension formulahendry.docker-extension-pack-0.0.1.vsix
+codium --install-extension formulahendry.docker-extension-pack-0.0.1.vsix
+codium --install-extension george3447.docker-run-1.1.0.vsix
+codium --install-extension Zim.vsc-docker-0.34.0.vsix
+codium --install-extension dunstontc.vscode-docker-syntax-0.1.5.vsix
+codium --install-extension QuentinGruber.dockerfiletemplate-2.0.4.vsix
+codium --install-extension ms-vscode-remote.remote-containers-0.383.0.vsix
 
 
 
@@ -469,6 +473,13 @@ echo "Continuando execucao do Script"
 
 ## Copiando o arquivo de configuracao do VsCode para o VsCodium
 cp ~/.config/Code/User/settings.json ~/.config/VSCodium/User/
+
+
+
+## Entrando na para pasta de programas
+cd ~/Downloads/Softwares/
+
+echo "***********************************************************************************************************************************************"
 
 
 

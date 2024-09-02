@@ -366,6 +366,19 @@ else
     cp -r ~/Downloads/Softwares/database-docker-compose/ ~/Installation/
 fi
 
+
+
+## Download das extencoes do VsCde e do VsCodium
+if [ -d ~/Installation/vscode-vscodium-extensions/ ];
+then
+    echo "O diretorio  Installation/vscode-vscodium-extensions  ja existe"
+else
+    echo -e "\n\n\n\n Extencoes do VsCde e do VsCodium"
+    git https://github.com/lucgithub343/vscode-vscodium-extensions.git
+
+    cp -r ~/Downloads/Softwares/vscode-vscodium-extensions/ ~/Installation/
+fi
+
 echo "***********************************************************************************************************************************************"
 
 
