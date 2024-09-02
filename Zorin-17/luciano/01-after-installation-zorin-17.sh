@@ -919,6 +919,11 @@ sudo apt install umbrello -y
 ## Instalando o modulo "libcanberra-gtk-module" para que nao ocorra o erro: “failed to load module canberra-gtk-module”
 sudo apt install libcanberra-gtk-module libcanberra-gtk3-module -y
 
+## Instalando Programa para instalar e desinstalr versoes diferentes do Kernel
+sudo add-apt-repository ppa:cappelikan/ppa -y
+sudo apt update -y
+sudo apt install mainline -y
+
 ## Instalando Chromium
 sudo add-apt-repository ppa:savoury1/chromium -y
 sudo apt update -y
