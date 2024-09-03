@@ -343,6 +343,9 @@ code --install-extension YasharHabibi.run-bash-script
 ## Instalando Tema Dracula
 code --install-extension dracula-theme.theme-dracula
 
+## Instalando o Prettier que serve para formatador de codigo 
+code --install-extension esbenp.prettier-vscode
+
 
 
 ## Editor Cobol
@@ -435,6 +438,9 @@ codium --install-extension YasharHabibi.run-bash-script-0.0.8.vsix
 
 ## Instalando Tema Dracula
 codium --install-extension dracula-theme.theme-dracula-2.25.1.vsix
+
+## Instalando o Prettier que serve para formatador de codigo 
+codium --install-extension esbenp.prettier-vscode-11.0.0.vsix
 
 
 
