@@ -15,6 +15,35 @@ echo "**************************************************************************
 
 
 
+echo -e "\n\n\n************************************************** INSTALANDO  FLUTTER*****************************************************************"
+
+if [ -e flutter_linux_3.24.3-stable.tar.xz ];
+then
+    echo "O diretorio  ~/Wallpaper/  ja existe"
+else
+    echo -e "\n\n\n\n Flutter"
+    wget https://github.com/lucgithub343/flutter/releases/download/Flutter/flutter_linux_3.24.3-stable.tar.xz
+
+    sudo tar xf flutter_linux_3.24.3-stable.tar.xz -C /opt/ 
+
+    sudo apt-get install curl git unzip xz-utils zip libglu1-mesa -y
+
+    sudo apt install clang -y
+    sudo apt install ninja-build -y
+    sudo apt apt install libgtk-3-dev -y
+    flutter doctor --android-licenses
+
+    sudo apt-get install lib32stdc++6 libstdc++6 libcurl4-openssl-dev libglu1-mesa -y
+
+    sudo apt-get install \
+         libc6:amd64 libstdc++6:amd64 \
+         libbz2-1.0:amd64 libncurses5:amd64 -y
+
+    echo "export PATH=\$PATH:/opt/flutter/bin" | sudo tee /etc/profile.d/flutter.sh
+fi
+
+
+
 
 echo -e "\n\n\n**************************************************INSTALANDO  VMWARE  PLAYER *********************************************************"
 
@@ -249,6 +278,12 @@ sudo dpkg -i onlyoffice-desktopeditors_amd64.deb
 sudo apt --fix-broken install -y
 sudo sed -i '/Terminal=false/a StartupWMClass=DesktopEditors' /usr/share/applications/onlyoffice-desktopeditors.desktop
 
+
+## Pale Moon
+sudo dpkg -i palemoon_33.1.1-1.gtk3_amd64.deb
+sudo apt --fix-broken install -y
+
+
 ## Slack desktop
 sudo dpkg -i slack-desktop-4.39.95-amd64.deb
 sudo apt --fix-broken install -y
@@ -345,6 +380,8 @@ code --install-extension dracula-theme.theme-dracula
 
 ## Instalando o Prettier que serve para formatador de codigo 
 code --install-extension esbenp.prettier-vscode
+
+code --install-extension Dart-Code.flutter
 
 
 

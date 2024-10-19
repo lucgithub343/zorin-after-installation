@@ -566,6 +566,17 @@ else
 fi
 
 
+## Download Pale Moon
+if [ -e palemoon_33.1.1-1.gtk3_amd64.deb ];
+then
+    echo "O arquivo  palemoon_33.1.1-1.gtk3_amd64.deb  ja existe"
+else
+    echo -e "\n\n\n\n Pale Moon"
+    ## https://software.opensuse.org/download.html?project=home%3Astevenpusser%3Apalemoon-GTK3&package=palemoon
+    wget https://github.com/lucgithub343/pale-moon/releases/download/Pale-Moon/palemoon_33.1.1-1.gtk3_amd64.deb
+fi
+
+
 
 
 ## Download Slack Desktop
@@ -951,20 +962,10 @@ sudo apt install luckybackup-data -y
 
 ######################################################## INSTALACAO  DO  NAVEGADOR LIBRE-WOLF #######################################################
 
-sudo apt update && sudo apt install -y wget gnupg lsb-release apt-transport-https ca-certificates
-
-distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then lsb_release -sc; else echo focal; fi)
-
-wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
-
-sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
-Types: deb
-URIs: https://deb.librewolf.net
-Suites: $distro
-Components: main
-Architectures: amd64
-Signed-By: /usr/share/keyrings/librewolf.gpg
-EOF
+sudo apt update -y
+sudo apt install extrepo -y
+sudo extrepo enable librewolf
+sudo apt --allow-releaseinfo-change update
 
 sudo apt update -y
 
